@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/btc-hero.jpg";
 
 const HeroSection = () => {
@@ -27,18 +28,18 @@ const HeroSection = () => {
           Arme-toi d'arguments pour le prochain repas de famille.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="#arguments"
+          <Link
+            to="/arguments"
             className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-gradient-btc text-primary-foreground font-semibold text-lg transition-all hover:scale-105 glow-btc"
           >
             ⚡ Les arguments qui tuent
-          </a>
-          <a
-            href="#fondamentaux"
+          </Link>
+          <Link
+            to="/fondamentaux"
             className="inline-flex items-center justify-center px-8 py-4 rounded-lg border border-btc-orange/30 text-foreground font-semibold text-lg transition-all hover:border-btc-orange/60 hover:bg-secondary"
           >
             Les fondamentaux
-          </a>
+          </Link>
         </div>
       </div>
     </section>
