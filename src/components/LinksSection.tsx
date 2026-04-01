@@ -225,7 +225,7 @@ const LinksSection = () => {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group rounded-2xl border border-border bg-card/60 hover:border-btc-orange/30 overflow-hidden transition-all hover:shadow-lg hover:shadow-btc-orange/5 flex flex-col"
+                className="group relative rounded-2xl border border-border bg-card/60 hover:border-btc-orange/30 overflow-hidden transition-all hover:shadow-lg hover:shadow-btc-orange/5 flex flex-col"
               >
                 {/* Image */}
                 {link.imageUrl ? (
