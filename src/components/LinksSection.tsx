@@ -1,3 +1,4 @@
+import React from "react";
 import { ExternalLink, Newspaper, Youtube, Twitter } from "lucide-react";
 
 type LinkType = "article" | "youtube" | "tweet";
