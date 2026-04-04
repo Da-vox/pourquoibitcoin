@@ -25,6 +25,7 @@ const LINKS: LinkItem[] = [
   },
   {
     id: "1",
+    type: "article" as const,
     type: "article",
     url: "https://bitcoin.fr/lettre-ouverte-a-ma-famille/",
     title: "Lettre ouverte à ma famille",
