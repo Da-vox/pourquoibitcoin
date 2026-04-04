@@ -15,6 +15,28 @@ interface LinkItem {
 
 const LINKS: LinkItem[] = ([
   {
+    id: "4",
+    type: "article",
+    url: "https://news.bitcoin.com/fr/btq-lance-un-reseau-de-test-bitcoin-resistant-a-linformatique-quantique-grace-au-bip-360/",
+    title: "BTQ lance un réseau de test Bitcoin résistant à l'informatique quantique grâce au BIP 360",
+    description:
+      "BTQ Technologies a lancé la première implémentation fonctionnelle du BIP 360 sur son réseau de test Bitcoin Quantum. Cette mise à jour permet aux développeurs de tester des transactions Bitcoin résistantes à l'informatique quantique dans un environnement réel.",
+    image:
+      "https://static.news.bitcoin.com/wp-content/uploads/2026/03/btq-launches-quantum-resistant-bitcoin-testnet-with-bip-360.jpg",
+    date: "2026-03-21",
+  },
+  {
+    id: "3",
+    type: "article",
+    url: "https://www.cointribune.com/en/bitcoin-an-old-line-of-code-from-satoshi-ready-to-change-the-game/",
+    title: "Bitcoin : une ancienne ligne de code de Satoshi prête à changer la donne",
+    description:
+      "L'opcode OP_CAT, aussi connu sous le nom de BIP-420, pourrait transformer le fonctionnement de la blockchain Bitcoin. Cette ligne de code faisait partie du protocole original mais a été retirée par Satoshi en 2010. Aujourd'hui, des développeurs veulent la réintroduire pour permettre des smart contracts sur Bitcoin.",
+    image:
+      "https://www.cointribune.com/app/uploads/2024/09/Bitcoin-OP_CAT.png",
+    date: "2024-09-01",
+  },
+  {
     id: "2",
     type: "article",
     url: "https://journalducoin.com/bitcoin/bitcoin-michael-saylor-predit-btc-13-millions-dollars-21-ans/",
