@@ -1,19 +1,20 @@
-import { ExternalLink, Newspaper } from "lucide-react";
+import { ExternalLink, Newspaper, Youtube, Twitter } from "lucide-react";
+
+type LinkType = "article" | "youtube" | "tweet";
 
 interface LinkItem {
   id: string;
-  type: "article" | "youtube" | "tweet";
+  type: LinkType;
   url: string;
   title: string;
   description: string;
   image: string;
-  date: string; // YYYY-MM-DD for sorting
+  date: string;
 }
 
-const LINKS: LinkItem[] = [
+const LINKS: LinkItem[] = ([
   {
     id: "2",
-    type: "article" as const,
     type: "article",
     url: "https://journalducoin.com/bitcoin/bitcoin-michael-saylor-predit-btc-13-millions-dollars-21-ans/",
     title: "Michael Saylor prédit un BTC à 13 millions de dollars dans 21 ans",
@@ -25,7 +26,6 @@ const LINKS: LinkItem[] = [
   },
   {
     id: "1",
-    type: "article" as const,
     type: "article",
     url: "https://bitcoin.fr/lettre-ouverte-a-ma-famille/",
     title: "Lettre ouverte à ma famille",
@@ -35,7 +35,15 @@ const LINKS: LinkItem[] = [
       "https://bitcoin.fr/wp-content/uploads/2021/10/Lettre-ouverte-a-ma-famille-696x365.jpg",
     date: "2021-10-15",
   },
-].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+] as const satisfies readonly LinkItem[]).slice().sort(
+  (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+);
+
+const typeLabel: Record<LinkType, { icon: typeof Newspaper; label: string }> = {
+  article: { icon: Newspaper, label: "Article" },
+  youtube: { icon: Youtube, label: "YouTube" },
+  tweet: { icon: Twitter, label: "Tweet" },
+};
 
 const LinksSection = () => {
   return (
@@ -54,45 +62,49 @@ const LinksSection = () => {
         </div>
 
         <div className="max-w-3xl mx-auto grid gap-6">
-          {LINKS.map((link) => (
-            <a
-              key={link.id}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group rounded-xl border border-border bg-card/50 hover:border-btc-orange/30 overflow-hidden transition-all hover:shadow-lg hover:shadow-btc-orange/5"
-            >
-              <div className="aspect-video w-full overflow-hidden">
-                <img
-                  src={link.image}
-                  alt={link.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="p-5 space-y-2">
-                <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-btc-orange">
-                  <Newspaper className="w-3.5 h-3.5" />
-                  <span>Article</span>
-                  <span className="text-muted-foreground ml-auto">
-                    {new Date(link.date).toLocaleDateString("fr-FR", {
-                      day: "numeric",
-                      month: "long",
-                      year: "numeric",
-                    })}
-                  </span>
+          {LINKS.map((link) => {
+            const cfg = typeLabel[link.type];
+            const Icon = cfg.icon;
+            return (
+              <a
+                key={link.id}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group rounded-xl border border-border bg-card/50 hover:border-btc-orange/30 overflow-hidden transition-all hover:shadow-lg hover:shadow-btc-orange/5"
+              >
+                <div className="aspect-video w-full overflow-hidden">
+                  <img
+                    src={link.image}
+                    alt={link.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
-                <h3 className="text-lg font-bold text-foreground group-hover:text-btc-orange transition-colors leading-snug">
-                  {link.title}
-                </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
-                  {link.description}
-                </p>
-                <div className="flex items-center gap-1 text-btc-orange text-sm font-medium pt-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                  Lire l'article <ExternalLink className="w-3.5 h-3.5" />
+                <div className="p-5 space-y-2">
+                  <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-btc-orange">
+                    <Icon className="w-3.5 h-3.5" />
+                    <span>{cfg.label}</span>
+                    <span className="text-muted-foreground ml-auto">
+                      {new Date(link.date).toLocaleDateString("fr-FR", {
+                        day: "numeric",
+                        month: "long",
+                        year: "numeric",
+                      })}
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-bold text-foreground group-hover:text-btc-orange transition-colors leading-snug">
+                    {link.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
+                    {link.description}
+                  </p>
+                  <div className="flex items-center gap-1 text-btc-orange text-sm font-medium pt-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                    Lire l'article <ExternalLink className="w-3.5 h-3.5" />
+                  </div>
                 </div>
-              </div>
-            </a>
-          ))}
+              </a>
+            );
+          })}
         </div>
       </div>
     </section>
