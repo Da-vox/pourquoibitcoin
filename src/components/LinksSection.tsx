@@ -13,6 +13,7 @@ interface LinkItem {
 const LINKS: LinkItem[] = [
   {
     id: "2",
+    type: "article" as const,
     type: "article",
     url: "https://journalducoin.com/bitcoin/bitcoin-michael-saylor-predit-btc-13-millions-dollars-21-ans/",
     title: "Michael Saylor prédit un BTC à 13 millions de dollars dans 21 ans",
