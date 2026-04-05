@@ -1,7 +1,7 @@
 import HeroSection from "@/components/HeroSection";
 import BtcPriceChart from "@/components/BtcPriceChart";
 import BitcoinCalculator from "@/components/BitcoinCalculator";
-import FAQSection from "@/components/FAQSection";
+
 import LinksSection from "@/components/LinksSection";
 import ContactSection from "@/components/ContactSection";
 import FooterSection from "@/components/FooterSection";
