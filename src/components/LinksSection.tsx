@@ -132,7 +132,7 @@ const LinksSection = () => {
                       {link.description}
                     </p>
                     <div className="flex items-center gap-1 text-btc-orange text-sm font-medium pt-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                      Lire l'article <ExternalLink className="w-3.5 h-3.5" />
+                      {link.type === "youtube" ? "Voir la vidéo" : "Lire l'article"} <ExternalLink className="w-3.5 h-3.5" />
                     </div>
                   </div>
                 </a>
