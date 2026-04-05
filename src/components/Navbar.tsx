@@ -5,6 +5,7 @@ const navItems = [
   { label: "Accueil", to: "/" },
   { label: "Fondamentaux", to: "/fondamentaux" },
   { label: "Arguments", to: "/arguments" },
+  { label: "Sécuriser", to: "/securiser" },
 ];
 
 const Navbar = () => {
