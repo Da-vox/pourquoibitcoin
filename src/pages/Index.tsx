@@ -15,7 +15,7 @@ const Index = () => {
       <HeroSection />
       <BtcPriceChart />
       <BitcoinCalculator />
-      <FAQSection />
+      
       <LinksSection />
       <section className="py-12 text-center">
         <p className="text-muted-foreground mb-4 text-sm">Partage ce site à quelqu'un qui a besoin de comprendre Bitcoin :</p>

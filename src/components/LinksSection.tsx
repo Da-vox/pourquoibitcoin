@@ -15,6 +15,16 @@ interface LinkItem {
 
 const LINKS: LinkItem[] = ([
   {
+    id: "5",
+    type: "youtube",
+    url: "https://youtu.be/97QYykgZlA4?is=rkFWpvjKDyKOtuur",
+    title: "Comprendre Bitcoin en quelques minutes",
+    description:
+      "Une vidéo claire et accessible pour comprendre les bases de Bitcoin, son fonctionnement et pourquoi il change la donne.",
+    image: "https://img.youtube.com/vi/97QYykgZlA4/maxresdefault.jpg",
+    date: "2024-01-01",
+  },
+  {
     id: "4",
     type: "article",
     url: "https://news.bitcoin.com/fr/btq-lance-un-reseau-de-test-bitcoin-resistant-a-linformatique-quantique-grace-au-bip-360/",
