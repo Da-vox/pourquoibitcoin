@@ -15,6 +15,46 @@ interface LinkItem {
 
 const LINKS: LinkItem[] = ([
   {
+    id: "9",
+    type: "youtube",
+    url: "https://youtu.be/dIRwGcuOR1s?is=O8engs4DLlBhDN_Y",
+    title: "Bitcoin : La révolution monétaire expliquée",
+    description:
+      "Une vidéo pédagogique qui explique en profondeur comment Bitcoin fonctionne techniquement et pourquoi il représente une révolution monétaire.",
+    image: "https://img.youtube.com/vi/dIRwGcuOR1s/maxresdefault.jpg",
+    date: "2024-06-01",
+  },
+  {
+    id: "8",
+    type: "article",
+    url: "https://cryptoast.fr/pourquoi-21-millions-de-bitcoins/",
+    title: "Pourquoi seulement 21 millions de bitcoins ?",
+    description:
+      "Cryptoast décrypte la raison derrière la limite des 21 millions de BTC, un choix fondamental de Satoshi Nakamoto qui garantit la rareté absolue de Bitcoin.",
+    image: "https://cryptoast.fr/wp-content/uploads/2023/01/pourquoi-21-millions-bitcoin.jpg",
+    date: "2023-01-15",
+  },
+  {
+    id: "7",
+    type: "article",
+    url: "https://www.reddit.com/r/Bitcoin/comments/1n6ogzs/you_dont_need_more_crypto_news_you_need_021/",
+    title: "You don't need more crypto news — you need 0.21 BTC",
+    description:
+      "Un post Reddit viral qui explique pourquoi accumuler 0.21 BTC (soit un millionième de l'offre totale) est plus important que suivre les news crypto au quotidien.",
+    image: "https://www.redditstatic.com/desktop2x/img/favicon/android-icon-192x192.png",
+    date: "2025-04-01",
+  },
+  {
+    id: "6",
+    type: "youtube",
+    url: "https://youtu.be/O1muDph8Tg8?is=Wzpz5Ml_t3BRsT01",
+    title: "Bitcoin pour les nuls — tout comprendre en 30 min",
+    description:
+      "Une explication complète de Bitcoin en 30 minutes : histoire, technologie, enjeux économiques et pourquoi ça change tout.",
+    image: "https://img.youtube.com/vi/O1muDph8Tg8/maxresdefault.jpg",
+    date: "2024-03-15",
+  },
+  {
     id: "5",
     type: "youtube",
     url: "https://youtu.be/97QYykgZlA4?is=rkFWpvjKDyKOtuur",
