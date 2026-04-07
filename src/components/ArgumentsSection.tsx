@@ -79,8 +79,8 @@ const ArgumentCard = ({
     <div
       className={`rounded-xl border transition-all duration-300 cursor-pointer ${
         open
-          ? "border-primary/50 glass-card glow-btc-sm"
-          : "border-border bg-card/30 hover:border-primary/20"
+          ? "border-btc-orange/50 bg-card glow-btc-sm"
+          : "border-border bg-card/50 hover:border-btc-orange/20"
       }`}
       onClick={() => setOpen(!open)}
     >
@@ -95,7 +95,7 @@ const ArgumentCard = ({
       </div>
       {open && (
         <div className="px-6 pb-6 pt-0">
-          <div className="neon-line mb-5" />
+          <div className="h-px bg-gradient-btc opacity-30 mb-5" />
           <p className="text-secondary-foreground leading-relaxed text-base">
             {counter}
           </p>
@@ -107,13 +107,13 @@ const ArgumentCard = ({
 
 const ArgumentsSection = () => {
   return (
-    <section id="arguments" className="py-24 cyber-grid">
+    <section id="arguments" className="py-24 bg-btc-dark">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <p className="font-mono text-sm tracking-[0.3em] uppercase text-primary mb-4">
+          <p className="font-mono text-sm tracking-[0.3em] uppercase text-btc-orange mb-4">
             Le guide anti-oncle
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-display">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             <span className="text-gradient-btc">10 arguments</span> pour le
             prochain repas de famille
           </h2>

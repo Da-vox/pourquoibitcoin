@@ -70,7 +70,7 @@ const LINKS: LinkItem[] = ([
     url: "https://news.bitcoin.com/fr/btq-lance-un-reseau-de-test-bitcoin-resistant-a-linformatique-quantique-grace-au-bip-360/",
     title: "BTQ lance un réseau de test Bitcoin résistant à l'informatique quantique grâce au BIP 360",
     description:
-      "BTQ Technologies a lancé la première implémentation fonctionnelle du BIP 360 sur son réseau de test Bitcoin Quantum.",
+      "BTQ Technologies a lancé la première implémentation fonctionnelle du BIP 360 sur son réseau de test Bitcoin Quantum. Cette mise à jour permet aux développeurs de tester des transactions Bitcoin résistantes à l'informatique quantique dans un environnement réel.",
     image:
       "https://static.news.bitcoin.com/wp-content/uploads/2026/03/btq-launches-quantum-resistant-bitcoin-testnet-with-bip-360.jpg",
     date: "2026-03-21",
@@ -81,7 +81,7 @@ const LINKS: LinkItem[] = ([
     url: "https://www.cointribune.com/en/bitcoin-an-old-line-of-code-from-satoshi-ready-to-change-the-game/",
     title: "Bitcoin : une ancienne ligne de code de Satoshi prête à changer la donne",
     description:
-      "L'opcode OP_CAT, aussi connu sous le nom de BIP-420, pourrait transformer le fonctionnement de la blockchain Bitcoin.",
+      "L'opcode OP_CAT, aussi connu sous le nom de BIP-420, pourrait transformer le fonctionnement de la blockchain Bitcoin. Cette ligne de code faisait partie du protocole original mais a été retirée par Satoshi en 2010. Aujourd'hui, des développeurs veulent la réintroduire pour permettre des smart contracts sur Bitcoin.",
     image:
       "https://www.cointribune.com/app/uploads/2024/09/Bitcoin-OP_CAT.png",
     date: "2024-09-01",
@@ -92,7 +92,7 @@ const LINKS: LinkItem[] = ([
     url: "https://journalducoin.com/bitcoin/bitcoin-michael-saylor-predit-btc-13-millions-dollars-21-ans/",
     title: "Michael Saylor prédit un BTC à 13 millions de dollars dans 21 ans",
     description:
-      "Alors que le Bitcoin peine à franchir les 60 000 $, le très maximaliste Michael Saylor réitère ses perspectives au micro de CNBC.",
+      "Alors que le Bitcoin peine à franchir les 60 000 $, le très maximaliste Michael Saylor réitère ses perspectives au micro de CNBC : un BTC à 13 millions de dollars dans 21 ans. Sa stratégie de trésorerie Bitcoin chez MicroStrategy a déjà battu toutes les entreprises du S&P.",
     image:
       "https://journalducoin-com.exactdn.com/app/uploads/2023/05/Microstrategy_2.jpg?strip=all&lossy=1&quality=90&webp=90&ssl=1",
     date: "2024-09-10",
@@ -103,7 +103,7 @@ const LINKS: LinkItem[] = ([
     url: "https://bitcoin.fr/lettre-ouverte-a-ma-famille/",
     title: "Lettre ouverte à ma famille",
     description:
-      "Après plusieurs années et dîners à parler de bitcoin, l'auteur écrit un long message à sa famille au sujet de l'inflation, de leurs économies et de bitcoin.",
+      "Après plusieurs années et dîners à parler de bitcoin, l'auteur écrit un long message à sa famille au sujet de l'inflation, de leurs économies et de bitcoin. Un texte parfait à partager pour expliquer Bitcoin simplement à vos proches.",
     image:
       "https://bitcoin.fr/wp-content/uploads/2021/10/Lettre-ouverte-a-ma-famille-696x365.jpg",
     date: "2021-10-15",
@@ -120,13 +120,13 @@ const typeLabel: Record<LinkType, { icon: typeof Newspaper; label: string }> = {
 
 const LinksSection = () => {
   return (
-    <section className="py-24">
+    <section className="py-24 bg-btc-dark">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
-          <p className="font-mono text-sm tracking-[0.3em] uppercase text-primary mb-4">
+          <p className="font-mono text-sm tracking-[0.3em] uppercase text-btc-orange mb-4">
             Veille Bitcoin
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-display">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Ressources & <span className="text-gradient-btc">Liens</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto text-lg">
@@ -144,7 +144,7 @@ const LinksSection = () => {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group rounded-xl glass-card hover:border-primary/30 overflow-hidden transition-all hover:shadow-lg hover:shadow-primary/5"
+                  className="group rounded-xl border border-border bg-card/50 hover:border-btc-orange/30 overflow-hidden transition-all hover:shadow-lg hover:shadow-btc-orange/5"
                 >
                   <div className="aspect-video w-full overflow-hidden">
                     <img
@@ -154,7 +154,7 @@ const LinksSection = () => {
                     />
                   </div>
                   <div className="p-5 space-y-2">
-                    <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-primary">
+                    <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-btc-orange">
                       <Icon className="w-3.5 h-3.5" />
                       <span>{cfg.label}</span>
                       <span className="text-muted-foreground ml-auto">
@@ -165,24 +165,25 @@ const LinksSection = () => {
                         })}
                       </span>
                     </div>
-                    <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors leading-snug">
+                    <h3 className="text-lg font-bold text-foreground group-hover:text-btc-orange transition-colors leading-snug">
                       {link.title}
                     </h3>
                     <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
                       {link.description}
                     </p>
-                    <div className="flex items-center gap-1 text-primary text-sm font-medium pt-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <div className="flex items-center gap-1 text-btc-orange text-sm font-medium pt-1 opacity-0 group-hover:opacity-100 transition-opacity">
                       {link.type === "youtube" ? "Voir la vidéo" : "Lire l'article"} <ExternalLink className="w-3.5 h-3.5" />
                     </div>
                   </div>
                 </a>
                 {index === 0 && LINKS.length > 1 && (
-                  <div className="rounded-xl glass-card p-6 text-center">
+                  <div className="rounded-xl border border-border bg-card/30 p-6 text-center">
                     <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground mb-3">Publicité</p>
                     <div
                       className="min-h-[250px] flex items-center justify-center rounded-lg bg-muted/30 border border-dashed border-border"
                       id="adsense-slot"
                     >
+                      {/* Remplacer par le script AdSense une fois l'ID obtenu */}
                       <p className="text-muted-foreground text-sm">Emplacement publicitaire AdSense</p>
                     </div>
                   </div>

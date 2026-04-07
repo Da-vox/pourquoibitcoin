@@ -15,10 +15,10 @@ const ComparisonTable = () => {
     <section className="py-24">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
-          <p className="font-mono text-sm tracking-[0.3em] uppercase text-primary mb-4">
+          <p className="font-mono text-sm tracking-[0.3em] uppercase text-btc-orange mb-4">
             Face à face
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-display">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             <span className="text-gradient-btc">₿ Bitcoin</span> vs € Monnaie fiat
           </h2>
         </div>
@@ -26,11 +26,11 @@ const ComparisonTable = () => {
         <div className="max-w-3xl mx-auto overflow-x-auto">
           <table className="w-full border-collapse">
             <thead>
-              <tr className="border-b border-primary/30">
+              <tr className="border-b border-btc-orange/30">
                 <th className="py-3 px-4 text-left text-xs font-mono uppercase tracking-wider text-muted-foreground">
                   Critère
                 </th>
-                <th className="py-3 px-4 text-center text-xs font-mono uppercase tracking-wider text-primary">
+                <th className="py-3 px-4 text-center text-xs font-mono uppercase tracking-wider text-btc-orange">
                   ₿ Bitcoin
                 </th>
                 <th className="py-3 px-4 text-center text-xs font-mono uppercase tracking-wider text-muted-foreground">
@@ -47,7 +47,7 @@ const ComparisonTable = () => {
                   <td className="py-4 px-4 text-sm font-medium text-foreground">
                     {row.critere}
                   </td>
-                  <td className="py-4 px-4 text-center text-sm font-semibold text-primary">
+                  <td className="py-4 px-4 text-center text-sm font-semibold text-btc-orange">
                     {row.btc}
                   </td>
                   <td className="py-4 px-4 text-center text-sm text-muted-foreground">

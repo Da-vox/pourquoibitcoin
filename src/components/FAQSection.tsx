@@ -48,10 +48,10 @@ const FAQSection = () => {
     <section className="py-24">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <p className="font-mono text-sm tracking-[0.3em] uppercase text-primary mb-4">
+          <p className="font-mono text-sm tracking-[0.3em] uppercase text-btc-orange mb-4">
             Questions fréquentes
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-display">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             <span className="text-gradient-btc">FAQ</span> Bitcoin
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto text-lg">
@@ -65,7 +65,7 @@ const FAQSection = () => {
               <AccordionItem
                 key={i}
                 value={`faq-${i}`}
-                className="rounded-xl glass-card px-6 hover:border-primary/30 transition-colors"
+                className="rounded-xl border border-border bg-card/50 px-6 hover:border-btc-orange/30 transition-colors"
               >
                 <AccordionTrigger className="text-left text-base font-semibold text-foreground hover:no-underline">
                   {faq.question}

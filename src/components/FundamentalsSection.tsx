@@ -41,13 +41,13 @@ const fundamentals = [
 
 const FundamentalsSection = () => {
   return (
-    <section id="fondamentaux" className="py-24 relative cyber-grid">
+    <section id="fondamentaux" className="py-24 relative">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <p className="font-mono text-sm tracking-[0.3em] uppercase text-primary mb-4">
+          <p className="font-mono text-sm tracking-[0.3em] uppercase text-btc-orange mb-4">
             Pourquoi Bitcoin ?
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-display">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Les <span className="text-gradient-btc">fondamentaux</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto text-lg">
@@ -59,12 +59,12 @@ const FundamentalsSection = () => {
           {fundamentals.map((item, i) => (
             <div
               key={i}
-              className="group p-8 rounded-xl glass-card hover:border-primary/40 transition-all duration-300 hover:glow-btc-sm"
+              className="group p-8 rounded-xl bg-card border border-border hover:border-btc-orange/40 transition-all duration-300 hover:glow-btc-sm"
             >
               <div className="w-12 h-12 rounded-lg bg-gradient-btc flex items-center justify-center mb-5">
                 <item.icon className="w-6 h-6 text-primary-foreground" />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3 font-display text-base">
+              <h3 className="text-xl font-semibold text-foreground mb-3">
                 {item.title}
               </h3>
               <p className="text-muted-foreground leading-relaxed">
