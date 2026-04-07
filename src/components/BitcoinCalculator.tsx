@@ -1,7 +1,6 @@
 import { useState, useMemo } from "react";
 import { Calculator, TrendingUp } from "lucide-react";
 
-// Historical BTC prices (approximate yearly averages / start-of-year prices in USD)
 const BTC_PRICES: Record<number, number> = {
   2011: 0.3,
   2012: 5,
@@ -20,7 +19,7 @@ const BTC_PRICES: Record<number, number> = {
   2025: 94000,
 };
 
-const CURRENT_BTC_PRICE = 105000; // Approximate current price
+const CURRENT_BTC_PRICE = 105000;
 
 const years = Object.keys(BTC_PRICES)
   .map(Number)
@@ -40,13 +39,13 @@ const BitcoinCalculator = () => {
   }, [amount, year]);
 
   return (
-    <section className="py-24 bg-btc-dark">
+    <section className="py-24">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
-          <p className="font-mono text-sm tracking-[0.3em] uppercase text-btc-orange mb-4">
+          <p className="font-mono text-sm tracking-[0.3em] uppercase text-primary mb-4">
             Simulateur
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 font-display">
             <span className="text-gradient-btc">Calculateur</span> Bitcoin
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto text-lg">
@@ -54,7 +53,7 @@ const BitcoinCalculator = () => {
           </p>
         </div>
 
-        <div className="max-w-lg mx-auto rounded-xl border border-border bg-card p-8 space-y-6">
+        <div className="max-w-lg mx-auto rounded-xl glass-card p-8 space-y-6">
           <div className="space-y-2">
             <label className="text-sm font-medium text-foreground">
               Montant investi (€)
@@ -86,8 +85,8 @@ const BitcoinCalculator = () => {
           </div>
 
           {result && (
-            <div className="rounded-lg bg-muted/50 border border-btc-orange/20 p-6 space-y-4">
-              <div className="flex items-center gap-2 text-btc-orange">
+            <div className="rounded-lg bg-muted/50 border border-primary/20 p-6 space-y-4">
+              <div className="flex items-center gap-2 text-primary">
                 <TrendingUp className="w-5 h-5" />
                 <span className="font-mono text-sm uppercase tracking-wider">
                   Résultat
@@ -113,7 +112,7 @@ const BitcoinCalculator = () => {
                   })}
                 </p>
               </div>
-              <p className="text-btc-orange font-semibold text-lg">
+              <p className="text-primary font-semibold text-lg">
                 × {result.multiplier.toLocaleString("fr-FR", { maximumFractionDigits: 0 })}
               </p>
             </div>
