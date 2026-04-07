@@ -59,7 +59,6 @@ const BtcPriceChart = () => {
             price: Math.round(price),
           })
         );
-        // Downsample for performance
         const step = Math.max(1, Math.floor(prices.length / 200));
         const sampled = prices.filter((_, i) => i % step === 0);
         setData(sampled);
@@ -84,18 +83,18 @@ const BtcPriceChart = () => {
     <section className="py-24">
       <div className="container mx-auto px-6">
         <div className="text-center mb-10">
-          <p className="font-mono text-sm tracking-[0.3em] uppercase text-btc-orange mb-4">
+          <p className="font-mono text-sm tracking-[0.3em] uppercase text-primary mb-4">
             Cours en direct
           </p>
           {currentPrice && (
-            <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-3">
+            <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-3 font-display">
               {formatPrice(currentPrice)}
             </h2>
           )}
           {data.length > 1 && (
             <p
               className={`text-lg font-semibold ${
-                isPositive ? "text-green-400" : "text-red-400"
+                isPositive ? "text-neon-green" : "text-destructive"
               }`}
             >
               {isPositive ? "+" : ""}
@@ -123,7 +122,7 @@ const BtcPriceChart = () => {
         </div>
 
         {/* Chart */}
-        <div className="rounded-2xl border border-border bg-card p-4 md:p-8">
+        <div className="rounded-2xl glass-card p-4 md:p-8">
           {loading ? (
             <div className="h-[350px] flex items-center justify-center text-muted-foreground">
               Chargement…
@@ -139,19 +138,19 @@ const BtcPriceChart = () => {
                   <linearGradient id="btcGradient" x1="0" y1="0" x2="0" y2="1">
                     <stop
                       offset="0%"
-                      stopColor="hsl(30 100% 50%)"
+                      stopColor="hsl(170 100% 50%)"
                       stopOpacity={0.4}
                     />
                     <stop
                       offset="100%"
-                      stopColor="hsl(30 100% 50%)"
+                      stopColor="hsl(170 100% 50%)"
                       stopOpacity={0}
                     />
                   </linearGradient>
                 </defs>
                 <XAxis
                   dataKey="date"
-                  stroke="hsl(220 15% 35%)"
+                  stroke="hsl(240 10% 30%)"
                   fontSize={12}
                   tickLine={false}
                   axisLine={false}
@@ -159,7 +158,7 @@ const BtcPriceChart = () => {
                   minTickGap={60}
                 />
                 <YAxis
-                  stroke="hsl(220 15% 35%)"
+                  stroke="hsl(240 10% 30%)"
                   fontSize={12}
                   tickLine={false}
                   axisLine={false}
@@ -169,10 +168,10 @@ const BtcPriceChart = () => {
                 />
                 <Tooltip
                   contentStyle={{
-                    backgroundColor: "hsl(220 25% 12%)",
-                    border: "1px solid hsl(220 25% 18%)",
+                    backgroundColor: "hsl(240 12% 8%)",
+                    border: "1px solid hsl(170 100% 50% / 0.3)",
                     borderRadius: "0.5rem",
-                    color: "hsl(35 100% 95%)",
+                    color: "hsl(180 10% 92%)",
                     fontSize: 14,
                   }}
                   formatter={(value: number) => [formatPrice(value), "BTC"]}
@@ -180,7 +179,7 @@ const BtcPriceChart = () => {
                 <Area
                   type="monotone"
                   dataKey="price"
-                  stroke="hsl(30 100% 50%)"
+                  stroke="hsl(170 100% 50%)"
                   strokeWidth={2}
                   fill="url(#btcGradient)"
                 />

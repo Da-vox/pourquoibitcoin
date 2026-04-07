@@ -43,13 +43,13 @@ const Securiser = () => {
     <main className="min-h-screen bg-background">
       <Navbar />
       <div className="pt-20">
-        <section className="py-24">
+        <section className="py-24 cyber-grid">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
-              <p className="font-mono text-sm tracking-[0.3em] uppercase text-btc-orange mb-4">
+              <p className="font-mono text-sm tracking-[0.3em] uppercase text-primary mb-4">
                 Protège tes satoshis
               </p>
-              <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 font-display">
                 <span className="text-gradient-btc">Sécuriser</span> ses Bitcoin
               </h1>
               <p className="text-muted-foreground max-w-2xl mx-auto text-lg mb-8">
@@ -64,13 +64,13 @@ const Securiser = () => {
               {steps.map((step, i) => (
                 <div
                   key={i}
-                  className="rounded-xl border border-border bg-card/50 p-8 hover:border-btc-orange/30 transition-colors"
+                  className="rounded-xl glass-card p-8 hover:border-primary/30 transition-colors"
                 >
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-lg bg-gradient-btc flex items-center justify-center">
                       <step.icon className="w-5 h-5 text-primary-foreground" />
                     </div>
-                    <h2 className="text-xl font-bold text-foreground">
+                    <h2 className="text-xl font-bold text-foreground font-display text-base">
                       {step.title}
                     </h2>
                   </div>
@@ -78,7 +78,7 @@ const Securiser = () => {
                     {step.content}
                   </p>
                   {step.highlight && (
-                    <p className="mt-4 text-btc-orange font-bold text-lg italic">
+                    <p className="mt-4 text-primary font-bold text-lg italic">
                       {step.highlight}
                     </p>
                   )}
@@ -88,14 +88,14 @@ const Securiser = () => {
 
             {/* Guide de configuration */}
             <div className="max-w-3xl mx-auto mb-20">
-              <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
+              <h2 className="text-3xl font-bold text-foreground mb-8 text-center font-display">
                 🛠️ Configuration <span className="text-gradient-btc">étape par étape</span>
               </h2>
               <div className="space-y-4">
                 {setupSteps.map((step, i) => (
                   <div
                     key={i}
-                    className="flex gap-4 items-start p-5 rounded-xl border border-border bg-card/50"
+                    className="flex gap-4 items-start p-5 rounded-xl glass-card"
                   >
                     <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-btc flex items-center justify-center text-primary-foreground font-bold text-sm">
                       {i + 1}
@@ -110,7 +110,7 @@ const Securiser = () => {
 
             {/* Erreurs à éviter */}
             <div className="max-w-3xl mx-auto mb-20">
-              <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
+              <h2 className="text-3xl font-bold text-foreground mb-8 text-center font-display">
                 ⚠️ Les erreurs <span className="text-gradient-btc">à ne jamais faire</span>
               </h2>
               <div className="grid sm:grid-cols-2 gap-4">
@@ -134,9 +134,9 @@ const Securiser = () => {
             </div>
 
             {/* CTA Ledger */}
-            <div className="max-w-2xl mx-auto text-center rounded-xl border border-btc-orange/30 bg-card p-10 glow-btc-sm">
-              <CheckCircle className="w-12 h-12 text-btc-orange mx-auto mb-4" />
-              <h2 className="text-2xl font-bold text-foreground mb-3">
+            <div className="max-w-2xl mx-auto text-center rounded-xl border border-primary/30 glass-card p-10 glow-btc-sm">
+              <CheckCircle className="w-12 h-12 text-primary mx-auto mb-4" />
+              <h2 className="text-2xl font-bold text-foreground mb-3 font-display">
                 Prêt à sécuriser tes BTC ?
               </h2>
               <p className="text-muted-foreground mb-6">
