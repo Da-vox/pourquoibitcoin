@@ -14,7 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ["Space Grotesk", "sans-serif"],
+        display: ["Orbitron", "sans-serif"],
+        body: ["Inter", "sans-serif"],
         mono: ["JetBrains Mono", "monospace"],
       },
       colors: {
@@ -52,10 +53,15 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         btc: {
-          orange: "hsl(var(--btc-orange))",
-          gold: "hsl(var(--btc-gold))",
-          dark: "hsl(var(--btc-dark))",
-          navy: "hsl(var(--btc-navy))",
+          orange: "hsl(var(--neon-cyan))",
+          gold: "hsl(var(--neon-purple))",
+          dark: "hsl(var(--neon-dark))",
+          navy: "hsl(var(--neon-navy))",
+        },
+        neon: {
+          cyan: "hsl(var(--neon-cyan))",
+          purple: "hsl(var(--neon-purple))",
+          green: "hsl(var(--neon-green))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -90,12 +96,22 @@ export default {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" },
         },
+        "flicker": {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.8" },
+        },
+        "scan-line": {
+          "0%": { transform: "translateY(-100%)" },
+          "100%": { transform: "translateY(100%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "pulse-glow": "pulse-glow 3s ease-in-out infinite",
         "float": "float 6s ease-in-out infinite",
+        "flicker": "flicker 4s ease-in-out infinite",
+        "scan-line": "scan-line 8s linear infinite",
       },
     },
   },
