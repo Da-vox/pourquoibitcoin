@@ -12,7 +12,7 @@ const AboutSection = () => {
             Le mouvement <span className="text-gradient-btc">#StudyBitcoin</span>
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-            Ce site fait partie du mouvement <span className="text-btc-orange font-semibold">#StudyBitcoin</span> dans le monde francophone. 
+            Ce site fait via l IA Claude et Lovable fait partie du mouvement <span className="text-btc-orange font-semibold">#StudyBitcoin</span> dans le monde francophone. 
             Notre mission : expliquer et vulgariser la technique derrière Bitcoin. 
             Pas de jargon financier, pas de promesses de gains — juste de la compréhension.
           </p>
