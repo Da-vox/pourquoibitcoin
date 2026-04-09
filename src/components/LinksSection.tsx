@@ -134,7 +134,7 @@ const LinksSection = () => {
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto grid gap-6">
+        <div className="max-w-4xl mx-auto grid gap-4 md:grid-cols-2">
           {LINKS.map((link, index) => {
             const cfg = typeLabel[link.type];
             const Icon = cfg.icon;
@@ -144,43 +144,43 @@ const LinksSection = () => {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group rounded-xl border border-border bg-card/50 hover:border-btc-orange/30 overflow-hidden transition-all hover:shadow-lg hover:shadow-btc-orange/5"
+                  className="group rounded-xl border border-border bg-card/50 hover:border-btc-orange/30 overflow-hidden transition-all hover:shadow-lg hover:shadow-btc-orange/5 flex flex-col"
                 >
-                  <div className="aspect-video w-full overflow-hidden">
+                  <div className="aspect-[16/9] w-full overflow-hidden">
                     <img
                       src={link.image}
                       alt={link.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
-                  <div className="p-5 space-y-2">
+                  <div className="p-4 space-y-1.5 flex-1 flex flex-col">
                     <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-btc-orange">
-                      <Icon className="w-3.5 h-3.5" />
+                      <Icon className="w-3 h-3" />
                       <span>{cfg.label}</span>
-                      <span className="text-muted-foreground ml-auto">
+                      <span className="text-muted-foreground ml-auto text-[10px]">
                         {new Date(link.date).toLocaleDateString("fr-FR", {
                           day: "numeric",
-                          month: "long",
+                          month: "short",
                           year: "numeric",
                         })}
                       </span>
                     </div>
-                    <h3 className="text-lg font-bold text-foreground group-hover:text-btc-orange transition-colors leading-snug">
+                    <h3 className="text-sm font-bold text-foreground group-hover:text-btc-orange transition-colors leading-snug">
                       {link.title}
                     </h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
+                    <p className="text-muted-foreground text-xs leading-relaxed line-clamp-2 flex-1">
                       {link.description}
                     </p>
-                    <div className="flex items-center gap-1 text-btc-orange text-sm font-medium pt-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                      {link.type === "youtube" ? "Voir la vidéo" : "Lire l'article"} <ExternalLink className="w-3.5 h-3.5" />
+                    <div className="flex items-center gap-1 text-btc-orange text-xs font-medium pt-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                      {link.type === "youtube" ? "Voir la vidéo" : "Lire l'article"} <ExternalLink className="w-3 h-3" />
                     </div>
                   </div>
                 </a>
                 {index === 0 && LINKS.length > 1 && (
-                  <div className="rounded-xl border border-border bg-card/30 p-6 text-center">
-                    <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground mb-3">Publicité</p>
+                  <div className="rounded-xl border border-border bg-card/30 p-4 text-center md:col-span-2">
+                    <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground mb-2">Publicité</p>
                     <div
-                      className="min-h-[250px] flex items-center justify-center rounded-lg bg-muted/30 border border-dashed border-border"
+                      className="min-h-[200px] flex items-center justify-center rounded-lg bg-muted/30 border border-dashed border-border"
                       id="adsense-slot"
                     >
                       {/* Remplacer par le script AdSense une fois l'ID obtenu */}
