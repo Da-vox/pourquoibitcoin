@@ -6,110 +6,50 @@
 
 @layer base {
   :root {
-    --background: 45 33% 97%;
-    --foreground: 44 12% 19%;
+    --background: 220 30% 8%;
+    --foreground: 35 100% 95%;
 
-    --card: 45 33% 97%;
-    --card-foreground: 0 0% 8%;
+    --card: 220 25% 12%;
+    --card-foreground: 35 100% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 44 16% 13%;
+    --popover: 220 25% 12%;
+    --popover-foreground: 35 100% 95%;
 
-    --primary: 14 55% 53%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 30 100% 50%;
+    --primary-foreground: 220 30% 8%;
 
-    --secondary: 40 16% 89%;
-    --secondary-foreground: 42 10% 30%;
+    --secondary: 220 40% 18%;
+    --secondary-foreground: 35 100% 90%;
 
-    --muted: 40 27% 90%;
-    --muted-foreground: 40 3% 50%;
+    --muted: 220 25% 15%;
+    --muted-foreground: 220 15% 55%;
 
-    --accent: 40 16% 89%;
-    --accent-foreground: 48 20% 13%;
+    --accent: 30 90% 45%;
+    --accent-foreground: 220 30% 8%;
 
-    --destructive: 0 0% 8%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 40 5% 84%;
-    --input: 43 5% 68%;
-    --ring: 14 55% 53%;
+    --border: 220 25% 18%;
+    --input: 220 25% 18%;
+    --ring: 30 100% 50%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --chart-1: 14 47% 44%;
-    --chart-2: 253 56% 74%;
-    --chart-3: 40 18% 82%;
-    --chart-4: 253 40% 83%;
-    --chart-5: 14 58% 44%;
+    --btc-orange: 30 100% 50%;
+    --btc-gold: 38 90% 55%;
+    --btc-dark: 220 35% 6%;
+    --btc-navy: 220 40% 14%;
+    --btc-glow: 30 100% 50%;
 
-    --sidebar-background: 45 20% 95%;
-    --sidebar-foreground: 0 1% 24%;
-    --sidebar-primary: 14 55% 53%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 40 16% 89%;
-    --sidebar-accent-foreground: 0 0% 20%;
-    --sidebar-border: 0 0% 92%;
-    --sidebar-ring: 0 0% 71%;
-
-    --btc-orange: 14 55% 53%;
-    --btc-gold: 14 58% 44%;
-    --btc-dark: 44 12% 19%;
-    --btc-navy: 40 27% 90%;
-    --btc-glow: 14 55% 53%;
-
-    --font-display: 'Space Grotesk', sans-serif;
-    --font-mono: 'JetBrains Mono', monospace;
-  }
-
-  .dark {
-    --background: 60 2% 14%;
-    --foreground: 40 8% 74%;
-
-    --card: 60 2% 14%;
-    --card-foreground: 45 33% 97%;
-
-    --popover: 60 2% 18%;
-    --popover-foreground: 40 3% 89%;
-
-    --primary: 14 60% 60%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 45 33% 97%;
-    --secondary-foreground: 60 2% 18%;
-
-    --muted: 60 5% 10%;
-    --muted-foreground: 40 8% 69%;
-
-    --accent: 48 12% 9%;
-    --accent-foreground: 45 20% 95%;
-
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 48 5% 23%;
-    --input: 48 5% 30%;
-    --ring: 14 60% 60%;
-
-    --chart-1: 14 47% 44%;
-    --chart-2: 253 56% 74%;
-    --chart-3: 48 12% 9%;
-    --chart-4: 253 22% 23%;
-    --chart-5: 14 58% 44%;
-
-    --sidebar-background: 30 3% 12%;
-    --sidebar-foreground: 40 8% 74%;
-    --sidebar-primary: 0 0% 20%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 60 5% 6%;
-    --sidebar-accent-foreground: 40 8% 74%;
-    --sidebar-border: 0 0% 92%;
-    --sidebar-ring: 0 0% 71%;
-
-    --btc-orange: 14 60% 60%;
-    --btc-gold: 14 58% 44%;
-    --btc-dark: 60 2% 14%;
-    --btc-navy: 60 5% 10%;
-    --btc-glow: 14 60% 60%;
+    --sidebar-background: 220 30% 8%;
+    --sidebar-foreground: 35 100% 95%;
+    --sidebar-primary: 30 100% 50%;
+    --sidebar-primary-foreground: 220 30% 8%;
+    --sidebar-accent: 220 40% 18%;
+    --sidebar-accent-foreground: 35 100% 90%;
+    --sidebar-border: 220 25% 18%;
+    --sidebar-ring: 30 100% 50%;
 
     --font-display: 'Space Grotesk', sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
