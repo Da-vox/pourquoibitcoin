@@ -177,10 +177,10 @@ const LinksSection = () => {
                   </div>
                 </a>
                 {index === 0 && LINKS.length > 1 && (
-                  <div className="rounded-xl border border-border bg-card/30 p-6 text-center">
-                    <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground mb-3">Publicité</p>
+                  <div className="rounded-xl border border-border bg-card/30 p-4 text-center md:col-span-2">
+                    <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground mb-2">Publicité</p>
                     <div
-                      className="min-h-[250px] flex items-center justify-center rounded-lg bg-muted/30 border border-dashed border-border"
+                      className="min-h-[200px] flex items-center justify-center rounded-lg bg-muted/30 border border-dashed border-border"
                       id="adsense-slot"
                     >
                       {/* Remplacer par le script AdSense une fois l'ID obtenu */}
