@@ -30,7 +30,7 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/arguments"
-              className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-gradient-btc text-primary-foreground font-semibold text-lg transition-all hover:scale-105 glow-btc"
+              className="rainbow-border inline-flex items-center justify-center px-8 py-4 rounded-xl bg-background text-foreground font-bold text-lg transition-all hover:scale-105"
             >
               ⚡ Les arguments qui tuent
             </Link>
