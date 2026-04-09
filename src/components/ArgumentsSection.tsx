@@ -3,7 +3,7 @@ import { ChevronDown } from "lucide-react";
 
 const arguments_list = [
   {
-    attack: "\"Bitcoin ne sert à rien, c'est de l'argent fictif\"",
+    attack: "\"Bitcoin ne sert à rien gamin ! C'est de l'argent fictif\"",
     counter:
       "L'euro aussi est \"fictif\" — il n'est adossé à rien depuis 1971 (fin de Bretton Woods). La différence ? L'euro peut être imprimé à l'infini par la BCE. Bitcoin est limité à 21 millions, vérifié par des mathématiques, pas par la confiance en un politicien. Demande-toi : tu préfères faire confiance à un algorithme transparent ou à un banquier central ?",
     emoji: "💸",
@@ -15,13 +15,13 @@ const arguments_list = [
     emoji: "📈",
   },
   {
-    attack: "\"C'est utilisé par les criminels\"",
+    attack: "\"C'est utilisé que par des criminels\"",
     counter:
       "Moins de 1% des transactions BTC sont illicites (Chainalysis 2024). Le dollar cash ? Utilisé dans 99% du blanchiment mondial. Bitcoin est un registre PUBLIC — chaque transaction est traçable pour l'éternité. C'est le pire outil pour un criminel.",
     emoji: "🔍",
   },
   {
-    attack: "\"Ça pollue énormément\"",
+    attack: "\"Ça pollue énormément (argument de ta belle-sœur écologiste)\"",
     counter:
       "58% du minage utilise des énergies renouvelables (plus que n'importe quelle industrie). Les mineurs consomment de l'énergie EXCÉDENTAIRE que personne d'autre n'utilise. Le système bancaire traditionnel consomme 2x plus d'énergie. Et Bitcoin sécurise 1 700 milliards $ de valeur — c'est de l'énergie bien investie.",
     emoji: "⚡",
@@ -33,7 +33,7 @@ const arguments_list = [
     emoji: "🏛️",
   },
   {
-    attack: "\"C'est une bulle spéculative / un Ponzi\"",
+    attack: "\"C'est une bulle spéculative / un Ponzi en puissance\"",
     counter:
       "Un Ponzi nécessite un opérateur central qui recrute. Bitcoin n'a pas de CEO. Il est open-source, vérifiable par tous. Chaque \"bulle\" a crashé plus haut que le sommet de la précédente. Si c'est une bulle, c'est la seule bulle de l'histoire qui regonfle toujours plus fort.",
     emoji: "🫧",
@@ -45,13 +45,13 @@ const arguments_list = [
     emoji: "🥇",
   },
   {
-    attack: "\"Il y a des milliers de cryptos, pourquoi Bitcoin ?\"",
+    attack: "\"Il y a des milliers de cryptos, pourquoi Bitcoin ? Je vais devenir millionnaire sur pumpfun 🔥\"",
     counter:
       "Il n'y a qu'un seul Bitcoin. Les altcoins ont des fondateurs, des prémines, des VC derrière. Bitcoin est le seul qui a eu une naissance immaculée — sans prévente, sans CEO, avec un créateur disparu. C'est la séparation de la monnaie et de l'État.",
     emoji: "👑",
   },
   {
-    attack: "\"C'est trop compliqué / trop technique\"",
+    attack: "\"C'est trop compliqué / trop technique avec bitnakamoto\"",
     counter:
       "Tu comprends comment fonctionne le protocole TCP/IP ? Non. Pourtant tu utilises Internet tous les jours. Tu n'as pas besoin de comprendre la cryptographie pour utiliser Bitcoin. Il y a des apps aussi simples que Venmo.",
     emoji: "📱",
