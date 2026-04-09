@@ -12,8 +12,8 @@ const TIME_FILTERS = [
   { label: "24h", days: 1 },
   { label: "1S", days: 7 },
   { label: "1A", days: 365 },
- " { label: "2A", days: 730 },
- " { label: "4A", days: 1460 },
+  { label: "2A", days: 730 },
+  { label: "4A", days: 1460 },
 ] as const;
 
 interface PricePoint {
