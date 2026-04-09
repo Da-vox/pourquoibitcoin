@@ -1,6 +1,6 @@
 import { Mail, Send } from "lucide-react";
 
-const CONTACT_EMAIL = "ton@email.com"; // Remplace par ton email
+const CONTACT_EMAIL = "vaga.tuktuk@gmail.com"; // Remplace par ton email
 
 const ContactSection = () => {
   const subject = encodeURIComponent("Contact depuis le site Bitcoin");
@@ -14,7 +14,7 @@ const ContactSection = () => {
           <h2 className="text-3xl font-bold text-foreground">Contact</h2>
         </div>
         <p className="text-muted-foreground mb-8">
-          Une question sur Bitcoin ? Envie d'échanger ? N'hésite pas à me contacter.
+          Une question sur Bitcoin ? Envie d'échanger ? Si tu veux publier un lien sur le site ? N'hésite pas à me contacter.
         </p>
         <a
           href={`mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`}
