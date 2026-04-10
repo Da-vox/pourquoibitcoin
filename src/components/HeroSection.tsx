@@ -1,53 +1,141 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Zap, Lock, ArrowRight, TrendingUp } from "lucide-react";
 import { BackgroundPaths } from "@/components/ui/background-paths";
+
+const stats = [
+  { label: "Uptime", value: "99.98%" },
+  { label: "Années", value: "15+" },
+  { label: "Nœuds", value: "15k+" },
+];
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.12, delayChildren: 0.1 },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", stiffness: 100, damping: 20 },
+  },
+};
 
 const HeroSection = () => {
   return (
     <BackgroundPaths>
-      <div className="container mx-auto px-6 text-center py-20">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 2 }}
-        >
-          <p className="font-mono text-sm tracking-[0.3em] uppercase text-primary mb-6">
-            Satoshi Nakamoto · 3 janvier 2009
-          </p>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-4">
-            <span className="text-gradient-btc">Pourquoi Bitcoin ?</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-foreground font-semibold mb-6">
-            La réponse simple et honnête.
-          </p>
-          <p className="max-w-2xl mx-auto text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
-            En 2009, 1 BTC valait <span className="text-primary font-bold">0 $</span>.
-            Aujourd'hui, il vaut plus de <span className="text-primary font-bold">100 000 $</span>.
-          </p>
-          <p className="max-w-2xl mx-auto text-base md:text-lg text-muted-foreground leading-relaxed mb-10">
-            21 millions. Pas un de plus. Arme-toi d'arguments pour le prochain repas de famille.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/arguments"
-              className="rainbow-border inline-flex items-center justify-center px-8 py-4 rounded-xl bg-background text-foreground font-bold text-lg transition-all hover:scale-105"
+      <div className="container mx-auto px-6 py-32 md:py-40">
+        <div className="grid md:grid-cols-[1fr_auto] gap-12 xl:gap-20 items-center">
+
+          {/* Left — content */}
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className="max-w-2xl"
+          >
+            <motion.p
+              variants={itemVariants}
+              className="font-mono text-xs tracking-[0.4em] uppercase text-btc-orange mb-8"
             >
-              ⚡ Les arguments qui tuent
-            </Link>
-            <Link
-              to="/fondamentaux"
-              className="inline-flex items-center justify-center px-8 py-4 rounded-lg border border-primary/30 text-foreground font-semibold text-lg transition-all hover:border-primary/60 hover:bg-secondary"
+              Satoshi Nakamoto · 3 janvier 2009
+            </motion.p>
+
+            <motion.h1
+              variants={itemVariants}
+              className="text-6xl md:text-7xl xl:text-8xl font-bold tracking-tighter leading-none mb-6"
             >
-              Les fondamentaux
-            </Link>
-            <Link
-              to="/securiser"
-              className="inline-flex items-center justify-center px-8 py-4 rounded-lg border border-primary/30 text-foreground font-semibold text-lg transition-all hover:border-primary/60 hover:bg-secondary"
+              Pourquoi
+              <br />
+              <span className="text-btc-orange">Bitcoin ?</span>
+            </motion.h1>
+
+            <motion.p
+              variants={itemVariants}
+              className="text-lg md:text-xl text-foreground font-medium mb-3"
             >
-              🔒 Sécuriser ses BTC
-            </Link>
-          </div>
-        </motion.div>
+              La réponse simple et honnête.
+            </motion.p>
+
+            <motion.p
+              variants={itemVariants}
+              className="text-base text-muted-foreground leading-relaxed max-w-[55ch] mb-10"
+            >
+              En 2009, 1 BTC valait{" "}
+              <span className="text-foreground font-semibold font-mono">0 $</span>.
+              Aujourd'hui, il vaut plus de{" "}
+              <span className="text-btc-orange font-semibold font-mono">100 000 $</span>.
+              21 millions. Pas un de plus.
+            </motion.p>
+
+            <motion.div
+              variants={itemVariants}
+              className="flex flex-col sm:flex-row gap-3"
+            >
+              <Link
+                to="/arguments"
+                className="group inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-btc-orange text-primary-foreground font-semibold text-sm transition-all duration-200 hover:bg-btc-orange/90 active:scale-[0.98] shadow-btc"
+              >
+                <Zap className="w-4 h-4" strokeWidth={2} />
+                Les arguments qui tuent
+                <ArrowRight className="w-3.5 h-3.5 opacity-60 group-hover:translate-x-0.5 transition-transform" strokeWidth={2} />
+              </Link>
+              <Link
+                to="/fondamentaux"
+                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full border border-border text-foreground font-medium text-sm transition-all duration-200 hover:border-btc-orange/40 hover:bg-secondary active:scale-[0.98]"
+              >
+                <TrendingUp className="w-4 h-4 text-muted-foreground" strokeWidth={1.5} />
+                Les fondamentaux
+              </Link>
+              <Link
+                to="/securiser"
+                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full border border-border text-foreground font-medium text-sm transition-all duration-200 hover:border-btc-orange/40 hover:bg-secondary active:scale-[0.98]"
+              >
+                <Lock className="w-4 h-4 text-muted-foreground" strokeWidth={1.5} />
+                Sécuriser ses BTC
+              </Link>
+            </motion.div>
+          </motion.div>
+
+          {/* Right — floating stats card */}
+          <motion.div
+            initial={{ opacity: 0, x: 24 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ type: "spring", stiffness: 80, damping: 20, delay: 0.4 }}
+            className="hidden md:block"
+          >
+            <motion.div
+              animate={{ y: [0, -12, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              className="card-glass rounded-3xl p-8 w-64 xl:w-72"
+            >
+              <p className="text-btc-orange font-bold text-5xl xl:text-6xl mb-1 font-mono leading-none">
+                ₿
+              </p>
+              <p className="text-foreground font-bold text-3xl xl:text-4xl font-mono tracking-tight leading-none mt-4">
+                21 000 000
+              </p>
+              <p className="text-muted-foreground text-xs font-mono uppercase tracking-widest mt-2 mb-6">
+                Émission maximale
+              </p>
+              <div className="border-t border-border/60 pt-5 grid grid-cols-3 gap-2">
+                {stats.map((s) => (
+                  <div key={s.label} className="text-center">
+                    <p className="text-foreground font-semibold text-sm font-mono">
+                      {s.value}
+                    </p>
+                    <p className="text-muted-foreground text-xs mt-0.5">{s.label}</p>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </motion.div>
+
+        </div>
       </div>
     </BackgroundPaths>
   );
