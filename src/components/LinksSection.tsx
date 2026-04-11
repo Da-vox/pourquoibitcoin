@@ -14,23 +14,16 @@ interface LinkItem {
 }
 
 const LINKS: LinkItem[] = ([
-  {
+
+{
   "id": "10",
-  "type": "youtube",
-  "url": "https://youtu.be/JYUGfNoyDKs",
-  "title": "🚨Cessez-le-feu Iran : ne célébrez pas - La vraie bombe arrive",
-  "description": "Le marché respire après le cessez-le-feu Iran/USA, Bitcoin bondit à 72 000 $. Mais ce rebond est fragile. Analyse des données macro (CPI, PPI), des flux ETF Bitcoin et des trois scénarios pour les prochaines 72 heures.",
-  "image": "https://bitcoin.fr/wp-content/uploads/2021/10/Lettre-ouverte-a-ma-famille-696x365.jpg",
+  "type": "article",
+  "url": "https://youtu.be/Qib13mVh2So",
+  "title": "L'Iran fait payer le pétrole mondial en Bitcoin ?! Un péage en BTC au cœur du détroit d’Ormuz",
+  "description": "Entre tensions géopolitiques et blocage du système financier, un scénario qui pourrait redéfinir les règles du commerce international. Décryptage complet sur le rôle de Bitcoin dans le pétrole mondial et le détroit d’Ormuz.",
+  "image": "https://i.ytimg.com/vi/Qib13mVh2So/maxresdefault.jpg",
   "date": "2026-04-10"
 },
-
-
-
-
-
-
-
-
 {
     id: "9",
     type: "youtube",
