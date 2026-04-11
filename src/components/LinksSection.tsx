@@ -15,6 +15,23 @@ interface LinkItem {
 
 const LINKS: LinkItem[] = ([
   {
+  "id": "10",
+  "type": "youtube",
+  "url": "https://youtu.be/JYUGfNoyDKs",
+  "title": "🚨Cessez-le-feu Iran : ne célébrez pas - La vraie bombe arrive",
+  "description": "Le marché respire après le cessez-le-feu Iran/USA, Bitcoin bondit à 72 000 $. Mais ce rebond est fragile. Analyse des données macro (CPI, PPI), des flux ETF Bitcoin et des trois scénarios pour les prochaines 72 heures.",
+  "image": "https://bitcoin.fr/wp-content/uploads/2021/10/Lettre-ouverte-a-ma-famille-696x365.jpg",
+  "date": "2026-04-10"
+},
+
+
+
+
+
+
+
+
+{
     id: "9",
     type: "youtube",
     url: "https://youtu.be/dIRwGcuOR1s?is=O8engs4DLlBhDN_Y",
