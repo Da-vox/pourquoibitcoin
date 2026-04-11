@@ -17,7 +17,7 @@ const LINKS: LinkItem[] = ([
 
 {
   "id": "10",
-  "type": "youtube, attention nous ne recommandons pas le partenariat de la vidéo",
+  "type": "youtube, nous ne recommandons pas le partenariat de la vidéo",
   "url": "https://youtu.be/Qib13mVh2So",
   "title": "L'Iran fait payer le pétrole mondial en Bitcoin ?! Un péage en BTC au cœur du détroit d’Ormuz",
   "description": "Entre tensions géopolitiques et blocage du système financier, un scénario qui pourrait redéfinir les règles du commerce international. Décryptage complet sur le rôle de Bitcoin dans le pétrole mondial et le détroit d’Ormuz.",
