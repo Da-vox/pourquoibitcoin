@@ -141,7 +141,7 @@ const typeLabel: Record<LinkType, { icon: typeof Newspaper; label: string }> = {
 
 const LinksSection = () => {
   return (
-    <section className="py-24 bg-btc-dark">
+    <section className="py-14 md:py-24 bg-btc-dark">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <p className="font-mono text-sm tracking-[0.3em] uppercase text-btc-orange mb-4">

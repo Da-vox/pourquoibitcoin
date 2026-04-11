@@ -19,7 +19,7 @@ const Index = () => {
       
       <LinksSection />
       <AboutSection />
-      <section className="py-12 text-center">
+      <section className="py-8 text-center">
         <p className="text-muted-foreground mb-4 text-sm">Partage ce site à quelqu'un qui a besoin de comprendre Bitcoin :</p>
         <div className="flex justify-center">
           <ShareButtons />

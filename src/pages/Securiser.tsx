@@ -43,9 +43,9 @@ const Securiser = () => {
     <main className="min-h-screen bg-background">
       <Navbar />
       <div className="pt-20">
-        <section className="py-24">
+        <section className="py-14 md:py-24">
           <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
+            <div className="text-center mb-10 md:mb-16">
               <p className="font-mono text-sm tracking-[0.3em] uppercase text-btc-orange mb-4">
                 Protège tes satoshis
               </p>

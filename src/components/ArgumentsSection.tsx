@@ -126,11 +126,11 @@ const ArgumentCard = ({
 
 const ArgumentsSection = () => {
   return (
-    <section id="arguments" className="py-24 bg-btc-dark">
+    <section id="arguments" className="py-14 md:py-24 bg-btc-dark">
       <div className="container mx-auto px-6">
 
         {/* Left-aligned header */}
-        <div className="mb-12 max-w-2xl">
+        <div className="mb-8 md:mb-12 max-w-2xl">
           <p className="font-mono text-xs tracking-[0.4em] uppercase text-btc-orange mb-4">
             Le guide anti-oncle
           </p>
