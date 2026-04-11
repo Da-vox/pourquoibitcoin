@@ -64,11 +64,11 @@ const cardVariants = {
 
 const FundamentalsSection = () => {
   return (
-    <section id="fondamentaux" className="py-24 relative">
+    <section id="fondamentaux" className="py-14 md:py-24 relative">
       <div className="container mx-auto px-6">
 
         {/* Left-aligned header */}
-        <div className="mb-14 max-w-xl">
+        <div className="mb-10 md:mb-14 max-w-xl">
           <p className="font-mono text-xs tracking-[0.4em] uppercase text-btc-orange mb-4">
             Pourquoi Bitcoin ?
           </p>

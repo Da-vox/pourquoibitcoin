@@ -81,9 +81,9 @@ const BtcPriceChart = () => {
   const isPositive = priceChange >= 0;
 
   return (
-    <section className="py-24">
+    <section className="py-14 md:py-24">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-10">
+        <div className="text-center mb-6 md:mb-10">
           <p className="font-mono text-sm tracking-[0.3em] uppercase text-btc-orange mb-4">
             Cours en direct
           </p>

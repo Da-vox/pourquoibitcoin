@@ -28,7 +28,7 @@ const itemVariants = {
 const HeroSection = () => {
   return (
     <BackgroundPaths>
-      <div className="container mx-auto px-6 py-32 md:py-40">
+      <div className="container mx-auto px-6 py-20 md:py-32 lg:py-40">
         <div className="grid md:grid-cols-[1fr_auto] gap-12 xl:gap-20 items-center">
 
           {/* Left — content */}

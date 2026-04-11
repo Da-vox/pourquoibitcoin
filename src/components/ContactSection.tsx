@@ -7,7 +7,7 @@ const ContactSection = () => {
   const body = encodeURIComponent("Bonjour,\n\n");
 
   return (
-    <section className="py-20 border-t border-border">
+    <section className="py-12 md:py-20 border-t border-border">
       <div className="container mx-auto px-6 max-w-2xl text-center">
         <div className="flex items-center justify-center gap-3 mb-6">
           <Mail className="h-8 w-8 text-primary" />

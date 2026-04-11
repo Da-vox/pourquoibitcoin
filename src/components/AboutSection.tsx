@@ -2,7 +2,7 @@ import { Code, Heart, ShieldCheck } from "lucide-react";
 
 const AboutSection = () => {
   return (
-    <section className="py-16 border-t border-border">
+    <section className="py-10 md:py-16 border-t border-border">
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center">
           <p className="font-mono text-sm tracking-[0.3em] uppercase text-btc-orange mb-4">
