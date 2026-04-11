@@ -16,6 +16,17 @@ interface LinkItem {
 const LINKS: LinkItem[] = ([
 
 {
+  "id": "11",
+  "type": "article",
+  "url": "https://fr.tradingview.com/news/cointribune:fa1d68949b858:0/",
+  "title": "L’Iran impose un péage en Bitcoin pour traverser le détroit d’Ormuz",
+  "description": "En pleine escalade des tensions entre l’Iran et Israël, le détroit d’Ormuz devient le théâtre d’une révolution économique : un péage allant jusqu’à 2 millions de dollars en Bitcoin (ou en yuan chinois) pour traverser. Cette mesure illustre l’utilisation croissante des cryptomonnaies par les États sous sanctions pour contourner le système financier traditionnel.",
+  "image": "https://s3.tradingview.com/news/cointribune/fa1d68949b858-0.jpg",
+  "date": "2026-04-09"
+}
+
+
+{
   "id": "10",
   "type": "youtube",
   "url": "https://youtu.be/Qib13mVh2So",
