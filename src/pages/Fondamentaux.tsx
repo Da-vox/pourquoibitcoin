@@ -1,4 +1,5 @@
 import FundamentalsSection from "@/components/FundamentalsSection";
+import YoutubeVideoSection from "@/components/YoutubeVideoSection";
 import ComparisonTable from "@/components/ComparisonTable";
 import FAQSection from "@/components/FAQSection";
 import Navbar from "@/components/Navbar";
@@ -10,6 +11,7 @@ const Fondamentaux = () => {
       <Navbar />
       <div className="pt-20">
         <FundamentalsSection />
+        <YoutubeVideoSection />
         <ComparisonTable />
         <FAQSection />
       </div>
