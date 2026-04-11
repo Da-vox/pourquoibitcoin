@@ -104,7 +104,7 @@ const LINKS: LinkItem[] = ([
     description:
       "L'opcode OP_CAT, aussi connu sous le nom de BIP-420, pourrait transformer le fonctionnement de la blockchain Bitcoin. Cette ligne de code faisait partie du protocole original mais a été retirée par Satoshi en 2010. Aujourd'hui, des développeurs veulent la réintroduire pour permettre des smart contracts sur Bitcoin.",
     image:
-      "https://www.cointribune.com/app/uploads/2024/09/Bitcoin-OP_CAT.png",
+      "https://www.cointribune.com/app/uploads/2024/09/Bitcoin-code.png",
     date: "2024-09-01",
   },
   {
