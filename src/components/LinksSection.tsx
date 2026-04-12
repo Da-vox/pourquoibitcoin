@@ -16,6 +16,18 @@ interface LinkItem {
 const LINKS: LinkItem[] = ([
 
 {
+  "id": "12",
+  "type": "youtube",
+  "url": "https://youtu.be/ITtZXwFw7Oc",
+  "title": "Posséder du Bitcoin c'est posséder le monde. Voici pourquoi.",
+  "description": "Il y a un graphique qui fascine depuis des années : trois courbes sur 110 ans d’histoire reliant le dollar, l’or et le pétrole. Cette vidéo remonte aux fondements de la monnaie, explore le point de Schelling, le paradoxe des monnaies nationales et explique pourquoi Bitcoin représente bien plus qu’un actif : une recomposition structurelle de l’architecture monétaire mondiale.",
+  "image": "https://i.ytimg.com/vi/ITtZXwFw7Oc/maxresdefault.jpg",
+  "date": "2026-04-12"
+},
+
+
+
+{
   "id": "11",
   "type": "article",
   "url": "https://fr.tradingview.com/news/cointribune:fa1d68949b858:0/",
