@@ -103,6 +103,10 @@ export default {
           "0%, 100%": { opacity: "0.5" },
           "50%": { opacity: "1" },
         },
+        "bounce-x": {
+          "0%, 100%": { transform: "translateX(0)" },
+          "50%": { transform: "translateX(4px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -112,6 +116,7 @@ export default {
         "gradient-slide": "gradient-slide 6s ease infinite",
         "fade-up": "fade-up 0.5s ease-out both",
         "pulse-glow": "pulse-glow 3s ease-in-out infinite",
+        "bounce-x": "bounce-x 1s ease-in-out infinite",
       },
     },
   },
