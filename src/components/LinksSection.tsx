@@ -16,6 +16,17 @@ interface LinkItem {
 const LINKS: LinkItem[] = ([
 
 {
+  "id": "13",
+  "type": "tweet",
+  "url": "https://x.com/RichardDetente/status/2003012634560335921",
+  "title": "Que penser de l’annonce de nombreux bitcoiners : Bitcoin va faire +30 % par an pendant 20 ans ? Fantasme ou réalité ?",
+  "description": "Analyse équilibrée sur les projections haussières de Bitcoin à long terme. Les gains d’adoption sont réels mais ponctuels. Faut-il « repricer » tous les actifs en Bitcoin ? Attention au risque total : même avec une petite chance d’échec, est-on prêt à tout miser ? Il est sage de garder une partie de son épargne décorrélée.",
+  "image": "https://pbs.twimg.com/profile_images/1905517046613315584/oeagiO2L.jpg",
+  "date": "2025-12-22"
+},
+
+
+{
   "id": "12",
   "type": "youtube",
   "url": "https://youtu.be/ITtZXwFw7Oc",
