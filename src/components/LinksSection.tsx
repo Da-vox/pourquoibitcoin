@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { ExternalLink, Newspaper, Youtube, Twitter } from "lucide-react";
 
 type LinkType = "article" | "youtube" | "tweet";
@@ -151,6 +151,25 @@ const typeLabel: Record<LinkType, { icon: typeof Newspaper; label: string }> = {
   tweet: { icon: Twitter, label: "Tweet" },
 };
 
+const AdSenseSlot = () => {
+  useEffect(() => {
+    try {
+      ((window as unknown as Record<string, unknown[]>).adsbygoogle =
+        (window as unknown as Record<string, unknown[]>).adsbygoogle || []).push({});
+    } catch {}
+  }, []);
+
+  return (
+    <ins
+      className="adsbygoogle"
+      style={{ display: "block" }}
+      data-ad-client="ca-pub-4293284975687194"
+      data-ad-format="auto"
+      data-full-width-responsive="true"
+    />
+  );
+};
+
 const LinksSection = () => {
   return (
     <section className="py-14 md:py-24 bg-btc-dark">
@@ -212,12 +231,8 @@ const LinksSection = () => {
                 {index === 0 && LINKS.length > 1 && (
                   <div className="rounded-xl border border-border bg-card/30 p-4 text-center md:col-span-2">
                     <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground mb-2">Publicité</p>
-                    <div
-                      className="min-h-[200px] flex items-center justify-center rounded-lg bg-muted/30 border border-dashed border-border"
-                      id="adsense-slot"
-                    >
-                      {/* Remplacer par le script AdSense une fois l'ID obtenu */}
-                      <p className="text-muted-foreground text-sm">Emplacement publicitaire AdSense</p>
+                    <div className="w-full" id="adsense-slot">
+                      <AdSenseSlot />
                     </div>
                   </div>
                 )}
