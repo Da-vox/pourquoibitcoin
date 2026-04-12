@@ -76,7 +76,7 @@ const FundamentalsSection = () => {
             Les fondamentaux
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed max-w-[55ch]">
-            Comprendre Bitcoin, c'est comprendre pourquoi il est inévitable.
+            Comprendre Bitcoin, c'est comprendre pourquoi il est inévitable. Mais notre mission est de vous faire comprendre avant qu'il soit trop tard face aux institutionnels !
           </p>
         </div>
 
