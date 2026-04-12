@@ -234,18 +234,33 @@ const GeekArea = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
               <span className="text-gradient-btc">Geek Area</span>
             </h1>
-            <p className="text-muted-foreground max-w-2xl mx-auto text-lg mb-8">
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg mb-10">
               Prends le contrôle total. Lance ton propre nœud Bitcoin et
               construis ton hardware wallet open source — étape par étape.
             </p>
-            <ShareButtons title="Geek Area — Nœud Bitcoin et Hardware Wallet DIY" />
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="#noeud-bitcoin"
+                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-gradient-btc text-primary-foreground font-semibold text-sm transition-all hover:scale-105 shadow-btc"
+              >
+                <Server className="w-4 h-4" />
+                Monter un nœud Bitcoin
+              </a>
+              <a
+                href="#hardware-wallet"
+                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full border border-btc-orange/40 text-btc-orange font-semibold text-sm transition-all hover:bg-btc-orange/10 hover:border-btc-orange"
+              >
+                <Cpu className="w-4 h-4" />
+                Construire son hardware wallet
+              </a>
+            </div>
           </div>
         </section>
 
         {/* ══════════════════════════════════════
             SECTION 1 — NŒUD BITCOIN
         ══════════════════════════════════════ */}
-        <section className="py-14 md:py-20 border-t border-border">
+        <section id="noeud-bitcoin" className="py-14 md:py-20 border-t border-border">
           <div className="container mx-auto px-6">
             {/* En-tête section */}
             <div className="max-w-3xl mx-auto text-center mb-14">
@@ -398,7 +413,7 @@ const GeekArea = () => {
         {/* ══════════════════════════════════════
             SECTION 2 — DIY HARDWARE WALLET
         ══════════════════════════════════════ */}
-        <section className="py-14 md:py-20 border-t border-border">
+        <section id="hardware-wallet" className="py-14 md:py-20 border-t border-border">
           <div className="container mx-auto px-6">
             {/* En-tête section */}
             <div className="max-w-3xl mx-auto text-center mb-14">
@@ -546,6 +561,16 @@ const GeekArea = () => {
                 SeedSigner sur GitHub <ExternalLink className="w-4 h-4" />
               </a>
             </div>
+          </div>
+        </section>
+
+        {/* ── Partage ── */}
+        <section className="py-12 border-t border-border">
+          <div className="container mx-auto px-6 text-center">
+            <p className="text-muted-foreground text-sm mb-4">
+              Partage ces tutoriels avec d'autres bitcoiners
+            </p>
+            <ShareButtons title="Geek Area — Nœud Bitcoin et Hardware Wallet DIY" />
           </div>
         </section>
       </div>
