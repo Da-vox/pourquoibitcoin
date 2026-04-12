@@ -29,13 +29,13 @@ const steps = [
 
 const setupSteps = [
   "Commande ton Ledger uniquement sur le site officiel (jamais sur Amazon ou d'occasion).",
-  "Télécharge l'app Ledger Live sur ton ordinateur ou smartphone.",
+  "Télécharge l'app Ledger Live sur ton ordinateur ou smartphone (toujours des liens ou des stores officiels.",
   "Branche ton Ledger et suis les instructions d'initialisation.",
   "NOTE ta seed phrase (24 mots) sur PAPIER. Active l'option du 25eme mot, technique (details sur internet) mais c'est la sécu idéale . Ne la photographie JAMAIS. Ne la stocke JAMAIS en numérique.",
-  "Range ta seed phrase dans un endroit sûr (coffre-fort à la banque, cela coûte que 10€ par mois, chez un notaire…). C'est ta sauvegarde ultime.",
+  "Range ta seed phrase dans un endroit sûr (coffre-fort à la banque, cela coûte que 10€ par mois, chez un notaire…). C'est ta sauvegarde ultime. Évite les petits coffres chez toi, cela ne sert à rien.",
   "Installe l'app Bitcoin sur ton Ledger via Ledger Live.",
   "Transfère tes BTC depuis l'exchange vers ton adresse Ledger.",
-  "Vérifie l'adresse de réception directement sur l'écran du Ledger avant de confirmer.",
+  "Vérifie l'adresse de réception directement sur l'écran du Ledger avant de confirmer. Alerte: fais toujours un transfert test de 5 ou 6 euros avant pour garantir le flux.",
 ];
 
 const Securiser = () => {
