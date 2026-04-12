@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Fondamentaux from "./pages/Fondamentaux";
 import Arguments from "./pages/Arguments";
 import Securiser from "./pages/Securiser";
+import GeekArea from "./pages/GeekArea";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/fondamentaux" element={<Fondamentaux />} />
           <Route path="/arguments" element={<Arguments />} />
           <Route path="/securiser" element={<Securiser />} />
+          <Route path="/geek-area" element={<GeekArea />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
