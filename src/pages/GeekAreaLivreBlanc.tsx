@@ -20,6 +20,7 @@ import {
   Shield,
   Hash,
 } from "lucide-react";
+import MerkleTreeDiagram from "@/components/illustrations/MerkleTreeDiagram";
 
 const chapters = [
   {
@@ -243,6 +244,9 @@ const GeekAreaLivreBlanc = () => {
                           {chapter.keyPoint}
                         </p>
                       </div>
+
+                      {/* Merkle tree illustration for chapter 07 */}
+                      {chapter.num === "07" && <MerkleTreeDiagram />}
                     </div>
                   </div>
                 </div>
