@@ -1,5 +1,7 @@
 import { Shield, Clock, Globe, Lock, TrendingUp, Zap } from "lucide-react";
 import { motion } from "framer-motion";
+import BitcoinSupplySchedule from "@/components/illustrations/BitcoinSupplySchedule";
+import LightningLayersDiagram from "@/components/illustrations/LightningLayersDiagram";
 
 const fundamentals = [
   {
@@ -94,7 +96,7 @@ const FundamentalsSection = () => {
               variants={cardVariants}
               className={`card-spotlight group p-7 rounded-2xl bg-card border border-border transition-all duration-300 hover:border-btc-orange/30 hover:shadow-btc-sm ${
                 item.span === 2 ? "md:col-span-2" : item.span === 3 ? "md:col-span-3" : ""
-              } ${item.span === 3 ? "flex flex-col md:flex-row md:items-center md:gap-8" : ""}`}
+              } ${item.span === 3 ? "flex flex-col md:flex-row md:items-start md:gap-8" : ""}`}
             >
               <div className={item.span === 3 ? "flex-shrink-0" : ""}>
                 <div className="w-10 h-10 rounded-xl bg-btc-orange/10 flex items-center justify-center mb-5 group-hover:bg-btc-orange/15 transition-colors duration-300">
@@ -104,9 +106,23 @@ const FundamentalsSection = () => {
                   {item.title}
                 </h3>
               </div>
-              <p className={`text-muted-foreground leading-relaxed text-sm ${item.span === 3 ? "md:mt-0 md:border-l md:border-border/60 md:pl-8" : ""}`}>
-                {item.description}
-              </p>
+
+              {/* Description + optional illustration */}
+              {item.span === 3 ? (
+                <div className="flex-1 mt-2 md:mt-0 md:border-l md:border-border/60 md:pl-8">
+                  <p className="text-muted-foreground leading-relaxed text-sm">
+                    {item.description}
+                  </p>
+                  <LightningLayersDiagram />
+                </div>
+              ) : (
+                <>
+                  <p className="text-muted-foreground leading-relaxed text-sm">
+                    {item.description}
+                  </p>
+                  {item.title === "Rareté absolue" && <BitcoinSupplySchedule />}
+                </>
+              )}
             </motion.div>
           ))}
         </motion.div>

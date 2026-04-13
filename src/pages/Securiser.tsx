@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 import ShareButtons from "@/components/ShareButtons";
+import CustodyDiagram from "@/components/illustrations/CustodyDiagram";
 import { Shield, Key, AlertTriangle, CheckCircle, ExternalLink } from "lucide-react";
 
 const steps = [
@@ -57,6 +58,11 @@ const Securiser = () => {
                 Pas besoin d'être un expert — juste de suivre les étapes.
               </p>
               <ShareButtons title="Comment sécuriser ses Bitcoin simplement" />
+            </div>
+
+            {/* Schéma custody vs self-custody */}
+            <div className="max-w-3xl mx-auto mb-14">
+              <CustodyDiagram />
             </div>
 
             {/* Étapes d'explication */}
