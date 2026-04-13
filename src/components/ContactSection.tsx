@@ -14,7 +14,7 @@ const ContactSection = () => {
           <h2 className="text-3xl font-bold text-foreground">Contact</h2>
         </div>
         <p className="text-muted-foreground mb-8">
-          Une question sur Bitcoin ? Envie d'échanger ? Si tu veux publier un lien sur le site ? N'hésite pas à me contacter.
+          Une question sur Bitcoin ? Envie d'échanger sur le Bitcoin ? Si tu veux publier un lien sur le site ? N'hésite pas à nous contacter.TRES IMPORTANT : Nous ne demandons jamais d'informations personnelles, d'argents ou de connexion de wallets, si cela arrive, c'est un scam/hack.
         </p>
         <a
           href={`mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`}
