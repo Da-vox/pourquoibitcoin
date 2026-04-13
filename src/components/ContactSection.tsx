@@ -5,7 +5,6 @@ const CONTACT_EMAIL = "vaga.tuktuk@gmail.com"; // Remplace par ton email
 const ContactSection = () => {
   const subject = encodeURIComponent("Contact depuis le site Bitcoin");
   const body = encodeURIComponent("Bonjour,\n\n");
-
   return (
     <section className="py-12 md:py-20 border-t border-border">
       <div className="container mx-auto px-6 max-w-2xl text-center">
