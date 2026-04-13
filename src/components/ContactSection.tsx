@@ -20,7 +20,7 @@ const ContactSection = () => {
           className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-xl text-lg font-semibold hover:bg-primary/90 transition-colors"
         >
           <Send className="h-5 w-5" />
-          M'envoyer un message
+          Nous envoyer un message
         </a>
         <p className="text-muted-foreground text-sm mt-4 font-mono">
           {CONTACT_EMAIL}
