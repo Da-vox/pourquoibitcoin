@@ -16,6 +16,18 @@ interface LinkItem {
 const LINKS: LinkItem[] = ([
 
 {
+  "id": "14",
+  "type": "tweet",
+  "url": "https://x.com/DocumentingBTC/status/2044797743931998672",
+  "title": "Distribution Map of Computers Running Bitcoin Nodes",
+  "description": "Carte de répartition mondiale des nœuds Bitcoin en fonctionnement. Une visualisation claire de la décentralisation du réseau : des milliers de nœuds répartis sur tous les continents, avec une forte concentration en Europe et en Amérique du Nord. Plus de 60 % des nœuds restent invisibles (Tor, etc.). Bitcoin reste extrêmement résilient et sans point de défaillance unique.",
+  "image": "https://pbs.twimg.com/media/HGCUtaka4AEWAE_.jpg",
+  "date": "2026-04-16"
+},
+
+
+
+{
   "id": "13",
   "type": "tweet",
   "url": "https://x.com/RichardDetente/status/2003012634560335921",
