@@ -13,7 +13,7 @@ const ContactSection = () => {
           <h2 className="text-3xl font-bold text-foreground">Contact</h2>
         </div>
         <p className="text-muted-foreground mb-8">
-          Une question sur Bitcoin ? Envie d'échanger sur le Bitcoin ? Envie de publier une info Bitcoin sur le site ? N'hésite pas à nous contacter.<br />TRÈS IMPORTANT:<br />Nous ne demandons jamais d'informations personnelles, d'argents ou de connexions de wallet. Si cela arrive, c'est un scam/hack.
+          Une question sur Bitcoin ? Envie d'échanger sur le Bitcoin ? Envie de publier une info Bitcoin sur le site ? N'hésite pas à nous contacter.<br /><br />TRÈS IMPORTANT: Nous ne demandons jamais d'informations personnelles, d'argents ou de connexions de wallet. Si cela arrive, c'est un scam/hack.
         </p>
         <a
           href={`mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`}
