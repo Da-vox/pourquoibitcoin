@@ -183,9 +183,28 @@ const FILTERS: { value: Filter; label: string }[] = [
   { value: "tweet", label: "Tweets" },
 ];
 
+const PAGE_SIZE = 5;
+
 const LinksSection = () => {
   const [filter, setFilter] = useState<Filter>("all");
-  const visibleLinks = filter === "all" ? LINKS : LINKS.filter((l) => l.type === filter);
+  const [page, setPage] = useState(1);
+
+  const filteredLinks = filter === "all" ? LINKS : LINKS.filter((l) => l.type === filter);
+  const totalPages = Math.max(1, Math.ceil(filteredLinks.length / PAGE_SIZE));
+  const currentPage = Math.min(page, totalPages);
+  const visibleLinks = filteredLinks.slice(
+    (currentPage - 1) * PAGE_SIZE,
+    currentPage * PAGE_SIZE,
+  );
+
+  const handleFilterChange = (value: Filter) => {
+    setFilter(value);
+    setPage(1);
+  };
+
+  const goToPage = (p: number) => {
+    setPage(Math.min(Math.max(1, p), totalPages));
+  };
 
   return (
     <section className="py-14 md:py-24 bg-btc-dark">
@@ -215,7 +234,7 @@ const LinksSection = () => {
                 key={f.value}
                 role="tab"
                 aria-selected={active}
-                onClick={() => setFilter(f.value)}
+                onClick={() => handleFilterChange(f.value)}
                 className={`px-4 py-1.5 rounded-full text-xs font-mono uppercase tracking-wider border transition-colors ${
                   active
                     ? "bg-btc-orange text-btc-dark border-btc-orange"
@@ -276,6 +295,51 @@ const LinksSection = () => {
             );
           })}
         </div>
+
+        {totalPages > 1 && (
+          <nav
+            aria-label="Pagination des liens"
+            className="flex flex-wrap justify-center items-center gap-2 mt-10"
+          >
+            <button
+              type="button"
+              onClick={() => goToPage(currentPage - 1)}
+              disabled={currentPage === 1}
+              aria-label="Page précédente"
+              className="px-3 py-1.5 rounded-full text-xs font-mono uppercase tracking-wider border bg-card/50 text-muted-foreground border-border hover:border-btc-orange/30 hover:text-foreground transition-colors disabled:opacity-40 disabled:pointer-events-none"
+            >
+              ‹
+            </button>
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => {
+              const active = p === currentPage;
+              return (
+                <button
+                  key={p}
+                  type="button"
+                  onClick={() => goToPage(p)}
+                  aria-current={active ? "page" : undefined}
+                  aria-label={`Page ${p}`}
+                  className={`min-w-9 px-3 py-1.5 rounded-full text-xs font-mono uppercase tracking-wider border transition-colors ${
+                    active
+                      ? "bg-btc-orange text-btc-dark border-btc-orange"
+                      : "bg-card/50 text-muted-foreground border-border hover:border-btc-orange/30 hover:text-foreground"
+                  }`}
+                >
+                  {p}
+                </button>
+              );
+            })}
+            <button
+              type="button"
+              onClick={() => goToPage(currentPage + 1)}
+              disabled={currentPage === totalPages}
+              aria-label="Page suivante"
+              className="px-3 py-1.5 rounded-full text-xs font-mono uppercase tracking-wider border bg-card/50 text-muted-foreground border-border hover:border-btc-orange/30 hover:text-foreground transition-colors disabled:opacity-40 disabled:pointer-events-none"
+            >
+              ›
+            </button>
+          </nav>
+        )}
       </div>
     </section>
   );
