@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { ExternalLink, Newspaper, Youtube, Twitter } from "lucide-react";
 
 type LinkType = "article" | "youtube" | "tweet";
@@ -173,7 +174,19 @@ const typeLabel: Record<LinkType, { icon: typeof Newspaper; label: string }> = {
   tweet: { icon: Twitter, label: "Tweet" },
 };
 
+type Filter = "all" | LinkType;
+
+const FILTERS: { value: Filter; label: string }[] = [
+  { value: "all", label: "Tout" },
+  { value: "article", label: "Articles" },
+  { value: "youtube", label: "Vidéos" },
+  { value: "tweet", label: "Tweets" },
+];
+
 const LinksSection = () => {
+  const [filter, setFilter] = useState<Filter>("all");
+  const visibleLinks = filter === "all" ? LINKS : LINKS.filter((l) => l.type === filter);
+
   return (
     <section className="py-14 md:py-24 bg-btc-dark">
       <div className="container mx-auto px-6">
@@ -189,8 +202,37 @@ const LinksSection = () => {
           </p>
         </div>
 
+        <div
+          role="tablist"
+          aria-label="Filtrer par type"
+          className="flex flex-wrap justify-center gap-2 mb-8"
+        >
+          {FILTERS.map((f) => {
+            const active = filter === f.value;
+            const count = f.value === "all" ? LINKS.length : LINKS.filter((l) => l.type === f.value).length;
+            return (
+              <button
+                key={f.value}
+                role="tab"
+                aria-selected={active}
+                onClick={() => setFilter(f.value)}
+                className={`px-4 py-1.5 rounded-full text-xs font-mono uppercase tracking-wider border transition-colors ${
+                  active
+                    ? "bg-btc-orange text-btc-dark border-btc-orange"
+                    : "bg-card/50 text-muted-foreground border-border hover:border-btc-orange/30 hover:text-foreground"
+                }`}
+              >
+                {f.label}
+                <span className={`ml-2 text-[10px] ${active ? "opacity-70" : "opacity-60"}`}>
+                  {count}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+
         <div className="max-w-4xl mx-auto grid gap-4 md:grid-cols-2">
-          {LINKS.map((link) => {
+          {visibleLinks.map((link) => {
             const cfg = typeLabel[link.type];
             const Icon = cfg.icon;
             return (
