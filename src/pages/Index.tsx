@@ -1,6 +1,5 @@
 import HeroSection from "@/components/HeroSection";
 import BtcPriceChart from "@/components/BtcPriceChart";
-import BitcoinCalculator from "@/components/BitcoinCalculator";
 import LinksSection from "@/components/LinksSection";
 import ContactSection from "@/components/ContactSection";
 import FooterSection from "@/components/FooterSection";
@@ -22,9 +21,6 @@ const Index = () => {
       <div id="prix">
         <BtcPriceChart />
       </div>
-
-      {/* BitcoinCalculator possède déjà id="simulateur" en interne */}
-      <BitcoinCalculator />
 
       <div id="ressources">
         <LinksSection />
