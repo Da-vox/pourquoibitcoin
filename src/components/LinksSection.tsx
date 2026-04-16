@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { ExternalLink, Newspaper, Youtube, Twitter } from "lucide-react";
 
 type LinkType = "article" | "youtube" | "tweet";
@@ -188,6 +188,7 @@ const PAGE_SIZE = 5;
 const LinksSection = () => {
   const [filter, setFilter] = useState<Filter>("all");
   const [page, setPage] = useState(1);
+  const sectionRef = useRef<HTMLElement>(null);
 
   const filteredLinks = filter === "all" ? LINKS : LINKS.filter((l) => l.type === filter);
   const totalPages = Math.max(1, Math.ceil(filteredLinks.length / PAGE_SIZE));
@@ -203,11 +204,14 @@ const LinksSection = () => {
   };
 
   const goToPage = (p: number) => {
-    setPage(Math.min(Math.max(1, p), totalPages));
+    const next = Math.min(Math.max(1, p), totalPages);
+    if (next === currentPage) return;
+    setPage(next);
+    sectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   return (
-    <section className="py-14 md:py-24 bg-btc-dark">
+    <section ref={sectionRef} className="py-14 md:py-24 bg-btc-dark scroll-mt-20">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <p className="font-mono text-sm tracking-[0.3em] uppercase text-btc-orange mb-4">
