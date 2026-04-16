@@ -13,7 +13,7 @@ const AboutSection = () => {
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
             Ce site, réalisé via les IA Claude et Lovable fait partie du mouvement <span className="text-btc-orange font-semibold">#StudyBitcoin</span> dans le monde francophone. 
-            Notre mission : expliquer et vulgariser la technique derrière Bitcoin. 
+            <br /><br />Notre mission : expliquer et vulgariser la technique derrière Bitcoin. 
             Pas de jargon financier, pas de promesses de gains - juste de la compréhension.
           </p>
           <div className="grid sm:grid-cols-3 gap-6 mt-8">
