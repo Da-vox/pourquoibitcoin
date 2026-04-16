@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import { ExternalLink, Newspaper, Youtube, Twitter } from "lucide-react";
 
 type LinkType = "article" | "youtube" | "tweet";
@@ -174,25 +173,6 @@ const typeLabel: Record<LinkType, { icon: typeof Newspaper; label: string }> = {
   tweet: { icon: Twitter, label: "Tweet" },
 };
 
-const AdSenseSlot = () => {
-  useEffect(() => {
-    try {
-      ((window as unknown as Record<string, unknown[]>).adsbygoogle =
-        (window as unknown as Record<string, unknown[]>).adsbygoogle || []).push({});
-    } catch {}
-  }, []);
-
-  return (
-    <ins
-      className="adsbygoogle"
-      style={{ display: "block" }}
-      data-ad-client="ca-pub-4293284975687194"
-      data-ad-format="auto"
-      data-full-width-responsive="true"
-    />
-  );
-};
-
 const LinksSection = () => {
   return (
     <section className="py-14 md:py-24 bg-btc-dark">
@@ -210,56 +190,47 @@ const LinksSection = () => {
         </div>
 
         <div className="max-w-4xl mx-auto grid gap-4 md:grid-cols-2">
-          {LINKS.map((link, index) => {
+          {LINKS.map((link) => {
             const cfg = typeLabel[link.type];
             const Icon = cfg.icon;
             return (
-              <React.Fragment key={link.id}>
-                <a
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group rounded-xl border border-border bg-card/50 hover:border-btc-orange/30 overflow-hidden transition-all hover:shadow-lg hover:shadow-btc-orange/5 flex flex-col"
-                >
-                  <div className="aspect-[16/9] w-full overflow-hidden">
-                    <img
-                      src={link.image}
-                      alt={link.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
+              <a
+                key={link.id}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group rounded-xl border border-border bg-card/50 hover:border-btc-orange/30 overflow-hidden transition-all hover:shadow-lg hover:shadow-btc-orange/5 flex flex-col"
+              >
+                <div className="aspect-[16/9] w-full overflow-hidden">
+                  <img
+                    src={link.image}
+                    alt={link.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-4 space-y-1.5 flex-1 flex flex-col">
+                  <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-btc-orange">
+                    <Icon className="w-3 h-3" />
+                    <span>{cfg.label}</span>
+                    <span className="text-muted-foreground ml-auto text-[10px]">
+                      {new Date(link.date).toLocaleDateString("fr-FR", {
+                        day: "numeric",
+                        month: "short",
+                        year: "numeric",
+                      })}
+                    </span>
                   </div>
-                  <div className="p-4 space-y-1.5 flex-1 flex flex-col">
-                    <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-btc-orange">
-                      <Icon className="w-3 h-3" />
-                      <span>{cfg.label}</span>
-                      <span className="text-muted-foreground ml-auto text-[10px]">
-                        {new Date(link.date).toLocaleDateString("fr-FR", {
-                          day: "numeric",
-                          month: "short",
-                          year: "numeric",
-                        })}
-                      </span>
-                    </div>
-                    <h3 className="text-sm font-bold text-foreground group-hover:text-btc-orange transition-colors leading-snug">
-                      {link.title}
-                    </h3>
-                    <p className="text-muted-foreground text-xs leading-relaxed line-clamp-2 flex-1">
-                      {link.description}
-                    </p>
-                    <div className="flex items-center gap-1 text-btc-orange text-xs font-medium pt-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                      {link.type === "youtube" ? "Voir la vidéo" : "Lire l'article"} <ExternalLink className="w-3 h-3" />
-                    </div>
+                  <h3 className="text-sm font-bold text-foreground group-hover:text-btc-orange transition-colors leading-snug">
+                    {link.title}
+                  </h3>
+                  <p className="text-muted-foreground text-xs leading-relaxed line-clamp-2 flex-1">
+                    {link.description}
+                  </p>
+                  <div className="flex items-center gap-1 text-btc-orange text-xs font-medium pt-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                    {link.type === "youtube" ? "Voir la vidéo" : "Lire l'article"} <ExternalLink className="w-3 h-3" />
                   </div>
-                </a>
-                {index === 0 && LINKS.length > 1 && (
-                  <div className="rounded-xl border border-border bg-card/30 p-4 text-center md:col-span-2">
-                    <p className="text-xs font-mono uppercase tracking-wider text-muted-foreground mb-2">Publicité</p>
-                    <div className="w-full" id="adsense-slot">
-                      <AdSenseSlot />
-                    </div>
-                  </div>
-                )}
-              </React.Fragment>
+                </div>
+              </a>
             );
           })}
         </div>
