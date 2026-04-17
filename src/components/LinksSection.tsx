@@ -15,15 +15,7 @@ interface LinkItem {
 
 const LINKS: 
 
-{
-  "id": "15",
-  "type": "tweet",
-  "url": "https://x.com/DocumentingBTC/status/2045108621999014251",
-  "title": "Watch and learn about Bitcoin mining in 12 minutes",
-  "description": "Une vidéo claire et pédagogique de 12 minutes qui explique simplement le fonctionnement du minage de Bitcoin.",
-  "image": "https://pbs.twimg.com/profile_images/1369025687743500288/-4tdBSu5.jpg",
-  "date": "2026-04-17"
-},
+
 
 
 {
