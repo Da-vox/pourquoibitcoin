@@ -78,11 +78,11 @@ const HeroSection = () => {
             >
               <Link
                 to="/arguments"
-                className="group inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-btc-orange text-primary-foreground font-semibold text-sm transition-all duration-200 hover:bg-btc-orange/90 active:scale-[0.98] shadow-btc"
+                className="group relative inline-flex items-center gap-2.5 px-7 py-4 rounded-full bg-gradient-to-r from-btc-orange via-btc-gold to-btc-orange bg-[length:200%_100%] animate-gradient-slide text-primary-foreground font-bold text-base transition-all duration-300 hover:scale-[1.04] active:scale-[0.98] shadow-[0_10px_40px_-8px_hsl(var(--btc-orange)/0.5)] hover:shadow-[0_18px_60px_-8px_hsl(var(--btc-orange)/0.75)]"
               >
-                <Zap className="w-4 h-4" strokeWidth={2} />
+                <Zap className="w-4 h-4" strokeWidth={2.5} fill="currentColor" />
                 Les arguments qui tuent
-                <ArrowRight className="w-3.5 h-3.5 opacity-60 group-hover:translate-x-0.5 transition-transform" strokeWidth={2} />
+                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" strokeWidth={2.5} />
               </Link>
               <Link
                 to="/fondamentaux"
