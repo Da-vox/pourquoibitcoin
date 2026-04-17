@@ -51,12 +51,7 @@ export function BackgroundPaths({ children }: { children?: React.ReactNode }) {
     return (
         <div className="relative min-h-[100dvh] w-full flex items-center justify-center overflow-hidden bg-background">
             <div className="absolute inset-0">
-                <RotatingEarth
-                    className="absolute inset-0 w-full h-full opacity-70"
-                    cxRatio={0.78}
-                    cyRatio={0.52}
-                    radiusRatio={0.55}
-                />
+                <RotatingEarth className="absolute inset-0 w-full h-full opacity-70" />
                 <FloatingPaths position={1} />
                 <FloatingPaths position={-1} />
             </div>
