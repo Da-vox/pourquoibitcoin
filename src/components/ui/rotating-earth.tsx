@@ -57,7 +57,17 @@ function slerp(
   return [a[0] * k1 + b[0] * k2, a[1] * k1 + b[1] * k2, a[2] * k1 + b[2] * k2];
 }
 
-export function RotatingEarth({ className }: { className?: string }) {
+export function RotatingEarth({
+  className,
+  cxRatio = 0.5,
+  cyRatio = 0.5,
+  radiusRatio = 0.42,
+}: {
+  className?: string;
+  cxRatio?: number;
+  cyRatio?: number;
+  radiusRatio?: number;
+}) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const rafRef = useRef<number | null>(null);
   const flowsRef = useRef<Flow[]>([]);
@@ -111,9 +121,9 @@ export function RotatingEarth({ className }: { className?: string }) {
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       ctx.clearRect(0, 0, width, height);
 
-      const cx = width / 2;
-      const cy = height / 2;
-      const R = Math.min(width, height) * 0.42;
+      const cx = width * cxRatio;
+      const cy = height * cyRatio;
+      const R = Math.min(width, height) * radiusRatio;
 
       const glow = ctx.createRadialGradient(cx, cy, R * 0.6, cx, cy, R * 1.35);
       glow.addColorStop(0, "rgba(247,147,26,0.12)");
@@ -297,7 +307,7 @@ export function RotatingEarth({ className }: { className?: string }) {
       if (rafRef.current != null) cancelAnimationFrame(rafRef.current);
       ro.disconnect();
     };
-  }, []);
+  }, [cxRatio, cyRatio, radiusRatio]);
 
   return (
     <canvas
