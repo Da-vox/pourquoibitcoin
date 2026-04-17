@@ -218,7 +218,7 @@ const LinksSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <p className="font-mono text-sm tracking-[0.3em] uppercase text-btc-orange mb-4">
-            Actu Bitcoin
+            Actu 100% Bitcoin
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Ressources & <span className="text-gradient-btc">Liens</span>
