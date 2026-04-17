@@ -13,10 +13,7 @@ interface LinkItem {
   date: string;
 }
 
-const LINKS: 
-
-
-
+const LINKS: LinkItem[] = ([
 
 {
   "id": "14",
