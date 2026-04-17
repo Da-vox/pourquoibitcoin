@@ -23,7 +23,7 @@ const LINKS:
   "description": "Une vidéo claire et pédagogique de 12 minutes qui explique simplement le fonctionnement du minage de Bitcoin : l’énergie, le hardware, la difficulté, les récompenses et pourquoi c’est essentiel à la sécurité du réseau.",
   "image": "https://pbs.twimg.com/profile_images/1369025687743500288/-4tdBSu5.jpg",
   "date": "2026-04-17"
-}
+},
 
 
 {
