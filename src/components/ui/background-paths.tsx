@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { RotatingEarth } from "@/components/ui/rotating-earth";
 
 function FloatingPaths({ position }: { position: number }) {
     const paths = Array.from({ length: 36 }, (_, i) => ({
@@ -50,6 +51,7 @@ export function BackgroundPaths({ children }: { children?: React.ReactNode }) {
     return (
         <div className="relative min-h-[100dvh] w-full flex items-center justify-center overflow-hidden bg-background">
             <div className="absolute inset-0">
+                <RotatingEarth className="absolute inset-0 w-full h-full opacity-70" />
                 <FloatingPaths position={1} />
                 <FloatingPaths position={-1} />
             </div>
