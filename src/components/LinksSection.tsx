@@ -20,7 +20,7 @@ const LINKS:
   "type": "tweet",
   "url": "https://x.com/DocumentingBTC/status/2045108621999014251",
   "title": "Watch and learn about Bitcoin mining in 12 minutes",
-  "description": "Une vidéo claire et pédagogique de 12 minutes qui explique simplement le fonctionnement du minage de Bitcoin : l’énergie, le hardware, la difficulté, les récompenses et pourquoi c’est essentiel à la sécurité du réseau.",
+  "description": "Une vidéo claire et pédagogique de 12 minutes qui explique simplement le fonctionnement du minage de Bitcoin.",
   "image": "https://pbs.twimg.com/profile_images/1369025687743500288/-4tdBSu5.jpg",
   "date": "2026-04-17"
 },
@@ -226,7 +226,7 @@ const LinksSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <p className="font-mono text-sm tracking-[0.3em] uppercase text-btc-orange mb-4">
-            Veille Bitcoin
+            Actu Bitcoin
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Ressources & <span className="text-gradient-btc">Liens</span>
