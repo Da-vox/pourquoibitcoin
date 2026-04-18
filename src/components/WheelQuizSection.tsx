@@ -1,5 +1,5 @@
 import { useMemo, useRef, useState } from "react";
-import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation, AnimatePresence } from "framer-motion";
 import { Shield, Clock, Globe, Lock, TrendingUp, Zap, Check, X, RotateCcw, Trophy, type LucideIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -151,7 +151,7 @@ const WheelQuizSection = () => {
 
     await controls.start({
       rotate: nextRotation,
-      transition: { duration: 4.2, ease: [0.16, 1, 0.3, 1] },
+      transition: { duration: 3.6, ease: [0.16, 1, 0.3, 1] },
     });
 
     rotationRef.current = nextRotation;
@@ -182,279 +182,300 @@ const WheelQuizSection = () => {
     setAnswerState("idle");
   };
 
+  const progressDots = (
+    <div className="flex items-center gap-1.5">
+      {quizzes.map((q) => {
+        const answered = answeredIds.has(q.id);
+        return (
+          <span
+            key={q.id}
+            className={`w-2 h-2 rounded-full transition-colors ${
+              answered ? "bg-btc-orange" : "bg-border"
+            }`}
+          />
+        );
+      })}
+    </div>
+  );
+
   return (
-    <section id="quiz" className="py-14 md:py-24 relative">
+    <section id="quiz" className="py-10 md:py-20 relative">
       <div className="container mx-auto px-6">
-        <div className="mb-10 md:mb-14 max-w-xl">
-          <p className="font-mono text-xs tracking-[0.4em] uppercase text-btc-orange mb-4">
+        {/* Compact header */}
+        <div className="text-center max-w-xl mx-auto mb-6 md:mb-8">
+          <p className="font-mono text-[10px] md:text-xs tracking-[0.4em] uppercase text-btc-orange mb-2 md:mb-3">
             Testez vos connaissances
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-foreground mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tighter text-foreground mb-2 md:mb-3">
             La roue des fondamentaux
           </h2>
-          <p className="text-muted-foreground text-lg leading-relaxed max-w-[55ch]">
-            Faites tourner la roue et répondez aux 6 QCM pour vérifier si vous avez bien capté l'essentiel de Bitcoin.
+          <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
+            Faites tourner la roue, répondez aux 6 QCM.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
-          {/* Wheel */}
-          <div className="flex flex-col items-center">
-            <div className="relative">
-              {/* Pointer */}
-              <div className="absolute left-1/2 -translate-x-1/2 -top-2 z-20 pointer-events-none">
-                <div className="w-0 h-0 border-l-[14px] border-l-transparent border-r-[14px] border-r-transparent border-t-[22px] border-t-btc-orange drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)]" />
-              </div>
-
-              <motion.svg
-                width={WHEEL_CENTER * 2}
-                height={WHEEL_CENTER * 2}
-                viewBox={`0 0 ${WHEEL_CENTER * 2} ${WHEEL_CENTER * 2}`}
-                animate={controls}
-                initial={{ rotate: 0 }}
-                style={{ originX: "50%", originY: "50%" }}
-                className="max-w-full h-auto drop-shadow-[0_10px_30px_rgba(247,147,26,0.15)]"
-              >
-                <circle
-                  cx={WHEEL_CENTER}
-                  cy={WHEEL_CENTER}
-                  r={WHEEL_RADIUS + 6}
-                  fill="hsl(var(--card))"
-                  stroke="hsl(var(--border))"
-                  strokeWidth={2}
-                />
-                {quizzes.map((q, i) => {
-                  const Icon = q.icon;
-                  const labelAngle = i * SLICE_ANGLE + SLICE_ANGLE / 2;
-                  const labelPos = polarToCartesian(
-                    WHEEL_CENTER,
-                    WHEEL_CENTER,
-                    WHEEL_RADIUS * 0.62,
-                    labelAngle,
-                  );
-                  const iconPos = polarToCartesian(
-                    WHEEL_CENTER,
-                    WHEEL_CENTER,
-                    WHEEL_RADIUS * 0.82,
-                    labelAngle,
-                  );
-                  const answered = answeredIds.has(q.id);
-                  return (
-                    <g key={q.id}>
-                      <path
-                        d={slicePath(i)}
-                        fill={q.color}
-                        opacity={answered ? 0.35 : 0.92}
-                        stroke="hsl(var(--background))"
-                        strokeWidth={2}
-                      />
-                      <g
-                        transform={`translate(${labelPos.x}, ${labelPos.y}) rotate(${labelAngle})`}
-                      >
-                        <text
-                          textAnchor="middle"
-                          dominantBaseline="middle"
-                          fill="#fff"
-                          fontSize={13}
-                          fontWeight={700}
-                          style={{ letterSpacing: "0.02em" }}
-                        >
-                          {q.label}
-                        </text>
-                      </g>
-                      <g transform={`translate(${iconPos.x - 10}, ${iconPos.y - 10})`}>
-                        <Icon width={20} height={20} color="#fff" strokeWidth={2} />
-                      </g>
-                    </g>
-                  );
-                })}
-                <circle
-                  cx={WHEEL_CENTER}
-                  cy={WHEEL_CENTER}
-                  r={26}
-                  fill="hsl(var(--card))"
-                  stroke="hsl(var(--btc-orange))"
-                  strokeWidth={2}
-                />
-                <text
-                  x={WHEEL_CENTER}
-                  y={WHEEL_CENTER + 1}
-                  textAnchor="middle"
-                  dominantBaseline="middle"
-                  fill="hsl(var(--btc-orange))"
-                  fontSize={16}
-                  fontWeight={800}
+        {/* Single-stage container: wheel ↔ quiz ↔ summary (fixed min-h to avoid jumps) */}
+        <div className="max-w-xl mx-auto">
+          {/* Score / progress bar */}
+          <div className="flex items-center justify-between mb-4 px-1">
+            {progressDots}
+            <div className="flex items-center gap-3">
+              <span className="font-mono text-xs text-muted-foreground">
+                {score.correct}/{quizzes.length}
+              </span>
+              {score.total > 0 && !allDone && (
+                <button
+                  onClick={handleReset}
+                  className="text-xs text-muted-foreground hover:text-btc-orange transition-colors inline-flex items-center gap-1"
+                  aria-label="Recommencer"
                 >
-                  ₿
-                </text>
-              </motion.svg>
-            </div>
-
-            <div className="mt-8 flex flex-col sm:flex-row items-center gap-3">
-              <Button
-                onClick={handleSpin}
-                disabled={isSpinning || !!activeQuiz || allDone}
-                size="lg"
-                className="bg-btc-orange hover:bg-btc-orange/90 text-white font-semibold px-8"
-              >
-                {isSpinning ? "La roue tourne…" : allDone ? "Terminé !" : "Faire tourner la roue"}
-              </Button>
-              {score.total > 0 && (
-                <Button variant="ghost" size="sm" onClick={handleReset}>
-                  <RotateCcw className="w-4 h-4" />
-                  Recommencer
-                </Button>
+                  <RotateCcw className="w-3 h-3" />
+                </button>
               )}
             </div>
           </div>
 
-          {/* Panel: question / score / intro */}
-          <div className="min-h-[360px]">
-            {!activeQuiz && !allDone && score.total === 0 && (
-              <div className="p-8 rounded-2xl bg-card border border-border">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-xl bg-btc-orange/10 flex items-center justify-center">
-                    <Trophy className="w-5 h-5 text-btc-orange" strokeWidth={1.5} />
-                  </div>
-                  <h3 className="text-xl font-semibold">Comment ça marche</h3>
-                </div>
-                <ol className="space-y-2 text-muted-foreground text-sm leading-relaxed list-decimal list-inside">
-                  <li>Cliquez sur « Faire tourner la roue »</li>
-                  <li>La roue s'arrête sur un des 6 fondamentaux</li>
-                  <li>Répondez au QCM qui s'affiche</li>
-                  <li>Refaites tourner jusqu'à avoir couvert les 6 thèmes</li>
-                </ol>
-                <p className="mt-5 text-xs text-muted-foreground/80">
-                  Les thèmes déjà répondus apparaîtront grisés sur la roue.
-                </p>
-              </div>
-            )}
-
-            {!activeQuiz && score.total > 0 && !allDone && (
-              <div className="p-8 rounded-2xl bg-card border border-border">
-                <p className="font-mono text-xs tracking-[0.3em] uppercase text-btc-orange mb-3">
-                  Score
-                </p>
-                <p className="text-4xl font-bold mb-2">
-                  {score.correct} / {score.total}
-                </p>
-                <p className="text-muted-foreground text-sm">
-                  Encore {quizzes.length - score.total} thème
-                  {quizzes.length - score.total > 1 ? "s" : ""} à découvrir. Refaites tourner la roue !
-                </p>
-              </div>
-            )}
-
-            {allDone && !activeQuiz && (
-              <div className="p-8 rounded-2xl bg-card border border-btc-orange/40">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-xl bg-btc-orange/15 flex items-center justify-center">
-                    <Trophy className="w-5 h-5 text-btc-orange" strokeWidth={1.5} />
-                  </div>
-                  <h3 className="text-xl font-semibold">Bravo, partie terminée !</h3>
-                </div>
-                <p className="text-4xl font-bold mb-2">
-                  {score.correct} / {score.total}
-                </p>
-                <p className="text-muted-foreground text-sm mb-5">
-                  {score.correct === score.total
-                    ? "Sans-faute. Vous avez tout compris des fondamentaux de Bitcoin."
-                    : score.correct >= 4
-                      ? "Beau score ! Relisez les fondamentaux sur lesquels vous avez buté."
-                      : "Un petit tour sur les fondamentaux plus haut, et vous y serez."}
-                </p>
-                <Button onClick={handleReset} className="bg-btc-orange hover:bg-btc-orange/90 text-white">
-                  <RotateCcw className="w-4 h-4" />
-                  Rejouer
-                </Button>
-              </div>
-            )}
-
-            {activeQuiz && (
-              <motion.div
-                key={activeQuiz.id}
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.35 }}
-                className="p-8 rounded-2xl bg-card border border-border"
-              >
-                <div className="flex items-center gap-3 mb-5">
-                  <div className="w-10 h-10 rounded-xl bg-btc-orange/10 flex items-center justify-center">
-                    <activeQuiz.icon className="w-5 h-5 text-btc-orange" strokeWidth={1.5} />
-                  </div>
-                  <p className="font-mono text-xs tracking-[0.3em] uppercase text-btc-orange">
-                    {activeQuiz.label}
-                  </p>
-                </div>
-
-                <h3 className="text-xl md:text-2xl font-semibold mb-6 tracking-tight">
-                  {activeQuiz.question}
-                </h3>
-
-                <div className="space-y-2.5 mb-5">
-                  {activeQuiz.options.map((opt, i) => {
-                    const isSelected = selected === i;
-                    const isCorrect = i === activeQuiz.correct;
-                    const revealed = answerState !== "idle";
-                    let cls =
-                      "w-full text-left px-4 py-3 rounded-lg border text-sm transition-all duration-200";
-                    if (!revealed) {
-                      cls += " border-border hover:border-btc-orange/50 hover:bg-btc-orange/5 cursor-pointer";
-                    } else if (isCorrect) {
-                      cls += " border-green-500/60 bg-green-500/10 text-foreground";
-                    } else if (isSelected) {
-                      cls += " border-red-500/60 bg-red-500/10 text-foreground";
-                    } else {
-                      cls += " border-border opacity-60";
-                    }
-                    return (
-                      <button
-                        key={i}
-                        type="button"
-                        onClick={() => handleAnswer(i)}
-                        disabled={revealed}
-                        className={cls}
-                      >
-                        <span className="flex items-center justify-between gap-3">
-                          <span>{opt}</span>
-                          {revealed && isCorrect && (
-                            <Check className="w-4 h-4 text-green-500 shrink-0" />
-                          )}
-                          {revealed && isSelected && !isCorrect && (
-                            <X className="w-4 h-4 text-red-500 shrink-0" />
-                          )}
-                        </span>
-                      </button>
-                    );
-                  })}
-                </div>
-
-                {answerState !== "idle" && (
-                  <>
-                    <div
-                      className={`text-sm p-4 rounded-lg border mb-5 ${
-                        answerState === "correct"
-                          ? "border-green-500/40 bg-green-500/5 text-foreground"
-                          : "border-red-500/40 bg-red-500/5 text-foreground"
-                      }`}
-                    >
-                      <p className="font-semibold mb-1">
-                        {answerState === "correct" ? "Bien vu !" : "Raté."}
-                      </p>
-                      <p className="text-muted-foreground leading-relaxed">
-                        {activeQuiz.explanation}
-                      </p>
+          <div className="relative">
+            <AnimatePresence mode="wait">
+              {!activeQuiz && !allDone && (
+                <motion.div
+                  key="wheel"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0, scale: 0.96 }}
+                  transition={{ duration: 0.25 }}
+                  className="flex flex-col items-center"
+                >
+                  <div className="relative">
+                    {/* Pointer */}
+                    <div className="absolute left-1/2 -translate-x-1/2 -top-1 z-20 pointer-events-none">
+                      <div className="w-0 h-0 border-l-[12px] border-l-transparent border-r-[12px] border-r-transparent border-t-[20px] border-t-btc-orange drop-shadow-[0_2px_4px_rgba(0,0,0,0.4)]" />
                     </div>
-                    <Button
-                      onClick={handleNext}
-                      className="bg-btc-orange hover:bg-btc-orange/90 text-white w-full sm:w-auto"
+
+                    <motion.svg
+                      width={WHEEL_CENTER * 2}
+                      height={WHEEL_CENTER * 2}
+                      viewBox={`0 0 ${WHEEL_CENTER * 2} ${WHEEL_CENTER * 2}`}
+                      animate={controls}
+                      initial={{ rotate: 0 }}
+                      style={{ originX: "50%", originY: "50%" }}
+                      onClick={handleSpin}
+                      className="w-[260px] h-[260px] sm:w-[320px] sm:h-[320px] md:w-[360px] md:h-[360px] drop-shadow-[0_10px_30px_rgba(247,147,26,0.15)] cursor-pointer"
                     >
-                      {remaining.length > 0 ? "Continuer" : "Voir le score final"}
-                    </Button>
-                  </>
-                )}
-              </motion.div>
-            )}
+                      <circle
+                        cx={WHEEL_CENTER}
+                        cy={WHEEL_CENTER}
+                        r={WHEEL_RADIUS + 6}
+                        fill="hsl(var(--card))"
+                        stroke="hsl(var(--border))"
+                        strokeWidth={2}
+                      />
+                      {quizzes.map((q, i) => {
+                        const Icon = q.icon;
+                        const labelAngle = i * SLICE_ANGLE + SLICE_ANGLE / 2;
+                        const labelPos = polarToCartesian(
+                          WHEEL_CENTER,
+                          WHEEL_CENTER,
+                          WHEEL_RADIUS * 0.62,
+                          labelAngle,
+                        );
+                        const iconPos = polarToCartesian(
+                          WHEEL_CENTER,
+                          WHEEL_CENTER,
+                          WHEEL_RADIUS * 0.82,
+                          labelAngle,
+                        );
+                        const answered = answeredIds.has(q.id);
+                        return (
+                          <g key={q.id}>
+                            <path
+                              d={slicePath(i)}
+                              fill={q.color}
+                              opacity={answered ? 0.3 : 0.92}
+                              stroke="hsl(var(--background))"
+                              strokeWidth={2}
+                            />
+                            <g
+                              transform={`translate(${labelPos.x}, ${labelPos.y}) rotate(${labelAngle})`}
+                            >
+                              <text
+                                textAnchor="middle"
+                                dominantBaseline="middle"
+                                fill="#fff"
+                                fontSize={14}
+                                fontWeight={700}
+                                style={{ letterSpacing: "0.02em" }}
+                              >
+                                {q.label}
+                              </text>
+                            </g>
+                            <g transform={`translate(${iconPos.x - 10}, ${iconPos.y - 10})`}>
+                              <Icon width={20} height={20} color="#fff" strokeWidth={2} />
+                            </g>
+                          </g>
+                        );
+                      })}
+                      <circle
+                        cx={WHEEL_CENTER}
+                        cy={WHEEL_CENTER}
+                        r={30}
+                        fill="hsl(var(--card))"
+                        stroke="hsl(var(--btc-orange))"
+                        strokeWidth={2}
+                      />
+                      <text
+                        x={WHEEL_CENTER}
+                        y={WHEEL_CENTER + 1}
+                        textAnchor="middle"
+                        dominantBaseline="middle"
+                        fill="hsl(var(--btc-orange))"
+                        fontSize={20}
+                        fontWeight={800}
+                      >
+                        ₿
+                      </text>
+                    </motion.svg>
+                  </div>
+
+                  <Button
+                    onClick={handleSpin}
+                    disabled={isSpinning}
+                    size="lg"
+                    className="mt-5 bg-btc-orange hover:bg-btc-orange/90 text-white font-semibold px-8 shadow-lg shadow-btc-orange/20"
+                  >
+                    {isSpinning ? "La roue tourne…" : score.total === 0 ? "Faire tourner la roue" : "Tour suivant"}
+                  </Button>
+                </motion.div>
+              )}
+
+              {activeQuiz && (
+                <motion.div
+                  key={`quiz-${activeQuiz.id}`}
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -8 }}
+                  transition={{ duration: 0.3 }}
+                  className="p-5 md:p-7 rounded-2xl bg-card border border-border shadow-lg"
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-9 h-9 rounded-xl bg-btc-orange/10 flex items-center justify-center shrink-0">
+                      <activeQuiz.icon className="w-4 h-4 text-btc-orange" strokeWidth={1.5} />
+                    </div>
+                    <p className="font-mono text-[10px] md:text-xs tracking-[0.3em] uppercase text-btc-orange">
+                      {activeQuiz.label}
+                    </p>
+                  </div>
+
+                  <h3 className="text-lg md:text-xl font-semibold mb-4 md:mb-5 tracking-tight leading-snug">
+                    {activeQuiz.question}
+                  </h3>
+
+                  <div className="space-y-2 mb-4">
+                    {activeQuiz.options.map((opt, i) => {
+                      const isSelected = selected === i;
+                      const isCorrect = i === activeQuiz.correct;
+                      const revealed = answerState !== "idle";
+                      let cls =
+                        "w-full text-left px-4 py-2.5 rounded-lg border text-sm transition-all duration-200";
+                      if (!revealed) {
+                        cls +=
+                          " border-border hover:border-btc-orange/50 hover:bg-btc-orange/5 cursor-pointer active:scale-[0.99]";
+                      } else if (isCorrect) {
+                        cls += " border-green-500/60 bg-green-500/10 text-foreground";
+                      } else if (isSelected) {
+                        cls += " border-red-500/60 bg-red-500/10 text-foreground";
+                      } else {
+                        cls += " border-border opacity-60";
+                      }
+                      return (
+                        <button
+                          key={i}
+                          type="button"
+                          onClick={() => handleAnswer(i)}
+                          disabled={revealed}
+                          className={cls}
+                        >
+                          <span className="flex items-center justify-between gap-3">
+                            <span>{opt}</span>
+                            {revealed && isCorrect && (
+                              <Check className="w-4 h-4 text-green-500 shrink-0" />
+                            )}
+                            {revealed && isSelected && !isCorrect && (
+                              <X className="w-4 h-4 text-red-500 shrink-0" />
+                            )}
+                          </span>
+                        </button>
+                      );
+                    })}
+                  </div>
+
+                  {answerState !== "idle" && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      transition={{ duration: 0.25 }}
+                    >
+                      <div
+                        className={`text-sm p-3.5 rounded-lg border mb-3 ${
+                          answerState === "correct"
+                            ? "border-green-500/40 bg-green-500/5"
+                            : "border-red-500/40 bg-red-500/5"
+                        }`}
+                      >
+                        <p className="font-semibold mb-1">
+                          {answerState === "correct" ? "Bien vu !" : "Raté."}
+                        </p>
+                        <p className="text-muted-foreground leading-relaxed text-[13px]">
+                          {activeQuiz.explanation}
+                        </p>
+                      </div>
+                      <Button
+                        onClick={handleNext}
+                        className="bg-btc-orange hover:bg-btc-orange/90 text-white w-full"
+                      >
+                        {remaining.length > 0 ? "Tour suivant" : "Voir le score"}
+                      </Button>
+                    </motion.div>
+                  )}
+                </motion.div>
+              )}
+
+              {allDone && !activeQuiz && (
+                <motion.div
+                  key="done"
+                  initial={{ opacity: 0, scale: 0.96 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.35 }}
+                  className="p-6 md:p-8 rounded-2xl bg-card border border-btc-orange/40 text-center"
+                >
+                  <div className="w-14 h-14 rounded-2xl bg-btc-orange/15 flex items-center justify-center mx-auto mb-4">
+                    <Trophy className="w-7 h-7 text-btc-orange" strokeWidth={1.5} />
+                  </div>
+                  <p className="font-mono text-[10px] md:text-xs tracking-[0.3em] uppercase text-btc-orange mb-2">
+                    Score final
+                  </p>
+                  <p className="text-5xl font-bold mb-3">
+                    {score.correct}
+                    <span className="text-2xl text-muted-foreground font-normal"> / {score.total}</span>
+                  </p>
+                  <p className="text-muted-foreground text-sm mb-5 max-w-sm mx-auto">
+                    {score.correct === score.total
+                      ? "Sans-faute. Vous avez tout compris des fondamentaux de Bitcoin."
+                      : score.correct >= 4
+                        ? "Beau score ! Relisez les fondamentaux sur lesquels vous avez buté."
+                        : "Un petit tour sur les fondamentaux plus haut, et vous y serez."}
+                  </p>
+                  <Button
+                    onClick={handleReset}
+                    className="bg-btc-orange hover:bg-btc-orange/90 text-white"
+                  >
+                    <RotateCcw className="w-4 h-4" />
+                    Rejouer
+                  </Button>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         </div>
       </div>
