@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Zap, Lock, ArrowRight, TrendingUp } from "lucide-react";
+import { Zap, Lock, ArrowRight, TrendingUp, Code2 } from "lucide-react";
 import { BackgroundPaths } from "@/components/ui/background-paths";
 import { useBtc7DayLow } from "@/hooks/use-btc-7day-low";
 
@@ -105,6 +105,13 @@ const HeroSection = () => {
               >
                 <Lock className="w-4 h-4 text-muted-foreground" strokeWidth={1.5} />
                 Sécuriser ses BTC
+              </Link>
+              <Link
+                to="/geek-area"
+                className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full border border-border text-foreground font-medium text-sm transition-all duration-200 hover:border-btc-orange/40 hover:bg-secondary active:scale-[0.98]"
+              >
+                <Code2 className="w-4 h-4 text-muted-foreground" strokeWidth={1.5} />
+                Geek Area
               </Link>
             </motion.div>
           </motion.div>
