@@ -9,8 +9,7 @@ interface SectionLink {
 const sections: SectionLink[] = [
   { id: "prix",       label: "Cours" },
   { id: "ressources", label: "Ressources" },
-  { id: "apropos",    label: "À propos" },
-  { id: "contact",    label: "Contact" },
+  { id: "apropos",    label: "À propos & Contact" },
 ];
 
 /**

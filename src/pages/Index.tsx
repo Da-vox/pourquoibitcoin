@@ -1,7 +1,6 @@
 import HeroSection from "@/components/HeroSection";
 import BtcPriceChart from "@/components/BtcPriceChart";
 import LinksSection from "@/components/LinksSection";
-import ContactSection from "@/components/ContactSection";
 import FooterSection from "@/components/FooterSection";
 import Navbar from "@/components/Navbar";
 import ShareButtons from "@/components/ShareButtons";
@@ -38,10 +37,6 @@ const Index = () => {
           <ShareButtons />
         </div>
       </section>
-
-      <div id="contact">
-        <ContactSection />
-      </div>
 
       <FooterSection />
 
