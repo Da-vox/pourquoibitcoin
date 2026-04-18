@@ -10,21 +10,17 @@ const CZSection = () => {
             </p>
 
             {/* Vidéo YouTube embarquée */}
-            <div className="mb-6 rounded-xl overflow-hidden border border-btc-orange/20">
+            <div className="mb-8 rounded-xl overflow-hidden border border-btc-orange/20">
               <div className="aspect-video">
                 <iframe
-                  src="https://www.youtube.com/embed/WXpQWpUM6dQ?start=150"
-                  title="La vidéo qui m'a inspiré Pourquoi Bitcoin"
+                  src="https://www.youtube.com/embed/LOKoe4s3RcM"
+                  title="Moment culte Bitcoin"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                   className="w-full h-full"
                 />
               </div>
             </div>
-            <p className="text-base md:text-lg text-muted-foreground mb-8 leading-relaxed">
-              C'est <span className="text-btc-orange font-semibold">cette vidéo</span> (à partir de 2m30)
-              qui m'a indiqué qu'il fallait faire le site <span className="text-btc-orange font-semibold">Pourquoi Bitcoin</span>.
-            </p>
 
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               Quand <span className="text-gradient-btc">CZ</span> détruit un gold maxi en une question
@@ -52,6 +48,33 @@ const CZSection = () => {
                 <p className="text-muted-foreground mt-2">rien à transporter</p>
               </div>
             </div>
+          </div>
+
+          <div className="rounded-2xl border border-btc-orange/20 bg-card/80 backdrop-blur p-8 md:p-12 glow-btc mt-10">
+            <p className="font-mono text-sm tracking-[0.3em] uppercase text-btc-orange mb-6">
+              Moment culte
+            </p>
+
+            {/* Vidéo YouTube embarquée */}
+            <div className="mb-8 rounded-xl overflow-hidden border border-btc-orange/20">
+              <div className="aspect-video">
+                <iframe
+                  src="https://www.youtube.com/embed/WXpQWpUM6dQ?start=150"
+                  title="La vidéo qui m'a inspiré Pourquoi Bitcoin"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              </div>
+            </div>
+
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              La vidéo qui a <span className="text-gradient-btc">tout déclenché</span>
+            </h2>
+            <p className="text-lg md:text-xl text-foreground leading-relaxed">
+              C'est <span className="text-btc-orange font-semibold">cette vidéo</span> (à partir de 2m30)
+              qui m'a indiqué qu'il fallait faire le site <span className="text-btc-orange font-semibold">Pourquoi Bitcoin</span>.
+            </p>
           </div>
         </div>
       </div>
