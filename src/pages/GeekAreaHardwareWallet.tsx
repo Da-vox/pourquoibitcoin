@@ -34,7 +34,7 @@ const hwArguments = [
     icon: Lock,
     title: "Air-gap total",
     description:
-      "SeedSigner est conçu pour ne jamais se connecter à internet. Les transactions sont signées via QR codes. Aucune surface d'attaque réseau — c'est l'isolation maximale.",
+      "SeedSigner est conçu pour ne jamais se connecter à internet. Les transactions sont signées via QR codes. Aucune surface d'attaque réseau - c'est l'isolation maximale.",
   },
   {
     icon: Zap,
@@ -78,7 +78,7 @@ const hwSteps = [
   {
     title: "Premier démarrage",
     content:
-      "Alimente le Raspberry Pi Zero via le port USB. SeedSigner démarre en quelques secondes. Aucun paramétrage réseau n'est requis — l'appareil fonctionne entièrement hors ligne dès le premier démarrage.",
+      "Alimente le Raspberry Pi Zero via le port USB. SeedSigner démarre en quelques secondes. Aucun paramétrage réseau n'est requis - l'appareil fonctionne entièrement hors ligne dès le premier démarrage.",
   },
   {
     title: "Générer ta seed phrase",
@@ -151,7 +151,7 @@ const GeekAreaHardwareWallet = () => {
               <Cpu className="w-7 h-7 text-primary-foreground" />
             </div>
             <p className="font-mono text-sm tracking-[0.3em] uppercase text-btc-orange mb-4">
-              Section 02 — Geek Area
+              Section 02 - Geek Area
             </p>
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
               Construire son{" "}
@@ -335,7 +335,7 @@ const GeekAreaHardwareWallet = () => {
             <p className="text-muted-foreground text-sm mb-4">
               Partage ce tutoriel avec d'autres bitcoiners
             </p>
-            <ShareButtons title="Construire son Hardware Wallet DIY — Geek Area" />
+            <ShareButtons title="Construire son Hardware Wallet DIY - Geek Area" />
           </div>
         </section>
       </div>

@@ -1,5 +1,5 @@
 /**
- * Custody Diagram — SVG illustration
+ * Custody Diagram - SVG illustration
  * Compares custodial (exchange) vs self-custody (hardware wallet).
  * Illustrates the "Not your keys, not your coins" principle.
  */
@@ -27,7 +27,7 @@ const CustodyDiagram = () => {
       </div>
 
       <div className="grid grid-cols-2" style={{ background: "hsl(222,24%,8%)" }}>
-        {/* LEFT — Exchange (BAD) */}
+        {/* LEFT - Exchange (BAD) */}
         <div
           className="p-5 flex flex-col items-center gap-3 border-r"
           style={{ borderColor: BORDER_DARK }}
@@ -86,7 +86,7 @@ const CustodyDiagram = () => {
           </div>
         </div>
 
-        {/* RIGHT — Hardware Wallet (GOOD) */}
+        {/* RIGHT - Hardware Wallet (GOOD) */}
         <div className="p-5 flex flex-col items-center gap-3">
           {/* HW Wallet Icon */}
           <div

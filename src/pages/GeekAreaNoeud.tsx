@@ -23,7 +23,7 @@ const nodeArguments = [
     icon: Eye,
     title: "Vérifier toi-même",
     description:
-      "Un nœud complet valide chaque transaction et chaque bloc. Tu n'as plus besoin de faire confiance à un tiers — tu vérifies toi-même les règles du protocole Bitcoin.",
+      "Un nœud complet valide chaque transaction et chaque bloc. Tu n'as plus besoin de faire confiance à un tiers - tu vérifies toi-même les règles du protocole Bitcoin.",
   },
   {
     icon: Shield,
@@ -68,7 +68,7 @@ const nodeSteps = [
   {
     title: "Télécharger Bitcoin Core",
     content:
-      "Rends-toi sur bitcoincore.org et récupère la dernière version stable. Vérifie toujours la signature cryptographique du binaire avant de l'installer — c'est une étape de sécurité non négociable.",
+      "Rends-toi sur bitcoincore.org et récupère la dernière version stable. Vérifie toujours la signature cryptographique du binaire avant de l'installer - c'est une étape de sécurité non négociable.",
     code: "wget https://bitcoincore.org/bin/bitcoin-core-27.0/bitcoin-27.0-x86_64-linux-gnu.tar.gz",
   },
   {
@@ -98,7 +98,7 @@ const nodeSteps = [
   {
     title: "Synchroniser la blockchain",
     content:
-      "Lance la synchronisation initiale (IBD — Initial Block Download). Cela peut prendre entre 12 et 48 heures selon ton matériel et ta connexion. Tu peux suivre l'avancement en temps réel.",
+      "Lance la synchronisation initiale (IBD - Initial Block Download). Cela peut prendre entre 12 et 48 heures selon ton matériel et ta connexion. Tu peux suivre l'avancement en temps réel.",
     code: "bitcoin-cli getblockchaininfo",
   },
   {
@@ -109,7 +109,7 @@ const nodeSteps = [
 ];
 
 const nodeWarnings = [
-  "Ne pas utiliser un disque dur HDD — un SSD est obligatoire pour les performances",
+  "Ne pas utiliser un disque dur HDD - un SSD est obligatoire pour les performances",
   "Laisser la machine allumée en permanence pour rester synchronisé",
   "Ouvrir le port 8333 sur ton routeur pour contribuer au réseau (optionnel mais recommandé)",
   "Ne jamais exposer ton port RPC (8332) sur internet sans authentification",
@@ -155,7 +155,7 @@ const GeekAreaNoeud = () => {
               <Server className="w-7 h-7 text-primary-foreground" />
             </div>
             <p className="font-mono text-sm tracking-[0.3em] uppercase text-btc-orange mb-4">
-              Section 01 — Geek Area
+              Section 01 - Geek Area
             </p>
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
               Monter son{" "}
@@ -337,7 +337,7 @@ const GeekAreaNoeud = () => {
             <p className="text-muted-foreground text-sm mb-4">
               Partage ce tutoriel avec d'autres bitcoiners
             </p>
-            <ShareButtons title="Monter son nœud Bitcoin — Geek Area" />
+            <ShareButtons title="Monter son nœud Bitcoin - Geek Area" />
           </div>
         </section>
       </div>

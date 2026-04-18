@@ -1,5 +1,5 @@
 /**
- * Bitcoin Supply Schedule — SVG illustration
+ * Bitcoin Supply Schedule - SVG illustration
  * Shows the emission curve approaching 21M BTC with halving events.
  */
 

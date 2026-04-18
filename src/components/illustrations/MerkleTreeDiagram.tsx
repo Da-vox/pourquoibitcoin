@@ -1,5 +1,5 @@
 /**
- * Merkle Tree Diagram — SVG illustration
+ * Merkle Tree Diagram - SVG illustration
  * Visualizes how Bitcoin transactions are hashed into a Merkle root.
  * Used in the whitepaper chapter 07 (Récupération d'Espace Disque).
  */
@@ -120,7 +120,7 @@ const MerkleTreeDiagram = () => {
       className="w-full mt-4 rounded-xl border overflow-hidden"
       style={{ borderColor: BORDER, background: CARD_BG }}
       role="img"
-      aria-label="Arbre de Merkle — structure de hachage des transactions Bitcoin"
+      aria-label="Arbre de Merkle - structure de hachage des transactions Bitcoin"
     >
       {/* Header */}
       <div

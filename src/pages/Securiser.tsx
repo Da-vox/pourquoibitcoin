@@ -55,7 +55,7 @@ const Securiser = () => {
               </h1>
               <p className="text-muted-foreground max-w-2xl mx-auto text-lg mb-8">
                 Le guide simple pour protéger tes BTC avec un hardware wallet.
-                Pas besoin d'être un expert — juste de suivre les étapes.
+                Pas besoin d'être un expert - juste de suivre les étapes.
               </p>
               <ShareButtons title="Comment sécuriser ses Bitcoin simplement" />
             </div>
@@ -159,7 +159,7 @@ const Securiser = () => {
                 Commander un Ledger <ExternalLink className="w-5 h-5" />
               </a>
               <p className="text-muted-foreground text-xs mt-4">
-                Lien affilié — tu soutiens le site sans surcoût pour toi.
+                Lien affilié - tu soutiens le site sans surcoût pour toi.
               </p>
             </div>
           </div>

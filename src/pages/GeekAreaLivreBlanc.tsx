@@ -47,7 +47,7 @@ const chapters = [
     title: "Serveur d'Horodatage",
     concept: "Prouver l'existence dans le temps",
     summary:
-      "Pour prouver qu'une transaction existait à un moment précis, Bitcoin utilise un serveur d'horodatage distribué. Ce serveur prend le hash d'un bloc de transactions et le publie sur le réseau. Chaque timestamp inclut le timestamp précédent dans son hash, formant une chaîne inaltérable. Il devient mathématiquement impossible de modifier une transaction passée sans recalculer tous les blocs suivants — ce qui exigerait une puissance de calcul colossale.",
+      "Pour prouver qu'une transaction existait à un moment précis, Bitcoin utilise un serveur d'horodatage distribué. Ce serveur prend le hash d'un bloc de transactions et le publie sur le réseau. Chaque timestamp inclut le timestamp précédent dans son hash, formant une chaîne inaltérable. Il devient mathématiquement impossible de modifier une transaction passée sans recalculer tous les blocs suivants - ce qui exigerait une puissance de calcul colossale.",
     keyPoint: "Chaque bloc de la blockchain contient la preuve que tous les blocs précédents existaient déjà.",
   },
   {
@@ -74,7 +74,7 @@ const chapters = [
     title: "Incentive",
     concept: "Pourquoi les mineurs jouent honnêtement",
     summary:
-      "Le premier mineur à trouver un bloc valide reçoit une récompense en bitcoins nouvellement créés — c'est le seul mécanisme de création monétaire de Bitcoin. Au fil des halvings, cette récompense diminue et est progressivement remplacée par les frais de transaction. Satoshi démontre que pour un attaquant disposant d'une majorité de la puissance de calcul, il serait toujours plus rentable de miner honnêtement que d'attaquer le réseau, car une attaque détruirait la valeur même des bitcoins qu'il possède.",
+      "Le premier mineur à trouver un bloc valide reçoit une récompense en bitcoins nouvellement créés - c'est le seul mécanisme de création monétaire de Bitcoin. Au fil des halvings, cette récompense diminue et est progressivement remplacée par les frais de transaction. Satoshi démontre que pour un attaquant disposant d'une majorité de la puissance de calcul, il serait toujours plus rentable de miner honnêtement que d'attaquer le réseau, car une attaque détruirait la valeur même des bitcoins qu'il possède.",
     keyPoint: "Le protocole aligne les intérêts économiques des participants avec la sécurité du réseau.",
   },
   {
@@ -102,7 +102,7 @@ const chapters = [
     concept: "Le système UTXO",
     summary:
       "Bien que chaque satoshi puisse théoriquement être tracé individuellement, les envoyer séparément serait inefficace. Bitcoin permet à une transaction d'avoir plusieurs inputs (fusionnant plusieurs pièces reçues) et plusieurs outputs (envoyant vers plusieurs destinataires simultanément). Le « change » (la monnaie rendue) est renvoyé vers une nouvelle adresse du même portefeuille. Ce système d'UTXO (Unspent Transaction Outputs) est l'épine dorsale comptable de Bitcoin.",
-    keyPoint: "Chaque bitcoin que tu possèdes est en réalité un ou plusieurs UTXO — des sorties de transactions précédentes non encore dépensées.",
+    keyPoint: "Chaque bitcoin que tu possèdes est en réalité un ou plusieurs UTXO - des sorties de transactions précédentes non encore dépensées.",
   },
   {
     num: "10",
@@ -111,7 +111,7 @@ const chapters = [
     concept: "Pseudonymie, pas anonymat",
     summary:
       "Le modèle bancaire maintient la confidentialité en limitant l'accès aux registres. Bitcoin, avec sa blockchain publique, ne peut pas cacher les transactions. La confidentialité repose sur la pseudonymie : les identités sont représentées par des paires de clés cryptographiques, sans lien direct avec des personnes réelles. Pour maximiser la confidentialité, il est recommandé d'utiliser une nouvelle adresse pour chaque transaction. Attention : les inputs multiples d'une transaction révèlent souvent qu'ils appartiennent au même propriétaire.",
-    keyPoint: "Bitcoin est pseudonyme, pas anonyme. Toutes les transactions sont publiques — seules les identités des adresses sont masquées.",
+    keyPoint: "Bitcoin est pseudonyme, pas anonyme. Toutes les transactions sont publiques - seules les identités des adresses sont masquées.",
   },
   {
     num: "11",
@@ -173,7 +173,7 @@ const GeekAreaLivreBlanc = () => {
               <BookOpen className="w-7 h-7 text-primary-foreground" />
             </div>
             <p className="font-mono text-sm tracking-[0.3em] uppercase text-btc-orange mb-4">
-              Section 03 — Geek Area
+              Section 03 - Geek Area
             </p>
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
               Le{" "}
@@ -184,7 +184,7 @@ const GeekAreaLivreBlanc = () => {
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg mb-6">
               Le 31 octobre 2008, Satoshi Nakamoto publie 9 pages qui allaient
               changer le monde de la finance. « Bitcoin: A Peer-to-Peer
-              Electronic Cash System » — expliqué simplement, chapitre par
+              Electronic Cash System » - expliqué simplement, chapitre par
               chapitre.
             </p>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-btc-orange/30 bg-btc-orange/5 text-btc-orange text-sm font-mono">
@@ -317,7 +317,7 @@ const GeekAreaLivreBlanc = () => {
             <p className="text-muted-foreground text-sm mb-4">
               Partage le résumé du livre blanc avec d'autres bitcoiners
             </p>
-            <ShareButtons title="Le Livre Blanc de Satoshi expliqué — Geek Area" />
+            <ShareButtons title="Le Livre Blanc de Satoshi expliqué - Geek Area" />
           </div>
         </section>
       </div>

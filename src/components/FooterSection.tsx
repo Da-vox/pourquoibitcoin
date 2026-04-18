@@ -7,7 +7,7 @@ const FooterSection = () => {
           « Si vous ne croyez pas ou ne comprenez pas, je n'ai pas le temps d'essayer de vous convaincre, désolé. »
         </p>
         <p className="text-muted-foreground text-sm">
-          — Satoshi Nakamoto, 29 juillet 2010
+          - Satoshi Nakamoto, 29 juillet 2010
         </p>
         <div className="h-px bg-gradient-btc opacity-20 max-w-xs mx-auto mt-10 mb-6" />
         <p className="text-muted-foreground text-xs font-mono">

@@ -1,5 +1,5 @@
 /**
- * Lightning Network Layers Diagram — SVG illustration
+ * Lightning Network Layers Diagram - SVG illustration
  * Shows Bitcoin's layered architecture: Base Layer → Lightning → Apps
  */
 

@@ -9,7 +9,7 @@ const faqs = [
   {
     question: "C'est quoi Bitcoin exactement ?",
     answer:
-      "Bitcoin est une monnaie numérique décentralisée créée en 2009 par un anonyme sous le pseudonyme Satoshi Nakamoto. Contrairement à l'euro ou au dollar, elle n'est contrôlée par aucune banque centrale. Imagine un grand livre de comptes public, vérifiable par tout le monde, impossible à falsifier — c'est la blockchain.",
+      "Bitcoin est une monnaie numérique décentralisée créée en 2009 par un anonyme sous le pseudonyme Satoshi Nakamoto. Contrairement à l'euro ou au dollar, elle n'est contrôlée par aucune banque centrale. Imagine un grand livre de comptes public, vérifiable par tout le monde, impossible à falsifier - c'est la blockchain.",
   },
   {
     question: "Pourquoi Bitcoin a-t-il de la valeur ?",
@@ -24,22 +24,22 @@ const faqs = [
   {
     question: "Est-ce que ça consomme trop d'énergie ?",
     answer:
-      "58% du minage utilise des énergies renouvelables — plus que n'importe quelle autre industrie. Les mineurs consomment souvent de l'énergie excédentaire que personne d'autre n'utilise. Le système bancaire traditionnel consomme environ 2x plus d'énergie que Bitcoin.",
+      "58% du minage utilise des énergies renouvelables - plus que n'importe quelle autre industrie. Les mineurs consomment souvent de l'énergie excédentaire que personne d'autre n'utilise. Le système bancaire traditionnel consomme environ 2x plus d'énergie que Bitcoin.",
   },
   {
     question: "Comment stocker / sécuriser ses bitcoins ?",
     answer:
-      "Le plus sûr est d'utiliser un hardware wallet (portefeuille physique) comme Ledger. Il garde tes clés privées hors ligne, à l'abri des hackers. La règle d'or : \"Not your keys, not your coins\" — si tu laisses tes BTC sur un exchange, ils ne t'appartiennent pas vraiment.",
+      "Le plus sûr est d'utiliser un hardware wallet (portefeuille physique) comme Ledger. Il garde tes clés privées hors ligne, à l'abri des hackers. La règle d'or : \"Not your keys, not your coins\" - si tu laisses tes BTC sur un exchange, ils ne t'appartiennent pas vraiment.",
   },
   {
     question: "C'est trop tard pour acheter du Bitcoin ?",
     answer:
-      "On disait ça à 100 $, à 1 000 $, à 10 000 $, à 50 000 $. Seuls ~2% de la population mondiale possède du BTC. Les ETFs viennent d'être approuvés, les États commencent à constituer des réserves. Tu n'es pas en retard — tu es encore tôt.",
+      "On disait ça à 100 $, à 1 000 $, à 10 000 $, à 50 000 $. Seuls ~2% de la population mondiale possède du BTC. Les ETFs viennent d'être approuvés, les États commencent à constituer des réserves. Tu n'es pas en retard - tu es encore tôt.",
   },
   {
     question: "Les gouvernements peuvent-ils interdire Bitcoin ?",
     answer:
-      "La Chine l'a interdit… 5 fois. Bitcoin n'a jamais été aussi fort. Tu ne peux pas arrêter un protocole décentralisé qui tourne sur des milliers de nœuds dans le monde — c'est comme essayer d'interdire Internet en 1995.",
+      "La Chine l'a interdit… 5 fois. Bitcoin n'a jamais été aussi fort. Tu ne peux pas arrêter un protocole décentralisé qui tourne sur des milliers de nœuds dans le monde - c'est comme essayer d'interdire Internet en 1995.",
   },
 ];
 

@@ -17,7 +17,7 @@ const YoutubeVideoSection = () => {
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
               Si vous disposez d'une heure, cette vidéo changera votre vision de Bitcoin.
               Une masterclass complète sur ses fondements monétaires, sa rareté, sa résistance à la
-              censure et son rôle dans l'histoire de la monnaie — l'une des meilleures ressources
+              censure et son rôle dans l'histoire de la monnaie - l'une des meilleures ressources
               disponibles en français.
             </p>
 

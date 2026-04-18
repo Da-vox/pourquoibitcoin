@@ -24,7 +24,7 @@ const sections = [
     icon: Cpu,
     title: "Construire son Hardware Wallet DIY",
     description:
-      "SeedSigner est un hardware wallet open source que tu assembles toi-même pour moins de 50 €. Aucun firmware propriétaire, aucune connexion réseau, un code 100 % auditable par la communauté. Tu signes tes transactions via QR codes dans un air-gap total — la sécurité maximale.",
+      "SeedSigner est un hardware wallet open source que tu assembles toi-même pour moins de 50 €. Aucun firmware propriétaire, aucune connexion réseau, un code 100 % auditable par la communauté. Tu signes tes transactions via QR codes dans un air-gap total - la sécurité maximale.",
     highlights: [
       "Liste complète des composants (~50 €)",
       "Assemblage et flashage de l'image SeedSigner",
@@ -66,7 +66,7 @@ const GeekArea = () => {
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg mb-10">
               Prends le contrôle total. Lance ton propre nœud Bitcoin, construis
               ton hardware wallet open source, et plonge dans l'œuvre originale
-              de Satoshi — étape par étape.
+              de Satoshi - étape par étape.
             </p>
             {/* Ancres rapides */}
             <div className="flex flex-wrap gap-3 justify-center">
@@ -145,7 +145,7 @@ const GeekArea = () => {
             <p className="text-muted-foreground text-sm mb-4">
               Partage la Geek Area avec d'autres bitcoiners
             </p>
-            <ShareButtons title="Geek Area — Nœud Bitcoin, Hardware Wallet DIY et Livre Blanc de Satoshi" />
+            <ShareButtons title="Geek Area - Nœud Bitcoin, Hardware Wallet DIY et Livre Blanc de Satoshi" />
           </div>
         </section>
       </div>
