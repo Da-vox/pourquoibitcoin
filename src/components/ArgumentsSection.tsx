@@ -7,7 +7,7 @@ const arguments_list = [
     icon: Banknote,
     attack: "\"Bitcoin ne sert à rien gamin ! C'est de l'argent fictif\"",
     counter:
-      "L'euro aussi est \"fictif\" — il n'est adossé à rien depuis 1971 (fin de Bretton Woods). La différence ? L'euro peut être imprimé à l'infini par la BCE. Bitcoin est limité à 21 millions, vérifié par des mathématiques, pas par la confiance en un politicien. Demande-toi : tu préfères faire confiance à un algorithme transparent ou à un banquier central ?",
+      "L'euro aussi est \"fictif\" - il n'est adossé à rien depuis 1971 (fin de Bretton Woods). La différence ? L'euro peut être imprimé à l'infini par la BCE. Bitcoin est limité à 21 millions, vérifié par des mathématiques, pas par la confiance en un politicien. Demande-toi : tu préfères faire confiance à un algorithme transparent ou à un banquier central ?",
   },
   {
     icon: TrendingUp,
@@ -19,19 +19,19 @@ const arguments_list = [
     icon: Search,
     attack: "\"C'est utilisé que par des criminels\"",
     counter:
-      "Moins de 1% des transactions BTC sont illicites (Chainalysis 2024). Le dollar cash ? Utilisé dans 99% du blanchiment mondial. Bitcoin est un registre PUBLIC — chaque transaction est traçable pour l'éternité. C'est le pire outil pour un criminel.",
+      "Moins de 1% des transactions BTC sont illicites (Chainalysis 2024). Le dollar cash ? Utilisé dans 99% du blanchiment mondial. Bitcoin est un registre PUBLIC - chaque transaction est traçable pour l'éternité. C'est le pire outil pour un criminel.",
   },
   {
     icon: Zap,
     attack: "\"Ça pollue énormément (argument de ta belle-sœur écologiste)\"",
     counter:
-      "58% du minage utilise des énergies renouvelables (plus que n'importe quelle industrie). Les mineurs consomment de l'énergie EXCÉDENTAIRE que personne d'autre n'utilise. Le système bancaire traditionnel consomme 2x plus d'énergie. Et Bitcoin sécurise 1 700 milliards $ de valeur — c'est de l'énergie bien investie.",
+      "58% du minage utilise des énergies renouvelables (plus que n'importe quelle industrie). Les mineurs consomment de l'énergie EXCÉDENTAIRE que personne d'autre n'utilise. Le système bancaire traditionnel consomme 2x plus d'énergie. Et Bitcoin sécurise 1 700 milliards $ de valeur - c'est de l'énergie bien investie.",
   },
   {
     icon: Landmark,
     attack: "\"Les gouvernements vont l'interdire\"",
     counter:
-      "La Chine l'a interdit… 5 fois. Bitcoin n'a jamais été aussi fort. Les USA, le Salvador, la Suisse l'adoptent. Tu ne peux pas arrêter un protocole décentralisé — c'est comme essayer d'interdire Internet en 1995.",
+      "La Chine l'a interdit… 5 fois. Bitcoin n'a jamais été aussi fort. Les USA, le Salvador, la Suisse l'adoptent. Tu ne peux pas arrêter un protocole décentralisé - c'est comme essayer d'interdire Internet en 1995.",
   },
   {
     icon: BarChart3,
@@ -49,7 +49,7 @@ const arguments_list = [
     icon: Crown,
     attack: "\"Il y a des milliers de cryptos, pourquoi Bitcoin ? Je vais devenir millionnaire sur pumpfun\"",
     counter:
-      "Il n'y a qu'un seul Bitcoin. Les altcoins ont des fondateurs, des prémines, des VC derrière. Bitcoin est le seul qui a eu une naissance immaculée — sans prévente, sans CEO, avec un créateur disparu. C'est la séparation de la monnaie et de l'État.",
+      "Il n'y a qu'un seul Bitcoin. Les altcoins ont des fondateurs, des prémines, des VC derrière. Bitcoin est le seul qui a eu une naissance immaculée - sans prévente, sans CEO, avec un créateur disparu. C'est la séparation de la monnaie et de l'État.",
   },
   {
     icon: Smartphone,
@@ -61,7 +61,7 @@ const arguments_list = [
     icon: Clock,
     attack: "\"C'est trop tard pour acheter\"",
     counter:
-      "On disait ça à 100$, à 1 000$, à 10 000$, à 50 000$. Seuls 2% de la population mondiale possède du BTC. Les ETFs viennent d'être approuvés. Les États commencent à constituer des réserves. Tu n'es pas en retard — tu es encore tôt.",
+      "On disait ça à 100$, à 1 000$, à 10 000$, à 50 000$. Seuls 2% de la population mondiale possède du BTC. Les ETFs viennent d'être approuvés. Les États commencent à constituer des réserves. Tu n'es pas en retard - tu es encore tôt.",
   },
 ];
 

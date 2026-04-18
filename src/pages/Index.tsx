@@ -13,7 +13,7 @@ const Index = () => {
     <main className="min-h-screen bg-background">
       <Navbar />
 
-      {/* Hero — ancre pour la détection scroll de PageSectionsNav */}
+      {/* Hero - ancre pour la détection scroll de PageSectionsNav */}
       <div id="hero">
         <HeroSection />
       </div>

@@ -82,7 +82,7 @@ const FundamentalsSection = () => {
           </p>
         </div>
 
-        {/* Bento grid — asymmetric row pattern */}
+        {/* Bento grid - asymmetric row pattern */}
         <motion.div
           variants={containerVariants}
           initial="hidden"

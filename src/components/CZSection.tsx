@@ -31,7 +31,7 @@ const CZSection = () => {
                 Mon Bitcoin, je le vérifie en une seconde, depuis mon téléphone, n'importe où dans le monde. »
               </p>
               <footer className="mt-4 text-muted-foreground">
-                — CZ (Changpeng Zhao), fondateur de Binance
+                - CZ (Changpeng Zhao), fondateur de Binance
               </footer>
             </blockquote>
             <div className="grid md:grid-cols-3 gap-6 mt-10">

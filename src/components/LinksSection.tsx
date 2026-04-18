@@ -106,7 +106,7 @@ const LINKS: LinkItem[] = ([
     id: "7",
     type: "article",
     url: "https://www.reddit.com/r/Bitcoin/comments/1n6ogzs/you_dont_need_more_crypto_news_you_need_021/",
-    title: "You don't need more crypto news — you need 0.21 BTC",
+    title: "You don't need more crypto news - you need 0.21 BTC",
     description:
       "Un post Reddit viral qui explique pourquoi accumuler 0.21 BTC (soit un millionième de l'offre totale) est plus important que suivre les news crypto au quotidien.",
     image: "https://www.redditstatic.com/desktop2x/img/favicon/android-icon-192x192.png",
@@ -116,7 +116,7 @@ const LINKS: LinkItem[] = ([
     id: "6",
     type: "youtube",
     url: "https://youtu.be/O1muDph8Tg8?is=Wzpz5Ml_t3BRsT01",
-    title: "Bitcoin pour les nuls — tout comprendre en 30 min",
+    title: "Bitcoin pour les nuls - tout comprendre en 30 min",
     description:
       "Une explication complète de Bitcoin en 30 minutes : histoire, technologie, enjeux économiques et pourquoi ça change tout.",
     image: "https://img.youtube.com/vi/O1muDph8Tg8/maxresdefault.jpg",

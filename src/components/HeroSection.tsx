@@ -31,7 +31,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 py-20 md:py-32 lg:py-40">
         <div className="grid md:grid-cols-[1fr_auto] gap-12 xl:gap-20 items-center">
 
-          {/* Left — content */}
+          {/* Left - content */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -101,7 +101,7 @@ const HeroSection = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right — floating stats card */}
+          {/* Right - floating stats card */}
           <motion.div
             initial={{ opacity: 0, x: 24 }}
             animate={{ opacity: 1, x: 0 }}

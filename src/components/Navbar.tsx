@@ -40,7 +40,7 @@ const Navbar = () => {
        Desktop: centered auto-width pill */
     <nav className="fixed top-3 z-50 card-glass rounded-2xl md:rounded-full px-2 py-1.5 left-3 right-3 md:left-1/2 md:right-auto md:w-auto md:-translate-x-1/2">
       <div className="relative flex items-center">
-        {/* ₿ logo — toujours visible, hors du conteneur scrollable */}
+        {/* ₿ logo - toujours visible, hors du conteneur scrollable */}
         <Link
           to="/"
           className="text-btc-orange font-bold text-xl px-3 py-1.5 mr-1 leading-none flex-shrink-0"
@@ -70,7 +70,7 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Flèche scroll — visible sur mobile uniquement tant qu'il reste du contenu à droite */}
+        {/* Flèche scroll - visible sur mobile uniquement tant qu'il reste du contenu à droite */}
         <div
           className={cn(
             "md:hidden absolute right-0 top-0 bottom-0 flex items-center justify-end pointer-events-none rounded-r-2xl transition-opacity duration-300",

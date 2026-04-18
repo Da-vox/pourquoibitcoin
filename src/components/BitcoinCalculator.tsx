@@ -279,7 +279,7 @@ const BitcoinCalculator = () => {
                     .filter((y) => y < CURRENT_YEAR)
                     .map((y) => (
                       <option key={y} value={y}>
-                        {y} — aujourd'hui ({CURRENT_YEAR - y} ans)
+                        {y} - aujourd'hui ({CURRENT_YEAR - y} ans)
                       </option>
                     ))}
                 </select>
