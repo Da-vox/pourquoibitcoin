@@ -10,17 +10,21 @@ const CZSection = () => {
             </p>
 
             {/* Vidéo YouTube embarquée */}
-            <div className="mb-8 rounded-xl overflow-hidden border border-btc-orange/20">
+            <div className="mb-6 rounded-xl overflow-hidden border border-btc-orange/20">
               <div className="aspect-video">
                 <iframe
-                  src="https://www.youtube.com/embed/LOKoe4s3RcM"
-                  title="Moment culte Bitcoin"
+                  src="https://www.youtube.com/embed/WXpQWpUM6dQ?start=150"
+                  title="La vidéo qui m'a inspiré Pourquoi Bitcoin"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                   className="w-full h-full"
                 />
               </div>
             </div>
+            <p className="text-base md:text-lg text-muted-foreground mb-8 leading-relaxed">
+              C'est <span className="text-btc-orange font-semibold">cette vidéo</span> (à partir de 2m30)
+              qui m'a indiqué qu'il fallait faire le site <span className="text-btc-orange font-semibold">Pourquoi Bitcoin</span>.
+            </p>
 
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               Quand <span className="text-gradient-btc">CZ</span> détruit un gold maxi en une question
