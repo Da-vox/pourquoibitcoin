@@ -2,6 +2,7 @@ import FundamentalsSection from "@/components/FundamentalsSection";
 import YoutubeVideoSection from "@/components/YoutubeVideoSection";
 import ComparisonTable from "@/components/ComparisonTable";
 import FAQSection from "@/components/FAQSection";
+import WheelQuizSection from "@/components/WheelQuizSection";
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 
@@ -13,6 +14,7 @@ const Fondamentaux = () => {
         <FundamentalsSection />
         <YoutubeVideoSection />
         <ComparisonTable />
+        <WheelQuizSection />
         <FAQSection />
       </div>
       <FooterSection />
