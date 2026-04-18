@@ -59,7 +59,7 @@ const AboutSection = () => {
               {CONTACT_EMAIL}
             </p>
             <p className="text-xs text-muted-foreground/80 mt-6 max-w-xl mx-auto">
-              <span className="font-semibold text-foreground">TRÈS IMPORTANT :</span> nous ne demandons jamais d'informations personnelles, d'argent ou de connexion de wallet. Si cela arrive, c'est un scam/hack.
+              <span className="font-semibold text-foreground">TRÈS IMPORTANT :</span> Nous ne demandons jamais d’informations personnelles, d’argent ou de connexion à des wallets. Si une telle demande vous est faite, il s’agit d’une arnaque/hack, arrêtez la communication et signalez-le immédiatement.
             </p>
           </div>
         </div>
