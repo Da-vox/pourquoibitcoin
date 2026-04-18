@@ -46,7 +46,7 @@ const AboutSection = () => {
               <h3 className="text-2xl md:text-3xl font-bold text-foreground">Nous contacter</h3>
             </div>
             <p className="text-muted-foreground mb-6">
-              Nous tenons à rester anonymes par principe, mais nous sommes ouverts aux échanges.<br />Vous avez une question sur Bitcoin ? Vous souhaitez échanger, partager ou publier des informations et articles sur notre site ? N’hésitez pas à nous écrire !
+              Nous tenons à rester anonymes par principe, mais nous sommes ouverts aux échanges.<br /><br />Vous avez une question sur Bitcoin ? Vous souhaitez échanger, partager ou publier des informations et articles sur notre site ? N’hésitez pas à nous écrire !
             </p>
             <a
               href={`mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`}
