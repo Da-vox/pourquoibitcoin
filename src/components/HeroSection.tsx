@@ -50,7 +50,7 @@ const HeroSection = () => {
               variants={itemVariants}
               className="font-mono text-xs tracking-[0.4em] uppercase text-btc-orange mb-8"
             >
-              Satoshi Nakamoto · 3 janvier 2009
+              
             </motion.p>
 
             <motion.h1
