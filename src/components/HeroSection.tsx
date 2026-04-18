@@ -2,6 +2,11 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Zap, Lock, ArrowRight, TrendingUp } from "lucide-react";
 import { BackgroundPaths } from "@/components/ui/background-paths";
+import { useBtc7DayLow } from "@/hooks/use-btc-7day-low";
+
+const PRICE_FALLBACK_USD = 100_000;
+const formatUsd = (value: number) =>
+  new Intl.NumberFormat("fr-FR").format(value);
 
 const stats = [
   { label: "Uptime", value: "99.98%" },
@@ -26,6 +31,9 @@ const itemVariants = {
 };
 
 const HeroSection = () => {
+  const btc7dLow = useBtc7DayLow();
+  const priceDisplay = formatUsd(btc7dLow ?? PRICE_FALLBACK_USD);
+
   return (
     <BackgroundPaths>
       <div className="container mx-auto px-6 py-20 md:py-32 lg:py-40">
@@ -68,7 +76,7 @@ const HeroSection = () => {
               En 2009, 1 BTC valait{" "}
               <span className="text-foreground font-semibold font-mono">0 $</span>.
               Aujourd'hui, il vaut plus de{" "}
-              <span className="text-btc-orange font-semibold font-mono">100 000 $</span>.
+              <span className="text-btc-orange font-semibold font-mono">{priceDisplay} $</span>.
               21 millions. Pas un de plus.
             </motion.p>
 
