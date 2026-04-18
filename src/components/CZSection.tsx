@@ -52,7 +52,7 @@ const CZSection = () => {
 
           <div className="rounded-2xl border border-btc-orange/20 bg-card/80 backdrop-blur p-8 md:p-12 glow-btc mt-10">
             <p className="font-mono text-sm tracking-[0.3em] uppercase text-btc-orange mb-6">
-              Moment Beauferie
+              Moment culte
             </p>
 
             {/* Vidéo YouTube embarquée */}
@@ -60,7 +60,7 @@ const CZSection = () => {
               <div className="aspect-video">
                 <iframe
                   src="https://www.youtube.com/embed/WXpQWpUM6dQ?start=150"
-                  title="La vidéo qui nous a inspiré le site PourquoiBitcoin, expliquer à un vrai teubé comme lui que nous ne serons jamais aussi ignorant. Le comparatif avec la puece de deux euros montre parfaitement le niveau de connaissance. Le pire c'est qu'il médiatise / monétise sa bêtise."
+                  title="La vidéo qui m'a inspiré Pourquoi Bitcoin"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                   className="w-full h-full"
