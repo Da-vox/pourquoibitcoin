@@ -16,6 +16,7 @@ import {
   ArrowLeft,
   Cpu,
   BookOpen,
+  Pickaxe,
 } from "lucide-react";
 
 const nodeArguments = [
@@ -194,6 +195,69 @@ const GeekAreaNoeud = () => {
                     </p>
                   </div>
                 ))}
+              </div>
+            </div>
+
+            {/* Nœud ≠ minage */}
+            <div className="max-w-3xl mx-auto mb-16">
+              <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
+                Un nœud n'est{" "}
+                <span className="text-gradient-btc">pas un ASIC</span> de minage
+              </h2>
+              <div className="rounded-xl border border-btc-orange/30 bg-card/50 p-6 md:p-8">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-gradient-btc flex items-center justify-center">
+                    <Pickaxe className="w-5 h-5 text-primary-foreground" />
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-4">
+                      C'est la confusion la plus fréquente chez les débutants :
+                      faire tourner un nœud Bitcoin ne génère{" "}
+                      <strong className="text-foreground">aucun bitcoin</strong>.
+                      Un nœud et un ASIC (ou rig de minage) sont deux machines
+                      radicalement différentes, avec deux rôles distincts dans le
+                      réseau.
+                    </p>
+                    <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-4">
+                      Un{" "}
+                      <strong className="text-foreground">nœud complet</strong>{" "}
+                      est un validateur : il télécharge la blockchain, vérifie
+                      chaque transaction et chaque bloc selon les règles du
+                      protocole, puis relaie ces informations au reste du réseau.
+                      Il tourne sur du matériel grand public (un Raspberry Pi, un
+                      vieux PC, un mini-PC), consomme une dizaine de watts et ne
+                      reçoit aucune récompense. Sa valeur est politique et
+                      technique : la souveraineté, la vie privée et la
+                      décentralisation.
+                    </p>
+                    <p className="text-muted-foreground text-sm md:text-base leading-relaxed mb-4">
+                      Un{" "}
+                      <strong className="text-foreground">ASIC de minage</strong>{" "}
+                      (Application-Specific Integrated Circuit) est une machine
+                      spécialisée qui ne fait qu'une seule chose : calculer des
+                      hashes SHA-256 à une vitesse vertigineuse pour tenter de
+                      résoudre le puzzle cryptographique d'un bloc. Quand un
+                      mineur trouve la bonne solution, il gagne la récompense de
+                      bloc (actuellement 3,125 BTC) plus les frais de
+                      transaction. Un ASIC moderne consomme entre 3000 et 5000
+                      watts, fait autant de bruit qu'un aspirateur et ne sert à
+                      rien d'autre qu'à miner.
+                    </p>
+                    <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
+                      En résumé :{" "}
+                      <strong className="text-foreground">
+                        les mineurs produisent les blocs, les nœuds les
+                        valident
+                      </strong>
+                      . Vouloir miner chez soi avec un PC ou un Raspberry Pi n'a
+                      aucun sens économique depuis 2013 — la concurrence
+                      industrielle des ASICs rend ça totalement non rentable.
+                      Faire tourner un nœud, en revanche, reste accessible à
+                      tout le monde, et c'est ce qui garantit que Bitcoin reste
+                      décentralisé.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
