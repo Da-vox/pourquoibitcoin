@@ -61,6 +61,8 @@ const arguments_list: Argument[] = [
     counter:
       "Un Ponzi nécessite un opérateur central qui recrute. Bitcoin n'a pas de CEO. Il est open-source, vérifiable par tous. Chaque \"bulle\" a crashé plus haut que le sommet de la précédente. Si c'est une bulle, c'est la seule bulle de l'histoire qui regonfle toujours plus fort.",
     meme: "🫧 Madoff depuis sa cellule : « J'aurais adoré monter un Ponzi open-source, sans CEO, sans prévente, audité par des millions de noeuds. Comment ça c'est juste Bitcoin ? »",
+    memeImage: "/memes/ponzi-tape-dans-la-main.jpg",
+    memeAlt: "Meme anime : les initiés qui t'invitent à taper dans la main pour entrer dans le Ponzi",
   },
   {
     icon: Medal,
