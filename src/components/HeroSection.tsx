@@ -37,14 +37,14 @@ const HeroSection = () => {
   return (
     <BackgroundPaths>
       <div className="container mx-auto px-6 py-20 md:py-32 lg:py-40">
-        <div className="grid md:grid-cols-[1fr_auto] gap-12 xl:gap-20 items-center">
+        <div className="grid md:grid-cols-[1fr_auto] gap-10 md:gap-12 xl:gap-20 items-center">
 
           {/* Left - content */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="max-w-2xl"
+            className="max-w-2xl order-1"
           >
             <motion.p
               variants={itemVariants}
@@ -118,15 +118,15 @@ const HeroSection = () => {
 
           {/* Right - floating stats card */}
           <motion.div
-            initial={{ opacity: 0, x: 24 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ type: "spring", stiffness: 80, damping: 20, delay: 0.4 }}
-            className="hidden md:block"
+            className="order-2 w-full md:w-auto flex justify-center md:block"
           >
             <motion.div
               animate={{ y: [0, -12, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="card-glass rounded-3xl p-8 w-64 xl:w-72"
+              className="card-glass rounded-3xl p-6 sm:p-8 w-full max-w-sm md:w-64 xl:w-72"
             >
               <p className="text-btc-orange font-bold text-5xl xl:text-6xl mb-1 font-mono leading-none">
                 ₿
