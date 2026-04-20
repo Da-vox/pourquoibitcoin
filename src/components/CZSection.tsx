@@ -73,7 +73,7 @@ const CZSection = () => {
             </h2>
             <p className="text-lg md:text-xl text-foreground leading-relaxed">
               C'est <span className="text-btc-orange font-semibold">cette vidéo</span> (à partir de 2m30)
-              qui m'a indiqué qu'il fallait faire le site <span className="text-btc-orange font-semibold">Pourquoi Bitcoin</span>.
+              qui nous a fait prendre conscience qu'il fallait faire le site (même le devoir) <span className="text-btc-orange font-semibold">Pourquoi Bitcoin</span>.
             </p>
           </div>
         </div>
