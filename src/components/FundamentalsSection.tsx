@@ -1,4 +1,4 @@
-import { Shield, Clock, Globe, Lock, TrendingUp, Zap } from "lucide-react";
+import { Shield, Clock, Globe, Lock, TrendingUp, Zap, Hourglass } from "lucide-react";
 import { motion } from "framer-motion";
 import BitcoinSupplySchedule from "@/components/illustrations/BitcoinSupplySchedule";
 import LightningLayersDiagram from "@/components/illustrations/LightningLayersDiagram";
@@ -38,6 +38,13 @@ const fundamentals = [
     description:
       "Performance annualisée supérieure à tout autre actif depuis sa création. L'or numérique surpasse l'or physique.",
     span: 1,
+  },
+  {
+    icon: Hourglass,
+    title: "Halving tous les 4 ans",
+    description:
+      "Tous les 210 000 blocs (~4 ans), la récompense des mineurs est divisée par deux : 50 → 25 → 12,5 → 6,25 → 3,125 BTC. Cette désinflation programmée rend Bitcoin de plus en plus rare, jusqu'au dernier satoshi miné vers 2140.",
+    span: 2,
   },
   {
     icon: Zap,
