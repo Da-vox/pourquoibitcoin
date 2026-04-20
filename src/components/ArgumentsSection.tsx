@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown, Banknote, TrendingUp, Search, Zap, Landmark, BarChart3, Medal, Crown, Smartphone, Clock } from "lucide-react";
+import { ChevronDown, Banknote, TrendingUp, Search, Zap, Landmark, BarChart3, Medal, Crown, Smartphone, Clock, Laugh } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const arguments_list = [
@@ -8,60 +8,70 @@ const arguments_list = [
     attack: "\"Bitcoin ne sert à rien gamin ! C'est de l'argent fictif\"",
     counter:
       "L'euro aussi est \"fictif\" - il n'est adossé à rien depuis 1971 (fin de Bretton Woods). La différence ? L'euro peut être imprimé à l'infini par la BCE. Bitcoin est limité à 21 millions, vérifié par des mathématiques, pas par la confiance en un politicien. Demande-toi : tu préfères faire confiance à un algorithme transparent ou à un banquier central ?",
+    meme: "🖨️ La BCE : « On a imprimé 2 000 milliards d'euros cette année. » — Bitcoin : « J'ai émis 164 250 BTC. Pile comme prévu depuis 2009. »",
   },
   {
     icon: TrendingUp,
     attack: "\"C'est trop volatil pour être une monnaie\"",
     counter:
       "La volatilité est le prix de la découverte de prix d'un nouvel actif monétaire mondial. L'or a mis des millénaires à se stabiliser. Bitcoin le fait en accéléré. Sur 4 ans (un cycle de halving), Bitcoin n'a JAMAIS été négatif. Zoome out.",
+    meme: "📉 Toi regardant le graph sur 1 jour : « C'est fini, ça s'effondre. » — Toi zoomant sur 10 ans : « Ah. »",
   },
   {
     icon: Search,
     attack: "\"C'est utilisé que par des criminels\"",
     counter:
       "Moins de 1% des transactions BTC sont illicites (Chainalysis 2024). Le dollar cash ? Utilisé dans 99% du blanchiment mondial. Bitcoin est un registre PUBLIC - chaque transaction est traçable pour l'éternité. C'est le pire outil pour un criminel.",
+    meme: "🕵️ Le criminel intelligent : une mallette de billets de 500 €. — Le criminel qui regarde trop Netflix : Bitcoin, traçable à vie sur un registre public mondial.",
   },
   {
     icon: Zap,
     attack: "\"Ça pollue énormément (argument de ta belle-sœur écologiste)\"",
     counter:
       "58% du minage utilise des énergies renouvelables (plus que n'importe quelle industrie). Les mineurs consomment de l'énergie EXCÉDENTAIRE que personne d'autre n'utilise. Le système bancaire traditionnel consomme 2x plus d'énergie. Et Bitcoin sécurise 1 700 milliards $ de valeur - c'est de l'énergie bien investie.",
+    meme: "🌱 Ta belle-sœur écolo en SUV diesel, iPhone chargé au charbon, commande Shein quotidienne : « Mais Bitcoin c'est une catastrophe écologique hein. »",
   },
   {
     icon: Landmark,
     attack: "\"Les gouvernements vont l'interdire\"",
     counter:
       "La Chine l'a interdit… 5 fois. Bitcoin n'a jamais été aussi fort. Les USA, le Salvador, la Suisse l'adoptent. Tu ne peux pas arrêter un protocole décentralisé - c'est comme essayer d'interdire Internet en 1995.",
+    meme: "🇨🇳 La Chine : « Bitcoin est officiellement interdit. » — Bitcoin, 5 interdictions plus tard, +500% : « Désolé, j'entendais pas avec le bruit du hashrate. »",
   },
   {
     icon: BarChart3,
     attack: "\"C'est une bulle spéculative / un Ponzi en puissance\"",
     counter:
       "Un Ponzi nécessite un opérateur central qui recrute. Bitcoin n'a pas de CEO. Il est open-source, vérifiable par tous. Chaque \"bulle\" a crashé plus haut que le sommet de la précédente. Si c'est une bulle, c'est la seule bulle de l'histoire qui regonfle toujours plus fort.",
+    meme: "🫧 Madoff depuis sa cellule : « J'aurais adoré monter un Ponzi open-source, sans CEO, sans prévente, audité par des millions de noeuds. Comment ça c'est juste Bitcoin ? »",
   },
   {
     icon: Medal,
     attack: "\"L'or c'est mieux, c'est tangible\"",
     counter:
       "Comme CZ l'a démontré face à un gold maxi : \"Ton lingot, il est vrai ?\" Tu ne peux pas vérifier la pureté d'un lingot sans le fondre. Bitcoin est vérifiable en une seconde par n'importe qui. Essaie d'envoyer un lingot d'or à l'autre bout du monde en 10 minutes…",
+    meme: "🪙 Peter Schiff en 2013 : « Bitcoin va à zéro. » — Peter Schiff en 2017 : « Bitcoin va à zéro. » — Peter Schiff en 2026 : « Bitcoin va à zéro. »",
   },
   {
     icon: Crown,
     attack: "\"Il y a des milliers de cryptos, pourquoi Bitcoin ? Je vais devenir millionnaire sur pumpfun\"",
     counter:
       "Il n'y a qu'un seul Bitcoin. Les altcoins ont des fondateurs, des prémines, des VC derrière. Bitcoin est le seul qui a eu une naissance immaculée - sans prévente, sans CEO, avec un créateur disparu. C'est la séparation de la monnaie et de l'État.",
+    meme: "🤡 POV : tu as mis ton PEL dans $FARTCOIN parce que le dev a tweeté un emoji banane. Rugpull en 4 minutes. « Mais Bitcoin c'est trop lent, ça pump pas. »",
   },
   {
     icon: Smartphone,
     attack: "\"C'est trop compliqué / trop technique avec bitnakamoto\"",
     counter:
       "Tu comprends comment fonctionne le protocole TCP/IP ? Non. Pourtant tu utilises Internet tous les jours. Tu n'as pas besoin de comprendre la cryptographie pour utiliser Bitcoin. Il y a des apps aussi simples que Venmo.",
+    meme: "📱 Toi : « Bitcoin c'est trop compliqué. » — Toi aussi : *cliques sur « Accepter tous les cookies » sans lire, configure la TV de mamie en 3 min, parles couramment emoji.*",
   },
   {
     icon: Clock,
     attack: "\"C'est trop tard pour acheter\"",
     counter:
       "On disait ça à 100$, à 1 000$, à 10 000$, à 50 000$. Seuls 2% de la population mondiale possède du BTC. Les ETFs viennent d'être approuvés. Les États commencent à constituer des réserves. Tu n'es pas en retard - tu es encore tôt.",
+    meme: "⏰ 2013 : « Trop tard à 100 $. » — 2017 : « Trop tard à 1 000 $. » — 2021 : « Trop tard à 20 000 $. » — 2026, toi : « Trop tard à 100 000 $. » — 2030, toi : « J'aurais dû écouter. »",
   },
 ];
 
@@ -69,11 +79,13 @@ const ArgumentCard = ({
   icon: Icon,
   attack,
   counter,
+  meme,
   index,
 }: {
   icon: React.ElementType;
   attack: string;
   counter: string;
+  meme: string;
   index: number;
 }) => {
   const [open, setOpen] = useState(false);
@@ -114,9 +126,22 @@ const ArgumentCard = ({
             transition={{ type: "spring", stiffness: 200, damping: 30 }}
             className="overflow-hidden"
           >
-            <p className="text-muted-foreground leading-relaxed text-sm pb-6 pl-12">
-              {counter}
-            </p>
+            <div className="pb-6 pl-12 space-y-4">
+              <p className="text-muted-foreground leading-relaxed text-sm">
+                {counter}
+              </p>
+              <div className="flex gap-3 rounded-lg border border-btc-orange/20 bg-btc-orange/5 p-4">
+                <Laugh className="w-4 h-4 text-btc-orange flex-shrink-0 mt-0.5" strokeWidth={1.5} />
+                <div className="flex-1">
+                  <p className="font-mono text-[10px] tracking-[0.3em] uppercase text-btc-orange mb-1.5">
+                    Meme du jour
+                  </p>
+                  <p className="text-foreground/90 italic text-sm leading-relaxed">
+                    {meme}
+                  </p>
+                </div>
+              </div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
