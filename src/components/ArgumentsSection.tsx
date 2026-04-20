@@ -36,6 +36,8 @@ const arguments_list: Argument[] = [
     counter:
       "Moins de 1% des transactions BTC sont illicites (Chainalysis 2024). Le dollar cash ? Utilisé dans 99% du blanchiment mondial. Bitcoin est un registre PUBLIC - chaque transaction est traçable pour l'éternité. C'est le pire outil pour un criminel.",
     meme: "🕵️ Le criminel intelligent : une mallette de billets de 500 €. — Le criminel qui regarde trop Netflix : Bitcoin, traçable à vie sur un registre public mondial.",
+    memeImage: "https://www.gif-vif.com/trending/scarface-tony-montana-happily-talking-w4hd14i6yilmxwl9.gif",
+    memeAlt: "GIF Tony Montana (Scarface) : le criminel qui préfère le cash",
   },
   {
     icon: Zap,
@@ -43,8 +45,8 @@ const arguments_list: Argument[] = [
     counter:
       "58% du minage utilise des énergies renouvelables (plus que n'importe quelle industrie). Les mineurs consomment de l'énergie EXCÉDENTAIRE que personne d'autre n'utilise. Le système bancaire traditionnel consomme 2x plus d'énergie. Et Bitcoin sécurise 1 700 milliards $ de valeur - c'est de l'énergie bien investie.",
     meme: "🌱 Ta belle-sœur écolo en SUV diesel, iPhone chargé au charbon, commande Shein quotidienne : « Mais Bitcoin c'est une catastrophe écologique hein. »",
-    memeImage: "https://api.memegen.link/images/cmm/Bitcoin_pollue/change_my_mind.png",
-    memeAlt: "Meme Change My Mind : Bitcoin pollue ?",
+    memeImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAnoe8EYjJoyOXFSeuiw7nMCVVtze_h_K84XZB2LLCjA&s=10",
+    memeAlt: "Meme belle-sœur écolo : la pollution c'est les autres",
   },
   {
     icon: Landmark,
@@ -70,8 +72,8 @@ const arguments_list: Argument[] = [
     counter:
       "Comme CZ l'a démontré face à un gold maxi : \"Ton lingot, il est vrai ?\" Tu ne peux pas vérifier la pureté d'un lingot sans le fondre. Bitcoin est vérifiable en une seconde par n'importe qui. Essaie d'envoyer un lingot d'or à l'autre bout du monde en 10 minutes…",
     meme: "🪙 Peter Schiff en 2013 : « Bitcoin va à zéro. » — Peter Schiff en 2017 : « Bitcoin va à zéro. » — Peter Schiff en 2026 : « Bitcoin va à zéro. »",
-    memeImage: "https://api.memegen.link/images/oag/Ton_lingot/il_est_vrai_?.png",
-    memeAlt: "Meme CZ : ton lingot, il est vrai ?",
+    memeImage: "https://media.tenor.com/SYXwuCIgbSIAAAAM/gollum-the-one-ring.gif",
+    memeAlt: "GIF Gollum : my precious — les gold maxis face à leur lingot",
   },
   {
     icon: Crown,
