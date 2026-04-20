@@ -41,24 +41,49 @@ const BtcPriceChart = () => {
     setLoading(true);
     setError(false);
 
-    fetch(
-      `https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=${days}`
-    )
-      .then((res) => {
-        if (!res.ok) throw new Error("API error");
-        return res.json();
-      })
-      .then((json) => {
-        const prices: PricePoint[] = json.prices.map(
-          ([timestamp, price]: [number, number]) => ({
-            date: new Date(timestamp).toLocaleDateString("fr-FR", {
-              day: "numeric",
-              month: "short",
-              ...(days > 30 ? { year: "2-digit" } : {}),
-            }),
-            price: Math.round(price),
-          })
-        );
+    const formatDate = (timestampMs: number) =>
+      new Date(timestampMs).toLocaleDateString("fr-FR", {
+        day: "numeric",
+        month: "short",
+        ...(days > 30 ? { year: "2-digit" } : {}),
+      });
+
+    // CoinGecko's free tier caps market_chart at 365 days, so use
+    // CryptoCompare's histoday endpoint for longer ranges.
+    const fetcher: Promise<PricePoint[]> =
+      days > 365
+        ? fetch(
+            `https://min-api.cryptocompare.com/data/v2/histoday?fsym=BTC&tsym=USD&limit=${days}`
+          )
+            .then((res) => {
+              if (!res.ok) throw new Error("API error");
+              return res.json();
+            })
+            .then((json) => {
+              if (json.Response !== "Success") throw new Error("API error");
+              return (json.Data.Data as { time: number; close: number }[]).map(
+                (d) => ({
+                  date: formatDate(d.time * 1000),
+                  price: Math.round(d.close),
+                })
+              );
+            })
+        : fetch(
+            `https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=${days}`
+          )
+            .then((res) => {
+              if (!res.ok) throw new Error("API error");
+              return res.json();
+            })
+            .then((json) =>
+              (json.prices as [number, number][]).map(([timestamp, price]) => ({
+                date: formatDate(timestamp),
+                price: Math.round(price),
+              }))
+            );
+
+    fetcher
+      .then((prices) => {
         // Downsample for performance
         const step = Math.max(1, Math.floor(prices.length / 200));
         const sampled = prices.filter((_, i) => i % step === 0);
