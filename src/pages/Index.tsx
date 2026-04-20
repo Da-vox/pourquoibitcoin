@@ -5,6 +5,7 @@ import FooterSection from "@/components/FooterSection";
 import Navbar from "@/components/Navbar";
 import ShareButtons from "@/components/ShareButtons";
 import AboutSection from "@/components/AboutSection";
+import SitemapSection from "@/components/SitemapSection";
 import PageSectionsNav from "@/components/PageSectionsNav";
 
 const Index = () => {
@@ -37,6 +38,10 @@ const Index = () => {
           <ShareButtons />
         </div>
       </section>
+
+      <div id="plan-du-site">
+        <SitemapSection />
+      </div>
 
       <FooterSection />
 
