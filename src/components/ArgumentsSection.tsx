@@ -27,8 +27,8 @@ const arguments_list: Argument[] = [
     counter:
       "La volatilité est le prix de la découverte de prix d'un nouvel actif monétaire mondial. L'or a mis des millénaires à se stabiliser. Bitcoin le fait en accéléré. Sur 4 ans (un cycle de halving), Bitcoin n'a JAMAIS été négatif. Zoome out.",
     meme: "📉 Toi regardant le graph sur 1 jour : « C'est fini, ça s'effondre. » — Toi zoomant sur 10 ans : « Ah. »",
-    memeImage: "https://api.memegen.link/images/stonks.png",
-    memeAlt: "Meme Stonks",
+    memeImage: "https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUyZHp2a2N0cGM0czI4a2VrbHBoa3NjajF1MGd6cWV2emhhYjFvZXk4ZiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3o7btW7VDxqrhJEnqE/giphy.gif",
+    memeAlt: "Meme GIF volatilité : zoom in vs zoom out",
   },
   {
     icon: Search,
@@ -88,8 +88,8 @@ const arguments_list: Argument[] = [
     counter:
       "Tu comprends comment fonctionne le protocole TCP/IP ? Non. Pourtant tu utilises Internet tous les jours. Tu n'as pas besoin de comprendre la cryptographie pour utiliser Bitcoin. Il y a des apps aussi simples que Venmo.",
     meme: "📱 Toi : « Bitcoin c'est trop compliqué. » — Toi aussi : *cliques sur « Accepter tous les cookies » sans lire, configure la TV de mamie en 3 min, parles couramment emoji.*",
-    memeImage: "https://api.memegen.link/images/jackie/Attends_/Bitcoin_c'est_compliqué_?.png",
-    memeAlt: "Meme Jackie Chan confus : Bitcoin c'est compliqué ?",
+    memeImage: "https://images.meme-arsenal.com/d00bb304268379b27981ab9fe1acfafc.jpg",
+    memeAlt: "Meme : Bitcoin c'est compliqué ?",
   },
   {
     icon: Clock,
