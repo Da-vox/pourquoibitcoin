@@ -195,7 +195,7 @@ const FILTERS: { value: Filter; label: string }[] = [
   { value: "tweet", label: "Tweets" },
 ];
 
-const PAGE_SIZE = 5;
+const PAGE_SIZE = 6;
 
 const LinksSection = () => {
   const [filter, setFilter] = useState<Filter>("all");
