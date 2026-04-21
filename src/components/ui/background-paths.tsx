@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-function FloatingPaths({ position }: { position: number }) {
+export function FloatingPaths({ position }: { position: number }) {
     const paths = Array.from({ length: 36 }, (_, i) => ({
         id: i,
         d: `M-${380 - i * 5 * position} -${189 + i * 6}C-${
@@ -56,6 +56,15 @@ export function BackgroundPaths({ children }: { children?: React.ReactNode }) {
             <div className="relative z-10 w-full">
                 {children}
             </div>
+        </div>
+    );
+}
+
+export function BackgroundPathsCanvas() {
+    return (
+        <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+            <FloatingPaths position={1} />
+            <FloatingPaths position={-1} />
         </div>
     );
 }
