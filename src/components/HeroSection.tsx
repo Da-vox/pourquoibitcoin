@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Zap, Lock, ArrowRight, TrendingUp, Code2 } from "lucide-react";
+import { BackgroundPaths } from "@/components/ui/background-paths";
 import { useBtc7DayLow } from "@/hooks/use-btc-7day-low";
 
 const PRICE_FALLBACK_USD = 100_000;
@@ -34,7 +35,7 @@ const HeroSection = () => {
   const priceDisplay = formatUsd(btc7dLow ?? PRICE_FALLBACK_USD);
 
   return (
-    <section className="relative min-h-[100dvh] w-full flex items-center justify-center overflow-hidden">
+    <BackgroundPaths>
       <div className="container mx-auto px-6 py-20 md:py-32 lg:py-40">
         <div className="grid md:grid-cols-[1fr_auto] gap-10 md:gap-12 xl:gap-20 items-center">
 
@@ -151,7 +152,7 @@ const HeroSection = () => {
 
         </div>
       </div>
-    </section>
+    </BackgroundPaths>
   );
 };
 
