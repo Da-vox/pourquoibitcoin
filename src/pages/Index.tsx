@@ -7,12 +7,12 @@ import ShareButtons from "@/components/ShareButtons";
 import AboutSection from "@/components/AboutSection";
 import SitemapSection from "@/components/SitemapSection";
 import PageSectionsNav from "@/components/PageSectionsNav";
-import { GlobeBackground } from "@/components/ui/globe-background";
+import { BackgroundPathsCanvas } from "@/components/ui/background-paths";
 
 const Index = () => {
   return (
     <main className="relative min-h-screen isolate">
-      <GlobeBackground />
+      <BackgroundPathsCanvas />
       <div className="relative z-10">
         <Navbar />
 
