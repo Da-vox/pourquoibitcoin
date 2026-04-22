@@ -21,7 +21,7 @@ const LINKS: LinkItem[] = ([
   "url": "https://x.com/AlexesNakamoto/status/2046700165822660758?s=20",
   "title": "Tweet d'Alexes Nakamoto",
   "description": "Un tweet à découvrir sur Bitcoin par Alexes Nakamoto.",
-  "image": "https://abs.twimg.com/icons/apple-touch-icon-192x192.png",
+  "image": "https://pbs.twimg.com/media/HGdWxsGXEAAmfPI?format=jpg&name=large",
   "date": "2026-04-22"
 },
 
