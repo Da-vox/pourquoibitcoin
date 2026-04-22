@@ -1,14 +1,56 @@
-import { Shield, Clock, Globe, Lock, TrendingUp, Zap, Hourglass } from "lucide-react";
+import {
+  Shield,
+  Clock,
+  Globe,
+  Lock,
+  TrendingUp,
+  Zap,
+  Hourglass,
+  Landmark,
+  Network,
+  Pickaxe,
+  Blocks,
+  HandCoins,
+  FileText,
+} from "lucide-react";
 import { motion } from "framer-motion";
 import BitcoinSupplySchedule from "@/components/illustrations/BitcoinSupplySchedule";
 import LightningLayersDiagram from "@/components/illustrations/LightningLayersDiagram";
 
 const fundamentals = [
   {
+    icon: Landmark,
+    title: "Le problème des tiers de confiance",
+    description:
+      "Le système financier traditionnel repose sur des intermédiaires (banques, processeurs de paiement). Transactions réversibles, censure, inflation imprimée à volonté. Et si la confiance n'était plus nécessaire ?",
+    span: 2,
+  },
+  {
+    icon: Network,
+    title: "Pair-à-pair",
+    description:
+      "Envoyer de la valeur directement à quelqu'un, sans banque, sans autorisation. Exactement comme envoyer un email, mais pour l'argent.",
+    span: 1,
+  },
+  {
     icon: Shield,
     title: "Rareté absolue",
     description:
       "21 millions d'unités, gravées dans le code. Aucune banque centrale, aucun gouvernement ne peut en imprimer davantage. C'est mathématique.",
+    span: 2,
+  },
+  {
+    icon: Blocks,
+    title: "La Blockchain",
+    description:
+      "Chaque bloc est lié cryptographiquement au précédent. Altérer un bloc impose de refaire toute la preuve de travail suivante. Immuable, décentralisée, sécurisée.",
+    span: 1,
+  },
+  {
+    icon: Pickaxe,
+    title: "Preuve de travail",
+    description:
+      "Les mineurs dépensent de l'énergie réelle pour résoudre un puzzle cryptographique. Coûteux à tricher, trivial à vérifier. Le coût est la vérité : aucun autre système monétaire n'a cette propriété.",
     span: 2,
   },
   {
@@ -26,6 +68,20 @@ const fundamentals = [
     span: 1,
   },
   {
+    icon: Hourglass,
+    title: "Halving tous les 4 ans",
+    description:
+      "Tous les 210 000 blocs (~4 ans), la récompense des mineurs est divisée par deux : 50 → 25 → 12,5 → 6,25 → 3,125 BTC. Cette désinflation programmée rend Bitcoin de plus en plus rare, jusqu'au dernier satoshi miné vers 2140.",
+    span: 2,
+  },
+  {
+    icon: HandCoins,
+    title: "Incitations alignées",
+    description:
+      "Les mineurs honnêtes sont récompensés en bitcoins neufs et en frais. Tricher coûte plus cher que de jouer le jeu. Un système auto-entretenu où chacun a intérêt à rester intègre.",
+    span: 1,
+  },
+  {
     icon: Globe,
     title: "Sans frontières",
     description:
@@ -40,10 +96,10 @@ const fundamentals = [
     span: 1,
   },
   {
-    icon: Hourglass,
-    title: "Halving tous les 4 ans",
+    icon: FileText,
+    title: "Le bloc Genesis",
     description:
-      "Tous les 210 000 blocs (~4 ans), la récompense des mineurs est divisée par deux : 50 → 25 → 12,5 → 6,25 → 3,125 BTC. Cette désinflation programmée rend Bitcoin de plus en plus rare, jusqu'au dernier satoshi miné vers 2140.",
+      "3 janvier 2009. Satoshi grave dans le premier bloc : « The Times 03/Jan/2009 Chancellor on brink of second bailout for banks. » Bitcoin est ancré dans la réalité, pas dans une autorité centrale.",
     span: 2,
   },
   {
