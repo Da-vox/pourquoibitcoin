@@ -2,7 +2,30 @@ import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 import ShareButtons from "@/components/ShareButtons";
 import CustodyDiagram from "@/components/illustrations/CustodyDiagram";
+import Seo, { buildBreadcrumb } from "@/components/Seo";
 import { Shield, Key, AlertTriangle, CheckCircle, ExternalLink } from "lucide-react";
+
+const securiserJsonLd = [
+  buildBreadcrumb([
+    { name: "Accueil", path: "/" },
+    { name: "Sécuriser", path: "/securiser" },
+  ]),
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "Sécuriser ses bitcoins avec un hardware wallet",
+    description:
+      "Guide pas à pas pour stocker ses BTC en self-custody avec un hardware wallet.",
+    inLanguage: "fr-FR",
+    step: [
+      { "@type": "HowToStep", name: "Comprendre le risque d'un exchange", text: "Les exchanges détiennent les clés privées. En cas de faillite (ex. FTX), tes fonds disparaissent." },
+      { "@type": "HowToStep", name: "Choisir un hardware wallet", text: "Un hardware wallet stocke tes clés privées hors ligne, à l'abri des virus." },
+      { "@type": "HowToStep", name: "Initialiser l'appareil", text: "Commande ton Ledger sur le site officiel, installe Ledger Live, suis l'initialisation." },
+      { "@type": "HowToStep", name: "Sauvegarder la seed sur papier", text: "Note les 24 mots sur papier, jamais en numérique. Range-les dans un coffre sûr." },
+      { "@type": "HowToStep", name: "Transférer tes BTC", text: "Fais un petit transfert test, puis transfère tes BTC depuis l'exchange vers le Ledger." },
+    ],
+  },
+];
 
 const steps = [
   {
@@ -42,6 +65,13 @@ const setupSteps = [
 const Securiser = () => {
   return (
     <main className="min-h-screen bg-background">
+      <Seo
+        title="Sécuriser ses bitcoins : guide complet hardware wallet"
+        description="Guide pas à pas pour sécuriser ses bitcoins en self-custody : choisir un hardware wallet (Ledger), initialiser, sauvegarder la seed phrase et transférer ses BTC sans risque."
+        path="/securiser"
+        keywords="sécuriser bitcoin, hardware wallet, ledger, self custody, seed phrase, not your keys not your coins"
+        jsonLd={securiserJsonLd}
+      />
       <Navbar />
       <div className="pt-20">
         <section className="py-14 md:py-24">

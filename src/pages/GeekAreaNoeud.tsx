@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 import ShareButtons from "@/components/ShareButtons";
+import Seo, { buildBreadcrumb } from "@/components/Seo";
 import {
   Server,
   Shield,
@@ -18,6 +19,24 @@ import {
   BookOpen,
   Pickaxe,
 } from "lucide-react";
+
+const noeudJsonLd = [
+  buildBreadcrumb([
+    { name: "Accueil", path: "/" },
+    { name: "Geek Area", path: "/geek-area" },
+    { name: "Nœud Bitcoin", path: "/geek-area/noeud-bitcoin" },
+  ]),
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    headline: "Monter son nœud Bitcoin Core : guide complet",
+    description:
+      "Installation pas à pas de Bitcoin Core, configuration matérielle et connexion de son wallet via RPC.",
+    inLanguage: "fr-FR",
+    author: { "@type": "Organization", name: "Pourquoi Bitcoin" },
+    about: "Bitcoin Core full node",
+  },
+];
 
 const nodeArguments = [
   {
@@ -134,6 +153,14 @@ const otherSections = [
 const GeekAreaNoeud = () => {
   return (
     <main className="min-h-screen bg-background">
+      <Seo
+        title="Monter son nœud Bitcoin : guide Bitcoin Core pas à pas"
+        description="Guide complet pour installer et configurer un nœud Bitcoin Core : matériel requis, installation en 9 étapes, connexion de ton wallet via RPC local et souveraineté totale sur le réseau."
+        path="/geek-area/noeud-bitcoin"
+        keywords="nœud bitcoin, bitcoin core, full node, RPC, souveraineté bitcoin, umbrel, raspberry pi"
+        type="article"
+        jsonLd={noeudJsonLd}
+      />
       <Navbar />
       <div className="pt-20">
         {/* ── Breadcrumb ── */}
