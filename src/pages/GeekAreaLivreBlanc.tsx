@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 import ShareButtons from "@/components/ShareButtons";
+import Seo, { buildBreadcrumb } from "@/components/Seo";
 import {
   BookOpen,
   ArrowLeft,
@@ -21,6 +22,26 @@ import {
   Hash,
 } from "lucide-react";
 import MerkleTreeDiagram from "@/components/illustrations/MerkleTreeDiagram";
+
+const livreBlancJsonLd = [
+  buildBreadcrumb([
+    { name: "Accueil", path: "/" },
+    { name: "Geek Area", path: "/geek-area" },
+    { name: "Livre Blanc Satoshi", path: "/geek-area/livre-blanc" },
+  ]),
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "Le livre blanc de Satoshi Nakamoto : résumé chapitre par chapitre",
+    description:
+      "Résumé structuré du livre blanc Bitcoin publié par Satoshi Nakamoto en 2008, chapitre par chapitre.",
+    inLanguage: "fr-FR",
+    author: { "@type": "Person", name: "Satoshi Nakamoto" },
+    publisher: { "@type": "Organization", name: "Pourquoi Bitcoin" },
+    about: "Bitcoin Whitepaper",
+    datePublished: "2008-10-31",
+  },
+];
 
 const chapters = [
   {
@@ -151,6 +172,14 @@ const otherSections = [
 const GeekAreaLivreBlanc = () => {
   return (
     <main className="min-h-screen bg-background">
+      <Seo
+        title="Livre blanc de Satoshi Nakamoto : résumé chapitre par chapitre"
+        description="Le livre blanc Bitcoin de Satoshi Nakamoto (2008) expliqué chapitre par chapitre en français : transactions, timestamp, proof of work, réseau, preuve simplifiée et arbre de Merkle."
+        path="/geek-area/livre-blanc"
+        keywords="livre blanc bitcoin, whitepaper bitcoin, satoshi nakamoto, proof of work, merkle tree, double dépense"
+        type="article"
+        jsonLd={livreBlancJsonLd}
+      />
       <Navbar />
       <div className="pt-20">
         {/* ── Breadcrumb ── */}

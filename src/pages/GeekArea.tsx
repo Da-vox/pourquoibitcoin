@@ -2,7 +2,13 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 import ShareButtons from "@/components/ShareButtons";
+import Seo, { buildBreadcrumb } from "@/components/Seo";
 import { Server, Cpu, BookOpen, CheckCircle, ArrowRight } from "lucide-react";
+
+const geekAreaJsonLd = buildBreadcrumb([
+  { name: "Accueil", path: "/" },
+  { name: "Geek Area", path: "/geek-area" },
+]);
 
 const sections = [
   {
@@ -52,6 +58,13 @@ const sections = [
 const GeekArea = () => {
   return (
     <main className="min-h-screen bg-background">
+      <Seo
+        title="Geek Area Bitcoin : nœud, hardware wallet DIY et livre blanc"
+        description="Trois ressources avancées pour les bitcoiners techniques : monter son nœud Bitcoin Core, construire un hardware wallet DIY SeedSigner et lire le livre blanc de Satoshi chapitre par chapitre."
+        path="/geek-area"
+        keywords="geek area bitcoin, nœud bitcoin core, seedsigner, hardware wallet diy, livre blanc satoshi, bitcoin technique"
+        jsonLd={geekAreaJsonLd}
+      />
       <Navbar />
       <div className="pt-20">
         {/* ── Hero ── */}

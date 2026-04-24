@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 import ShareButtons from "@/components/ShareButtons";
+import Seo, { buildBreadcrumb } from "@/components/Seo";
 import {
   Cpu,
   Shield,
@@ -16,6 +17,24 @@ import {
   Server,
   BookOpen,
 } from "lucide-react";
+
+const hwWalletJsonLd = [
+  buildBreadcrumb([
+    { name: "Accueil", path: "/" },
+    { name: "Geek Area", path: "/geek-area" },
+    { name: "Hardware Wallet DIY", path: "/geek-area/hardware-wallet" },
+  ]),
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    headline: "Construire son hardware wallet DIY SeedSigner",
+    description:
+      "Assemblage d'un hardware wallet open source SeedSigner : composants, flashage et workflow de signature par QR codes en air-gap.",
+    inLanguage: "fr-FR",
+    author: { "@type": "Organization", name: "Pourquoi Bitcoin" },
+    about: "SeedSigner DIY hardware wallet",
+  },
+];
 
 const hwArguments = [
   {
@@ -129,6 +148,14 @@ const otherSections = [
 const GeekAreaHardwareWallet = () => {
   return (
     <main className="min-h-screen bg-background">
+      <Seo
+        title="Hardware wallet DIY SeedSigner : guide de construction"
+        description="Construis ton propre hardware wallet open source SeedSigner pour moins de 50 € : composants, flashage de l'image et workflow de signature air-gap par QR codes."
+        path="/geek-area/hardware-wallet"
+        keywords="seedsigner, hardware wallet diy, hardware wallet open source, air-gap bitcoin, qr code signing"
+        type="article"
+        jsonLd={hwWalletJsonLd}
+      />
       <Navbar />
       <div className="pt-20">
         {/* ── Breadcrumb ── */}

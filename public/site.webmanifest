@@ -1,0 +1,18 @@
+{
+  "name": "Pourquoi Bitcoin",
+  "short_name": "Pourquoi Bitcoin",
+  "description": "Bitcoin expliqué simplement en français.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0A0A0A",
+  "theme_color": "#0A0A0A",
+  "lang": "fr-FR",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}

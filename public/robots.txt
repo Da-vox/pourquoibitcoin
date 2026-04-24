@@ -1,7 +1,21 @@
+# Pourquoi Bitcoin - robots.txt
+# https://pourquoibitcoin.lovable.app
+
+User-agent: *
+Allow: /
+Disallow: /404
+Disallow: /*?*
+
 User-agent: Googlebot
 Allow: /
 
+User-agent: Googlebot-Image
+Allow: /
+
 User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
 Allow: /
 
 User-agent: Twitterbot
@@ -10,7 +24,32 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Slackbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# AI crawlers (autorisés - la ressource veut être citée)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
 Allow: /
 
 Sitemap: https://pourquoibitcoin.lovable.app/sitemap.xml
