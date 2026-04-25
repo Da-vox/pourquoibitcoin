@@ -122,6 +122,7 @@ const ArgumentCard = ({
   index: number;
 }) => {
   const [open, setOpen] = useState(false);
+  const [memeFailed, setMemeFailed] = useState(false);
 
   return (
     <motion.div
@@ -164,12 +165,16 @@ const ArgumentCard = ({
                 {counter}
               </p>
               <div className="rounded-lg border border-btc-orange/20 bg-btc-orange/5 p-4 space-y-3">
-                {memeImage && (
+                {memeImage && !memeFailed && (
                   <img
                     src={memeImage}
-                    alt={memeAlt ?? "Meme"}
+                    alt={memeAlt ?? meme}
                     loading="lazy"
-                    className="rounded-md max-h-72 w-auto mx-auto"
+                    decoding="async"
+                    width={480}
+                    height={288}
+                    onError={() => setMemeFailed(true)}
+                    className="rounded-md max-h-72 w-auto mx-auto bg-card/40"
                   />
                 )}
                 <p className="text-foreground/90 italic text-sm leading-relaxed">

@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 import {
   AreaChart,
   Area,
@@ -28,75 +29,63 @@ const formatPrice = (value: number) =>
     maximumFractionDigits: 0,
   }).format(value);
 
+const formatDate = (timestampMs: number, days: number) =>
+  new Date(timestampMs).toLocaleDateString("fr-FR", {
+    day: "numeric",
+    month: "short",
+    ...(days > 30 ? { year: "2-digit" } : {}),
+  });
+
+const fetchBtcPrices = async (days: number): Promise<PricePoint[]> => {
+  // CoinGecko's free tier caps market_chart at 365 days, so use
+  // CryptoCompare's histoday endpoint for longer ranges.
+  if (days > 365) {
+    const res = await fetch(
+      `https://min-api.cryptocompare.com/data/v2/histoday?fsym=BTC&tsym=USD&limit=${days}`
+    );
+    if (!res.ok) throw new Error("API error");
+    const json = await res.json();
+    if (json.Response !== "Success") throw new Error("API error");
+    const prices = (json.Data.Data as { time: number; close: number }[]).map(
+      (d) => ({
+        date: formatDate(d.time * 1000, days),
+        price: Math.round(d.close),
+      })
+    );
+    const step = Math.max(1, Math.floor(prices.length / 200));
+    return prices.filter((_, i) => i % step === 0);
+  }
+
+  const res = await fetch(
+    `https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=${days}`
+  );
+  if (!res.ok) throw new Error("API error");
+  const json = await res.json();
+  const prices = (json.prices as [number, number][]).map(
+    ([timestamp, price]) => ({
+      date: formatDate(timestamp, days),
+      price: Math.round(price),
+    })
+  );
+  const step = Math.max(1, Math.floor(prices.length / 200));
+  return prices.filter((_, i) => i % step === 0);
+};
+
 const BtcPriceChart = () => {
   const [activeFilter, setActiveFilter] = useState(1);
-  const [data, setData] = useState<PricePoint[]>([]);
-  const [currentPrice, setCurrentPrice] = useState<number | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
-
   const days = TIME_FILTERS[activeFilter].days;
 
-  useEffect(() => {
-    setLoading(true);
-    setError(false);
+  const {
+    data = [],
+    isPending: loading,
+    isError: error,
+  } = useQuery({
+    queryKey: ["btc-prices", days],
+    queryFn: () => fetchBtcPrices(days),
+    staleTime: days === 1 ? 60 * 1000 : 5 * 60 * 1000,
+  });
 
-    const formatDate = (timestampMs: number) =>
-      new Date(timestampMs).toLocaleDateString("fr-FR", {
-        day: "numeric",
-        month: "short",
-        ...(days > 30 ? { year: "2-digit" } : {}),
-      });
-
-    // CoinGecko's free tier caps market_chart at 365 days, so use
-    // CryptoCompare's histoday endpoint for longer ranges.
-    const fetcher: Promise<PricePoint[]> =
-      days > 365
-        ? fetch(
-            `https://min-api.cryptocompare.com/data/v2/histoday?fsym=BTC&tsym=USD&limit=${days}`
-          )
-            .then((res) => {
-              if (!res.ok) throw new Error("API error");
-              return res.json();
-            })
-            .then((json) => {
-              if (json.Response !== "Success") throw new Error("API error");
-              return (json.Data.Data as { time: number; close: number }[]).map(
-                (d) => ({
-                  date: formatDate(d.time * 1000),
-                  price: Math.round(d.close),
-                })
-              );
-            })
-        : fetch(
-            `https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=${days}`
-          )
-            .then((res) => {
-              if (!res.ok) throw new Error("API error");
-              return res.json();
-            })
-            .then((json) =>
-              (json.prices as [number, number][]).map(([timestamp, price]) => ({
-                date: formatDate(timestamp),
-                price: Math.round(price),
-              }))
-            );
-
-    fetcher
-      .then((prices) => {
-        // Downsample for performance
-        const step = Math.max(1, Math.floor(prices.length / 200));
-        const sampled = prices.filter((_, i) => i % step === 0);
-        setData(sampled);
-        setCurrentPrice(prices[prices.length - 1]?.price ?? null);
-        setLoading(false);
-      })
-      .catch(() => {
-        setError(true);
-        setLoading(false);
-      });
-  }, [days]);
-
+  const currentPrice = data.length > 0 ? data[data.length - 1].price : null;
   const priceChange =
     data.length > 1 ? data[data.length - 1].price - data[0].price : 0;
   const priceChangePercent =
@@ -131,10 +120,18 @@ const BtcPriceChart = () => {
         </div>
 
         {/* Time Filters */}
-        <div className="flex justify-center gap-2 mb-8">
+        <div
+          role="tablist"
+          aria-label="Plage temporelle du cours"
+          className="flex justify-center gap-2 mb-8"
+        >
           {TIME_FILTERS.map((filter, i) => (
             <button
               key={filter.label}
+              role="tab"
+              type="button"
+              aria-selected={activeFilter === i}
+              aria-controls="btc-price-chart"
               onClick={() => setActiveFilter(i)}
               className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
                 activeFilter === i
@@ -148,7 +145,14 @@ const BtcPriceChart = () => {
         </div>
 
         {/* Chart */}
-        <div className="rounded-2xl border border-border bg-card p-4 md:p-8">
+        <div
+          id="btc-price-chart"
+          role="tabpanel"
+          aria-live="polite"
+          aria-busy={loading}
+          aria-label={`Évolution du cours du bitcoin sur ${TIME_FILTERS[activeFilter].label}`}
+          className="rounded-2xl border border-border bg-card p-4 md:p-8"
+        >
           {loading ? (
             <div className="h-[350px] flex items-center justify-center text-muted-foreground">
               Chargement…

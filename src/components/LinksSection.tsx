@@ -314,10 +314,15 @@ const LinksSection = () => {
                 rel="noopener noreferrer"
                 className="group rounded-xl border border-border bg-card/50 hover:border-btc-orange/30 overflow-hidden transition-all hover:shadow-lg hover:shadow-btc-orange/5 flex flex-col"
               >
-                <div className="aspect-[16/9] w-full overflow-hidden">
+                <div className="aspect-[16/9] w-full overflow-hidden bg-card">
                   <img
                     src={link.image}
                     alt={link.title}
+                    loading="lazy"
+                    decoding="async"
+                    onError={(e) => {
+                      e.currentTarget.style.visibility = "hidden";
+                    }}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>

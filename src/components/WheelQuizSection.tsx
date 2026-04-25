@@ -183,12 +183,20 @@ const WheelQuizSection = () => {
   };
 
   const progressDots = (
-    <div className="flex items-center gap-1.5">
+    <div
+      role="progressbar"
+      aria-valuemin={0}
+      aria-valuemax={quizzes.length}
+      aria-valuenow={answeredIds.size}
+      aria-label={`Progression du quiz : ${answeredIds.size} sur ${quizzes.length} questions répondues`}
+      className="flex items-center gap-1.5"
+    >
       {quizzes.map((q) => {
         const answered = answeredIds.has(q.id);
         return (
           <span
             key={q.id}
+            aria-hidden="true"
             className={`w-2 h-2 rounded-full transition-colors ${
               answered ? "bg-btc-orange" : "bg-border"
             }`}
@@ -260,7 +268,17 @@ const WheelQuizSection = () => {
                       initial={{ rotate: 0 }}
                       style={{ originX: "50%", originY: "50%" }}
                       onClick={handleSpin}
-                      className="w-[260px] h-[260px] sm:w-[320px] sm:h-[320px] md:w-[360px] md:h-[360px] drop-shadow-[0_10px_30px_rgba(247,147,26,0.15)] cursor-pointer"
+                      role="button"
+                      tabIndex={isSpinning ? -1 : 0}
+                      aria-label="Faire tourner la roue des fondamentaux"
+                      aria-disabled={isSpinning}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter" || e.key === " ") {
+                          e.preventDefault();
+                          handleSpin();
+                        }
+                      }}
+                      className="w-[260px] h-[260px] sm:w-[320px] sm:h-[320px] md:w-[360px] md:h-[360px] drop-shadow-[0_10px_30px_rgba(247,147,26,0.15)] cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-btc-orange focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-full"
                     >
                       <circle
                         cx={WHEEL_CENTER}
@@ -366,11 +384,18 @@ const WheelQuizSection = () => {
                     </p>
                   </div>
 
-                  <h3 className="text-lg md:text-xl font-semibold mb-4 md:mb-5 tracking-tight leading-snug">
+                  <h3
+                    id={`quiz-question-${activeQuiz.id}`}
+                    className="text-lg md:text-xl font-semibold mb-4 md:mb-5 tracking-tight leading-snug"
+                  >
                     {activeQuiz.question}
                   </h3>
 
-                  <div className="space-y-2 mb-4">
+                  <div
+                    role="radiogroup"
+                    aria-labelledby={`quiz-question-${activeQuiz.id}`}
+                    className="space-y-2 mb-4"
+                  >
                     {activeQuiz.options.map((opt, i) => {
                       const isSelected = selected === i;
                       const isCorrect = i === activeQuiz.correct;
@@ -387,10 +412,20 @@ const WheelQuizSection = () => {
                       } else {
                         cls += " border-border opacity-60";
                       }
+                      const revealLabel = revealed
+                        ? isCorrect
+                          ? " (bonne réponse)"
+                          : isSelected
+                            ? " (votre réponse, incorrecte)"
+                            : ""
+                        : "";
                       return (
                         <button
                           key={i}
                           type="button"
+                          role="radio"
+                          aria-checked={isSelected}
+                          aria-label={`${opt}${revealLabel}`}
                           onClick={() => handleAnswer(i)}
                           disabled={revealed}
                           className={cls}
@@ -398,10 +433,10 @@ const WheelQuizSection = () => {
                           <span className="flex items-center justify-between gap-3">
                             <span>{opt}</span>
                             {revealed && isCorrect && (
-                              <Check className="w-4 h-4 text-green-500 shrink-0" />
+                              <Check className="w-4 h-4 text-green-500 shrink-0" aria-hidden="true" />
                             )}
                             {revealed && isSelected && !isCorrect && (
-                              <X className="w-4 h-4 text-red-500 shrink-0" />
+                              <X className="w-4 h-4 text-red-500 shrink-0" aria-hidden="true" />
                             )}
                           </span>
                         </button>
@@ -416,6 +451,8 @@ const WheelQuizSection = () => {
                       transition={{ duration: 0.25 }}
                     >
                       <div
+                        role="status"
+                        aria-live="polite"
                         className={`text-sm p-3.5 rounded-lg border mb-3 ${
                           answerState === "correct"
                             ? "border-green-500/40 bg-green-500/5"

@@ -72,7 +72,10 @@ const PageSectionsNav = () => {
           : "opacity-0 translate-y-4 pointer-events-none"
       )}
     >
-      <nav className="card-glass rounded-full px-2 py-1.5 flex items-center gap-0.5 shadow-btc-sm">
+      <nav
+        aria-label="Navigation entre sections"
+        className="card-glass rounded-full px-2 py-1.5 flex items-center gap-0.5 shadow-btc-sm"
+      >
         <div
           ref={scrollRef}
           className="flex items-center gap-0.5 overflow-x-auto scrollbar-hide"
@@ -80,7 +83,10 @@ const PageSectionsNav = () => {
           {sections.map(({ id, label }) => (
             <button
               key={id}
+              type="button"
               onClick={() => scrollTo(id)}
+              aria-label={`Aller à la section ${label}`}
+              aria-current={activeId === id ? "location" : undefined}
               className={cn(
                 "px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap transition-all duration-200 flex-shrink-0",
                 activeId === id
