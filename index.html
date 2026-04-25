@@ -21,10 +21,10 @@
     
     
     
-    <meta property="og:url" content="https://pourquoibitcoin.lovable.app/">
+    <meta property="og:url" content="https://pourquoibitcoin.fr/">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:site_name" content="Pourquoi Bitcoin">
-    <link rel="canonical" href="https://pourquoibitcoin.lovable.app/">
+    <link rel="canonical" href="https://pourquoibitcoin.fr/">
     <meta name="robots" content="index, follow">
     <meta name="keywords" content="bitcoin, pourquoi bitcoin, comprendre bitcoin, bitcoin débutant, bitcoin francophone, study bitcoin, fondamentaux bitcoin, sécuriser bitcoin">
     <script type="application/ld+json">
@@ -32,12 +32,12 @@
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Pourquoi Bitcoin",
-      "url": "https://pourquoibitcoin.lovable.app",
+      "url": "https://pourquoibitcoin.fr",
       "description": "Bitcoin expliqué simplement : arguments, fondamentaux, FAQ et guide de sécurisation. La ressource francophone pour comprendre pourquoi Bitcoin est inévitable.",
       "inLanguage": "fr",
       "potentialAction": {
         "@type": "ReadAction",
-        "target": "https://pourquoibitcoin.lovable.app"
+        "target": "https://pourquoibitcoin.fr"
       }
     }
     </script>
@@ -46,6 +46,16 @@
   <meta property="og:description" content="Bitcoin expliqué simplement : arguments, fondamentaux, FAQ et guide de sécurisation. La ressource francophone pour comprendre pourquoi Bitcoin est inévitable.">
   <meta name="twitter:description" content="Bitcoin expliqué simplement : arguments, fondamentaux, FAQ et guide de sécurisation. La ressource francophone pour comprendre pourquoi Bitcoin est inévitable.">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <script>
+    // Restore path from GitHub Pages 404 redirect
+    (function() {
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect !== location.href) {
+        history.replaceState(null, null, redirect);
+      }
+    })();
+  </script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4293284975687194"
      crossorigin="anonymous"></script>
 </head>
