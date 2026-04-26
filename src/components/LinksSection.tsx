@@ -16,6 +16,18 @@ interface LinkItem {
 const LINKS: LinkItem[] = ([
 
 {
+  "id": "19",
+  "type": "tweet",
+  "url": "https://x.com/Loic_Pandul/status/2044662676408733717?s=20",
+  "title": "Tweet de Loïc Pandul",
+  "description": "Un tweet à découvrir sur Bitcoin par Loïc Pandul.",
+  "image": "https://pbs.twimg.com/profile_images/1396929547347546113/Y4HGbg-9_400x400.jpg",
+  "date": "2026-04-15"
+},
+
+
+
+{
   "id": "18",
   "type": "tweet",
   "url": "https://x.com/BitcoinArchive/status/2047889104872833190?s=20",
