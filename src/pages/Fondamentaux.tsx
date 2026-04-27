@@ -5,7 +5,7 @@ import FAQSection from "@/components/FAQSection";
 import WheelQuizSection from "@/components/WheelQuizSection";
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
-import Seo, { buildBreadcrumb } from "@/components/Seo";
+import Seo, { buildBreadcrumb, SITE_URL } from "@/components/Seo";
 
 const faqEntries = [
   {
@@ -46,11 +46,40 @@ const fondamentauxJsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    "@id": `${SITE_URL}/fondamentaux#faq`,
     mainEntity: faqEntries.map((f) => ({
       "@type": "Question",
       name: f.q,
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": `${SITE_URL}/fondamentaux#article`,
+    headline: "Fondamentaux de Bitcoin : FAQ, comparatif et quiz",
+    description:
+      "Apprends les fondamentaux de Bitcoin : comment ça marche, pourquoi c'est rare, comparatif or vs euros vs BTC, FAQ complète et quiz interactif.",
+    inLanguage: "fr-FR",
+    datePublished: "2025-01-01",
+    dateModified: "2026-04-27",
+    author: { "@type": "Organization", name: "Pourquoi Bitcoin", url: SITE_URL },
+    publisher: {
+      "@type": "Organization",
+      name: "Pourquoi Bitcoin",
+      url: SITE_URL,
+      logo: { "@type": "ImageObject", url: `${SITE_URL}/og-image.jpg` },
+    },
+    mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE_URL}/fondamentaux` },
+    image: `${SITE_URL}/og-image.jpg`,
+    keywords: [
+      "fondamentaux bitcoin",
+      "FAQ bitcoin",
+      "blockchain",
+      "halving",
+      "preuve de travail",
+      "satoshi",
+    ],
   },
 ];
 
@@ -61,7 +90,11 @@ const Fondamentaux = () => {
         title="Fondamentaux de Bitcoin : FAQ, comparatif et quiz"
         description="Apprends les fondamentaux de Bitcoin : comment ça marche, pourquoi c'est rare, comparatif or vs euros vs BTC, FAQ complète et quiz interactif pour valider tes connaissances."
         path="/fondamentaux"
-        keywords="fondamentaux bitcoin, comment marche bitcoin, faq bitcoin, blockchain, halving, satoshi, minage"
+        keywords="fondamentaux bitcoin, comment marche bitcoin, faq bitcoin, blockchain, halving, satoshi, minage, preuve de travail"
+        type="article"
+        articleSection="Fondamentaux"
+        publishedTime="2025-01-01T00:00:00+01:00"
+        modifiedTime="2026-04-27T00:00:00+02:00"
         jsonLd={fondamentauxJsonLd}
       />
       <Navbar />

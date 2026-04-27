@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 import ShareButtons from "@/components/ShareButtons";
-import Seo, { buildBreadcrumb } from "@/components/Seo";
+import Seo, { buildBreadcrumb, SITE_URL } from "@/components/Seo";
 import {
   Cpu,
   Shield,
@@ -27,12 +27,35 @@ const hwWalletJsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "TechArticle",
+    "@id": `${SITE_URL}/geek-area/hardware-wallet#article`,
     headline: "Construire son hardware wallet DIY SeedSigner",
     description:
       "Assemblage d'un hardware wallet open source SeedSigner : composants, flashage et workflow de signature par QR codes en air-gap.",
     inLanguage: "fr-FR",
-    author: { "@type": "Organization", name: "Pourquoi Bitcoin" },
+    datePublished: "2025-01-01",
+    dateModified: "2026-04-27",
+    author: { "@type": "Organization", name: "Pourquoi Bitcoin", url: SITE_URL },
+    publisher: {
+      "@type": "Organization",
+      name: "Pourquoi Bitcoin",
+      url: SITE_URL,
+      logo: { "@type": "ImageObject", url: `${SITE_URL}/og-image.jpg` },
+    },
+    image: `${SITE_URL}/og-image.jpg`,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${SITE_URL}/geek-area/hardware-wallet`,
+    },
+    proficiencyLevel: "Expert",
+    dependencies: "Raspberry Pi Zero 2W, écran Waveshare, caméra Pi",
     about: "SeedSigner DIY hardware wallet",
+    keywords: [
+      "seedsigner",
+      "hardware wallet diy",
+      "hardware wallet open source",
+      "air-gap bitcoin",
+      "qr code signing",
+    ],
   },
 ];
 
@@ -152,8 +175,11 @@ const GeekAreaHardwareWallet = () => {
         title="Hardware wallet DIY SeedSigner : guide de construction"
         description="Construis ton propre hardware wallet open source SeedSigner pour moins de 50 € : composants, flashage de l'image et workflow de signature air-gap par QR codes."
         path="/geek-area/hardware-wallet"
-        keywords="seedsigner, hardware wallet diy, hardware wallet open source, air-gap bitcoin, qr code signing"
+        keywords="seedsigner, hardware wallet diy, hardware wallet open source, air-gap bitcoin, qr code signing, raspberry pi zero, sparrow wallet"
         type="article"
+        articleSection="Geek Area"
+        publishedTime="2025-01-01T00:00:00+01:00"
+        modifiedTime="2026-04-27T00:00:00+02:00"
         jsonLd={hwWalletJsonLd}
       />
       <Navbar />

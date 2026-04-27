@@ -3,6 +3,8 @@ import { useEffect } from "react";
 export const SITE_URL = "https://pourquoibitcoin.lovable.app";
 export const SITE_NAME = "Pourquoi Bitcoin";
 export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.jpg`;
+export const DEFAULT_OG_IMAGE_WIDTH = 1200;
+export const DEFAULT_OG_IMAGE_HEIGHT = 630;
 
 type JsonLd = Record<string, unknown> | Array<Record<string, unknown>>;
 
@@ -12,10 +14,15 @@ export interface SeoProps {
   path: string;
   image?: string;
   imageAlt?: string;
+  imageWidth?: number;
+  imageHeight?: number;
   type?: "website" | "article";
   keywords?: string;
   noindex?: boolean;
   jsonLd?: JsonLd;
+  publishedTime?: string;
+  modifiedTime?: string;
+  articleSection?: string;
 }
 
 const MANAGED_ATTR = "data-seo-managed";
@@ -47,6 +54,10 @@ const setLink = (rel: string, href: string, extra: Record<string, string> = {}) 
     ...extra,
   });
 
+const removeMetaByProperty = (property: string) => {
+  document.head.querySelector(`meta[property="${property}"]`)?.remove();
+};
+
 const setJsonLd = (id: string, data: JsonLd) => {
   const existing = document.getElementById(id);
   if (existing) existing.remove();
@@ -64,10 +75,15 @@ const Seo = ({
   path,
   image = DEFAULT_OG_IMAGE,
   imageAlt = SITE_NAME,
+  imageWidth = DEFAULT_OG_IMAGE_WIDTH,
+  imageHeight = DEFAULT_OG_IMAGE_HEIGHT,
   type = "website",
   keywords,
   noindex = false,
   jsonLd,
+  publishedTime,
+  modifiedTime,
+  articleSection,
 }: SeoProps) => {
   useEffect(() => {
     const canonical = `${SITE_URL}${path.startsWith("/") ? path : `/${path}`}`;
@@ -96,7 +112,24 @@ const Seo = ({
     setMetaByProperty("og:site_name", SITE_NAME);
     setMetaByProperty("og:locale", "fr_FR");
     setMetaByProperty("og:image", image);
+    setMetaByProperty("og:image:secure_url", image);
+    setMetaByProperty("og:image:type", image.endsWith(".png") ? "image/png" : "image/jpeg");
+    setMetaByProperty("og:image:width", String(imageWidth));
+    setMetaByProperty("og:image:height", String(imageHeight));
     setMetaByProperty("og:image:alt", imageAlt);
+
+    if (type === "article") {
+      if (publishedTime) setMetaByProperty("article:published_time", publishedTime);
+      else removeMetaByProperty("article:published_time");
+      if (modifiedTime) setMetaByProperty("article:modified_time", modifiedTime);
+      else removeMetaByProperty("article:modified_time");
+      if (articleSection) setMetaByProperty("article:section", articleSection);
+      else removeMetaByProperty("article:section");
+    } else {
+      removeMetaByProperty("article:published_time");
+      removeMetaByProperty("article:modified_time");
+      removeMetaByProperty("article:section");
+    }
 
     setMetaByName("twitter:card", "summary_large_image");
     setMetaByName("twitter:title", fullTitle);
@@ -106,7 +139,22 @@ const Seo = ({
 
     if (jsonLd) setJsonLd("seo-jsonld", jsonLd);
     else document.getElementById("seo-jsonld")?.remove();
-  }, [title, description, path, image, imageAlt, type, keywords, noindex, jsonLd]);
+  }, [
+    title,
+    description,
+    path,
+    image,
+    imageAlt,
+    imageWidth,
+    imageHeight,
+    type,
+    keywords,
+    noindex,
+    jsonLd,
+    publishedTime,
+    modifiedTime,
+    articleSection,
+  ]);
 
   return null;
 };

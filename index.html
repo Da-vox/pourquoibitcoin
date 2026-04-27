@@ -9,6 +9,8 @@
     <title>Pourquoi Bitcoin ? Comprendre Bitcoin simplement en français</title>
     <meta name="description" content="Bitcoin expliqué simplement en français : fondamentaux, arguments, FAQ, sécurisation et guide avancé. La ressource francophone de référence pour comprendre pourquoi Bitcoin est inévitable." />
     <meta name="author" content="Pourquoi Bitcoin" />
+    <meta name="publisher" content="Pourquoi Bitcoin" />
+    <meta name="application-name" content="Pourquoi Bitcoin" />
     <meta name="keywords" content="bitcoin, pourquoi bitcoin, comprendre bitcoin, bitcoin débutant, bitcoin francophone, fondamentaux bitcoin, sécuriser bitcoin, hardware wallet, nœud bitcoin, livre blanc satoshi, halving bitcoin, BTC" />
 
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -16,6 +18,8 @@
     <meta name="bingbot" content="index, follow" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta name="format-detection" content="telephone=no" />
+    <meta name="rating" content="general" />
+    <meta name="revisit-after" content="7 days" />
 
     <link rel="canonical" href="https://pourquoibitcoin.lovable.app/" />
     <link rel="alternate" hreflang="fr" href="https://pourquoibitcoin.lovable.app/" />
@@ -24,6 +28,8 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="any" />
     <link rel="apple-touch-icon" href="/favicon.ico" />
     <link rel="manifest" href="/site.webmanifest" />
+
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
     <link rel="preconnect" href="https://min-api.cryptocompare.com" crossorigin />
     <link rel="preconnect" href="https://api.coingecko.com" crossorigin />
@@ -35,6 +41,8 @@
     <meta property="og:title" content="Pourquoi Bitcoin ? Comprendre Bitcoin simplement en français" />
     <meta property="og:description" content="Bitcoin expliqué simplement en français : fondamentaux, arguments, FAQ, sécurisation et guide avancé. La ressource francophone de référence pour comprendre pourquoi Bitcoin est inévitable." />
     <meta property="og:image" content="https://pourquoibitcoin.lovable.app/og-image.jpg" />
+    <meta property="og:image:secure_url" content="https://pourquoibitcoin.lovable.app/og-image.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Pourquoi Bitcoin - comprendre Bitcoin en français" />
@@ -50,38 +58,63 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Pourquoi Bitcoin",
-      "alternateName": "Pourquoi Bitcoin ?",
-      "url": "https://pourquoibitcoin.lovable.app",
-      "description": "Bitcoin expliqué simplement en français : fondamentaux, arguments, FAQ, sécurisation et guide avancé.",
-      "inLanguage": "fr-FR",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Pourquoi Bitcoin",
-        "url": "https://pourquoibitcoin.lovable.app",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://pourquoibitcoin.lovable.app/og-image.jpg"
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://pourquoibitcoin.lovable.app/#website",
+          "name": "Pourquoi Bitcoin",
+          "alternateName": "Pourquoi Bitcoin ?",
+          "url": "https://pourquoibitcoin.lovable.app/",
+          "description": "Bitcoin expliqué simplement en français : fondamentaux, arguments, FAQ, sécurisation et guide avancé.",
+          "inLanguage": "fr-FR",
+          "publisher": { "@id": "https://pourquoibitcoin.lovable.app/#organization" },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://pourquoibitcoin.lovable.app/?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://pourquoibitcoin.lovable.app/#organization",
+          "name": "Pourquoi Bitcoin",
+          "url": "https://pourquoibitcoin.lovable.app/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://pourquoibitcoin.lovable.app/og-image.jpg",
+            "width": 1200,
+            "height": 630
+          },
+          "description": "Ressource francophone pour comprendre Bitcoin : fondamentaux, arguments, sécurisation et guide avancé.",
+          "sameAs": []
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "name": [
+            "Accueil",
+            "Fondamentaux",
+            "Arguments",
+            "Sécuriser",
+            "Geek Area",
+            "Nœud Bitcoin",
+            "Hardware Wallet DIY",
+            "Livre Blanc Satoshi"
+          ],
+          "url": [
+            "https://pourquoibitcoin.lovable.app/",
+            "https://pourquoibitcoin.lovable.app/fondamentaux",
+            "https://pourquoibitcoin.lovable.app/arguments",
+            "https://pourquoibitcoin.lovable.app/securiser",
+            "https://pourquoibitcoin.lovable.app/geek-area",
+            "https://pourquoibitcoin.lovable.app/geek-area/noeud-bitcoin",
+            "https://pourquoibitcoin.lovable.app/geek-area/hardware-wallet",
+            "https://pourquoibitcoin.lovable.app/geek-area/livre-blanc"
+          ]
         }
-      },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://pourquoibitcoin.lovable.app/?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Pourquoi Bitcoin",
-      "url": "https://pourquoibitcoin.lovable.app",
-      "logo": "https://pourquoibitcoin.lovable.app/og-image.jpg",
-      "description": "Ressource francophone pour comprendre Bitcoin : fondamentaux, arguments, sécurisation et guide avancé.",
-      "sameAs": []
+      ]
     }
     </script>
 
@@ -90,6 +123,33 @@
 
   <body>
     <div id="root"></div>
+    <noscript>
+      <header>
+        <h1>Pourquoi Bitcoin ? Comprendre Bitcoin simplement en français</h1>
+        <p>
+          Bitcoin expliqué simplement en français : fondamentaux, arguments, FAQ,
+          sécurisation et guide avancé. La ressource francophone de référence pour
+          comprendre pourquoi Bitcoin est inévitable.
+        </p>
+        <nav aria-label="Navigation principale">
+          <ul>
+            <li><a href="/fondamentaux">Les fondamentaux de Bitcoin</a></li>
+            <li><a href="/arguments">Arguments et contre-arguments</a></li>
+            <li><a href="/securiser">Sécuriser ses bitcoins (hardware wallet)</a></li>
+            <li><a href="/geek-area">Geek Area : nœud, wallet DIY, livre blanc</a></li>
+            <li><a href="/geek-area/noeud-bitcoin">Monter un nœud Bitcoin Core</a></li>
+            <li><a href="/geek-area/hardware-wallet">Hardware wallet DIY (SeedSigner)</a></li>
+            <li><a href="/geek-area/livre-blanc">Livre blanc de Satoshi Nakamoto</a></li>
+          </ul>
+        </nav>
+        <p>
+          Bitcoin est une monnaie numérique décentralisée créée en 2009 par Satoshi
+          Nakamoto. Elle est rare (21 millions d'unités maximum), open source,
+          sécurisée par la preuve de travail et résistante à la censure. Pour la
+          meilleure expérience, activez JavaScript.
+        </p>
+      </header>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
