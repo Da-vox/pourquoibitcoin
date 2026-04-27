@@ -2,13 +2,55 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 import ShareButtons from "@/components/ShareButtons";
-import Seo, { buildBreadcrumb } from "@/components/Seo";
+import Seo, { buildBreadcrumb, SITE_URL } from "@/components/Seo";
 import { Server, Cpu, BookOpen, CheckCircle, ArrowRight } from "lucide-react";
 
-const geekAreaJsonLd = buildBreadcrumb([
-  { name: "Accueil", path: "/" },
-  { name: "Geek Area", path: "/geek-area" },
-]);
+const geekAreaJsonLd = [
+  buildBreadcrumb([
+    { name: "Accueil", path: "/" },
+    { name: "Geek Area", path: "/geek-area" },
+  ]),
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${SITE_URL}/geek-area#collection`,
+    name: "Geek Area Bitcoin",
+    description:
+      "Trois ressources avancées pour les bitcoiners techniques : nœud Bitcoin Core, hardware wallet DIY SeedSigner et livre blanc de Satoshi.",
+    inLanguage: "fr-FR",
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+    hasPart: [
+      { "@type": "TechArticle", url: `${SITE_URL}/geek-area/noeud-bitcoin`, name: "Monter son nœud Bitcoin Core" },
+      { "@type": "TechArticle", url: `${SITE_URL}/geek-area/hardware-wallet`, name: "Construire son Hardware Wallet DIY" },
+      { "@type": "Article", url: `${SITE_URL}/geek-area/livre-blanc`, name: "Livre Blanc de Satoshi" },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "@id": `${SITE_URL}/geek-area#itemlist`,
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Monter son nœud Bitcoin Core",
+        url: `${SITE_URL}/geek-area/noeud-bitcoin`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Construire son Hardware Wallet DIY (SeedSigner)",
+        url: `${SITE_URL}/geek-area/hardware-wallet`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Livre Blanc de Satoshi : résumé chapitre par chapitre",
+        url: `${SITE_URL}/geek-area/livre-blanc`,
+      },
+    ],
+  },
+];
 
 const sections = [
   {

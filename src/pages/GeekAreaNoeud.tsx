@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 import ShareButtons from "@/components/ShareButtons";
-import Seo, { buildBreadcrumb } from "@/components/Seo";
+import Seo, { buildBreadcrumb, SITE_URL } from "@/components/Seo";
 import {
   Server,
   Shield,
@@ -29,12 +29,35 @@ const noeudJsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "TechArticle",
+    "@id": `${SITE_URL}/geek-area/noeud-bitcoin#article`,
     headline: "Monter son nœud Bitcoin Core : guide complet",
     description:
       "Installation pas à pas de Bitcoin Core, configuration matérielle et connexion de son wallet via RPC.",
     inLanguage: "fr-FR",
-    author: { "@type": "Organization", name: "Pourquoi Bitcoin" },
+    datePublished: "2025-01-01",
+    dateModified: "2026-04-27",
+    author: { "@type": "Organization", name: "Pourquoi Bitcoin", url: SITE_URL },
+    publisher: {
+      "@type": "Organization",
+      name: "Pourquoi Bitcoin",
+      url: SITE_URL,
+      logo: { "@type": "ImageObject", url: `${SITE_URL}/og-image.jpg` },
+    },
+    image: `${SITE_URL}/og-image.jpg`,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${SITE_URL}/geek-area/noeud-bitcoin`,
+    },
+    proficiencyLevel: "Expert",
+    dependencies: "Bitcoin Core, Ubuntu Server, SSD 1 To",
     about: "Bitcoin Core full node",
+    keywords: [
+      "nœud bitcoin",
+      "bitcoin core",
+      "full node",
+      "RPC",
+      "raspberry pi bitcoin",
+    ],
   },
 ];
 
@@ -157,8 +180,11 @@ const GeekAreaNoeud = () => {
         title="Monter son nœud Bitcoin : guide Bitcoin Core pas à pas"
         description="Guide complet pour installer et configurer un nœud Bitcoin Core : matériel requis, installation en 9 étapes, connexion de ton wallet via RPC local et souveraineté totale sur le réseau."
         path="/geek-area/noeud-bitcoin"
-        keywords="nœud bitcoin, bitcoin core, full node, RPC, souveraineté bitcoin, umbrel, raspberry pi"
+        keywords="nœud bitcoin, bitcoin core, full node, RPC, souveraineté bitcoin, umbrel, raspberry pi, IBD, ubuntu bitcoin"
         type="article"
+        articleSection="Geek Area"
+        publishedTime="2025-01-01T00:00:00+01:00"
+        modifiedTime="2026-04-27T00:00:00+02:00"
         jsonLd={noeudJsonLd}
       />
       <Navbar />

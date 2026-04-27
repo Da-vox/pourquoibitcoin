@@ -1,61 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://pourquoibitcoin.lovable.app/</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pourquoibitcoin.lovable.app/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pourquoibitcoin.lovable.app/"/>
+    <image:image>
+      <image:loc>https://pourquoibitcoin.lovable.app/og-image.jpg</image:loc>
+      <image:title>Pourquoi Bitcoin - comprendre Bitcoin en français</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://pourquoibitcoin.lovable.app/fondamentaux</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pourquoibitcoin.lovable.app/fondamentaux"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pourquoibitcoin.lovable.app/fondamentaux"/>
   </url>
   <url>
     <loc>https://pourquoibitcoin.lovable.app/arguments</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pourquoibitcoin.lovable.app/arguments"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pourquoibitcoin.lovable.app/arguments"/>
   </url>
   <url>
     <loc>https://pourquoibitcoin.lovable.app/securiser</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pourquoibitcoin.lovable.app/securiser"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pourquoibitcoin.lovable.app/securiser"/>
   </url>
   <url>
     <loc>https://pourquoibitcoin.lovable.app/geek-area</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pourquoibitcoin.lovable.app/geek-area"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pourquoibitcoin.lovable.app/geek-area"/>
   </url>
   <url>
     <loc>https://pourquoibitcoin.lovable.app/geek-area/noeud-bitcoin</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pourquoibitcoin.lovable.app/geek-area/noeud-bitcoin"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pourquoibitcoin.lovable.app/geek-area/noeud-bitcoin"/>
   </url>
   <url>
     <loc>https://pourquoibitcoin.lovable.app/geek-area/hardware-wallet</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pourquoibitcoin.lovable.app/geek-area/hardware-wallet"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pourquoibitcoin.lovable.app/geek-area/hardware-wallet"/>
   </url>
   <url>
     <loc>https://pourquoibitcoin.lovable.app/geek-area/livre-blanc</loc>
-    <lastmod>2026-04-24</lastmod>
+    <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pourquoibitcoin.lovable.app/geek-area/livre-blanc"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pourquoibitcoin.lovable.app/geek-area/livre-blanc"/>
   </url>
 </urlset>

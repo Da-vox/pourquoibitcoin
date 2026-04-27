@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 import ShareButtons from "@/components/ShareButtons";
-import Seo, { buildBreadcrumb } from "@/components/Seo";
+import Seo, { buildBreadcrumb, SITE_URL } from "@/components/Seo";
 import {
   BookOpen,
   ArrowLeft,
@@ -32,14 +32,39 @@ const livreBlancJsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "Article",
+    "@id": `${SITE_URL}/geek-area/livre-blanc#article`,
     headline: "Le livre blanc de Satoshi Nakamoto : résumé chapitre par chapitre",
     description:
       "Résumé structuré du livre blanc Bitcoin publié par Satoshi Nakamoto en 2008, chapitre par chapitre.",
     inLanguage: "fr-FR",
     author: { "@type": "Person", name: "Satoshi Nakamoto" },
-    publisher: { "@type": "Organization", name: "Pourquoi Bitcoin" },
-    about: "Bitcoin Whitepaper",
+    publisher: {
+      "@type": "Organization",
+      name: "Pourquoi Bitcoin",
+      url: SITE_URL,
+      logo: { "@type": "ImageObject", url: `${SITE_URL}/og-image.jpg` },
+    },
+    image: `${SITE_URL}/og-image.jpg`,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${SITE_URL}/geek-area/livre-blanc`,
+    },
+    about: {
+      "@type": "Book",
+      name: "Bitcoin: A Peer-to-Peer Electronic Cash System",
+      author: { "@type": "Person", name: "Satoshi Nakamoto" },
+      datePublished: "2008-10-31",
+      inLanguage: "en",
+    },
     datePublished: "2008-10-31",
+    dateModified: "2026-04-27",
+    keywords: [
+      "livre blanc bitcoin",
+      "bitcoin whitepaper",
+      "satoshi nakamoto",
+      "proof of work",
+      "merkle tree",
+    ],
   },
 ];
 
@@ -176,8 +201,11 @@ const GeekAreaLivreBlanc = () => {
         title="Livre blanc de Satoshi Nakamoto : résumé chapitre par chapitre"
         description="Le livre blanc Bitcoin de Satoshi Nakamoto (2008) expliqué chapitre par chapitre en français : transactions, timestamp, proof of work, réseau, preuve simplifiée et arbre de Merkle."
         path="/geek-area/livre-blanc"
-        keywords="livre blanc bitcoin, whitepaper bitcoin, satoshi nakamoto, proof of work, merkle tree, double dépense"
+        keywords="livre blanc bitcoin, whitepaper bitcoin, satoshi nakamoto, proof of work, merkle tree, double dépense, peer-to-peer electronic cash"
         type="article"
+        articleSection="Geek Area"
+        publishedTime="2008-10-31T00:00:00Z"
+        modifiedTime="2026-04-27T00:00:00+02:00"
         jsonLd={livreBlancJsonLd}
       />
       <Navbar />
