@@ -1,7 +1,7 @@
 # Pourquoi Bitcoin - robots.txt
-# https://pourquoibitcoin.lovable.app
+# https://pourquoibitcoin.fr
 
-Sitemap: https://pourquoibitcoin.lovable.app/sitemap.xml
+Sitemap: https://pourquoibitcoin.fr/sitemap.xml
 
 User-agent: *
 Allow: /

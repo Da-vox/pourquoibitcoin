@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export const SITE_URL = "https://pourquoibitcoin.lovable.app";
+export const SITE_URL = "https://pourquoibitcoin.fr";
 export const SITE_NAME = "Pourquoi Bitcoin";
 export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.jpg`;
 export const DEFAULT_OG_IMAGE_WIDTH = 1200;

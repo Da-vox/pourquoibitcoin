@@ -6,7 +6,7 @@ interface ShareButtonsProps {
 }
 
 const ShareButtons = ({ url, title }: ShareButtonsProps) => {
-  const shareUrl = url || (typeof window !== "undefined" ? window.location.href : "https://pourquoibitcoin.lovable.app");
+  const shareUrl = url || (typeof window !== "undefined" ? window.location.href : "https://pourquoibitcoin.fr");
   const shareTitle = title || "Pourquoi Bitcoin ? La réponse simple et honnête.";
 
   const twitterUrl = `https://x.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareTitle)}`;
