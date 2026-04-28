@@ -256,6 +256,18 @@ const GeekAreaNoeud = () => {
                   </div>
                 ))}
               </div>
+              <p className="text-center text-sm text-muted-foreground mt-6">
+                Pour aller plus loin :{" "}
+                <a
+                  href="https://www.bitstack-app.com/comprendre-bitcoin/6-raisons-de-configurer-votre-propre-noeud-bitcoin?c=EUR"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-btc-orange hover:underline"
+                >
+                  6 raisons de configurer votre propre nœud Bitcoin (Bitstack)
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </p>
             </div>
 
             {/* Nœud ≠ minage */}
