@@ -5,6 +5,7 @@ import ShareButtons from "@/components/ShareButtons";
 import Seo, { buildBreadcrumb, SITE_URL } from "@/components/Seo";
 import {
   BookOpen,
+  BookA,
   ArrowLeft,
   Server,
   Cpu,
@@ -192,6 +193,12 @@ const otherSections = [
     description: "Construis ton propre portefeuille matériel open source avec SeedSigner pour moins de 50 €.",
     href: "/geek-area/hardware-wallet",
   },
+  {
+    icon: BookA,
+    title: "Dictionnaire Pandul",
+    description: "Le meilleur lexique Bitcoin open source en français, maintenu par la communauté.",
+    href: "/geek-area/dictionnaire",
+  },
 ];
 
 const GeekAreaLivreBlanc = () => {
@@ -344,7 +351,7 @@ const GeekAreaLivreBlanc = () => {
               Continuer dans la{" "}
               <span className="text-gradient-btc">Geek Area</span>
             </h2>
-            <div className="grid sm:grid-cols-2 gap-5 max-w-2xl mx-auto">
+            <div className="grid sm:grid-cols-3 gap-5 max-w-4xl mx-auto">
               {otherSections.map((section, i) => (
                 <Link
                   key={i}

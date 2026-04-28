@@ -70,4 +70,12 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://pourquoibitcoin.lovable.app/geek-area/livre-blanc"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pourquoibitcoin.lovable.app/geek-area/livre-blanc"/>
   </url>
+  <url>
+    <loc>https://pourquoibitcoin.lovable.app/geek-area/dictionnaire</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://pourquoibitcoin.lovable.app/geek-area/dictionnaire"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pourquoibitcoin.lovable.app/geek-area/dictionnaire"/>
+  </url>
 </urlset>

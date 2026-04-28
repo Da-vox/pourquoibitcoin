@@ -12,6 +12,7 @@ import GeekArea from "./pages/GeekArea";
 import GeekAreaNoeud from "./pages/GeekAreaNoeud";
 import GeekAreaHardwareWallet from "./pages/GeekAreaHardwareWallet";
 import GeekAreaLivreBlanc from "./pages/GeekAreaLivreBlanc";
+import GeekAreaDictionnaire from "./pages/GeekAreaDictionnaire";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient({
@@ -41,6 +42,7 @@ const App = () => (
           <Route path="/geek-area/noeud-bitcoin" element={<GeekAreaNoeud />} />
           <Route path="/geek-area/hardware-wallet" element={<GeekAreaHardwareWallet />} />
           <Route path="/geek-area/livre-blanc" element={<GeekAreaLivreBlanc />} />
+          <Route path="/geek-area/dictionnaire" element={<GeekAreaDictionnaire />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

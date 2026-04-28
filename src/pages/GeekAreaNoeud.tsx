@@ -17,6 +17,7 @@ import {
   ArrowLeft,
   Cpu,
   BookOpen,
+  BookA,
   Pickaxe,
 } from "lucide-react";
 
@@ -170,6 +171,12 @@ const otherSections = [
     title: "Livre Blanc de Satoshi",
     description: "Le document fondateur de Bitcoin expliqué simplement, chapitre par chapitre.",
     href: "/geek-area/livre-blanc",
+  },
+  {
+    icon: BookA,
+    title: "Dictionnaire Pandul",
+    description: "Le meilleur lexique Bitcoin open source en français, maintenu par la communauté.",
+    href: "/geek-area/dictionnaire",
   },
 ];
 
@@ -424,7 +431,7 @@ const GeekAreaNoeud = () => {
               Continuer dans la{" "}
               <span className="text-gradient-btc">Geek Area</span>
             </h2>
-            <div className="grid sm:grid-cols-2 gap-5 max-w-2xl mx-auto">
+            <div className="grid sm:grid-cols-3 gap-5 max-w-4xl mx-auto">
               {otherSections.map((section, i) => (
                 <Link
                   key={i}
