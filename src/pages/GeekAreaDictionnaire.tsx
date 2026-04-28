@@ -76,7 +76,7 @@ const features = [
     icon: Users,
     title: "Maintenu par la communauté",
     description:
-      "Pandul est animé par des bitcoiners francophones passionnés. Le dictionnaire évolue en continu avec le protocole et les nouveaux concepts (BIP, soft forks, etc.).",
+      "Pandul est animé par des bitcoiners francophones passionnés leadé par Loïc Morel. Le dictionnaire évolue en continu avec le protocole et les nouveaux concepts (BIP, soft forks, etc.).",
   },
   {
     icon: Search,
