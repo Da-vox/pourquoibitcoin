@@ -21,7 +21,7 @@ const LINKS: LinkItem[] = ([
   "url": "https://cryptoast.fr/nouvelle-proposition-fork-bitcoin-concurrencer-finance-tokenisee-ethereum-feu-communaute/",
   "title": "Une nouvelle proposition de fork de Bitcoin pour concurrencer la finance tokenisée d'Ethereum met le feu à la communauté",
   "description": "Une nouvelle proposition de fork de Bitcoin agite la communauté : permettre à Bitcoin de concurrencer Ethereum sur le terrain de la finance tokenisée. Le débat fait rage entre maximalistes attachés à la simplicité du protocole et partisans d'une évolution vers plus de programmabilité.",
-  "image": "https://cryptoast.fr/wp-content/uploads/2024/02/bitcoin-fork-proposal.jpg",
+  "image": "https://cryptoast.fr/wp-content/uploads/2026/04/nouvelle-proposition-fork-bitcoin-concurrencer-finance-tokenisee-ethereum-feu-communaute.jpg",
   "date": "2026-04-28"
 },
 
