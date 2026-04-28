@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import FooterSection from "@/components/FooterSection";
 import ShareButtons from "@/components/ShareButtons";
 import Seo, { buildBreadcrumb, SITE_URL } from "@/components/Seo";
-import { Server, Cpu, BookOpen, CheckCircle, ArrowRight } from "lucide-react";
+import { Server, Cpu, BookOpen, BookA, CheckCircle, ArrowRight } from "lucide-react";
 
 const geekAreaJsonLd = [
   buildBreadcrumb([
@@ -16,13 +16,14 @@ const geekAreaJsonLd = [
     "@id": `${SITE_URL}/geek-area#collection`,
     name: "Geek Area Bitcoin",
     description:
-      "Trois ressources avancées pour les bitcoiners techniques : nœud Bitcoin Core, hardware wallet DIY SeedSigner et livre blanc de Satoshi.",
+      "Quatre ressources avancées pour les bitcoiners techniques : nœud Bitcoin Core, hardware wallet DIY SeedSigner, livre blanc de Satoshi et dictionnaire Bitcoin Pandul.",
     inLanguage: "fr-FR",
     isPartOf: { "@id": `${SITE_URL}/#website` },
     hasPart: [
       { "@type": "TechArticle", url: `${SITE_URL}/geek-area/noeud-bitcoin`, name: "Monter son nœud Bitcoin Core" },
       { "@type": "TechArticle", url: `${SITE_URL}/geek-area/hardware-wallet`, name: "Construire son Hardware Wallet DIY" },
       { "@type": "Article", url: `${SITE_URL}/geek-area/livre-blanc`, name: "Livre Blanc de Satoshi" },
+      { "@type": "Article", url: `${SITE_URL}/geek-area/dictionnaire`, name: "Dictionnaire Bitcoin Pandul" },
     ],
   },
   {
@@ -47,6 +48,12 @@ const geekAreaJsonLd = [
         position: 3,
         name: "Livre Blanc de Satoshi : résumé chapitre par chapitre",
         url: `${SITE_URL}/geek-area/livre-blanc`,
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        name: "Dictionnaire Bitcoin Pandul : la référence open source en français",
+        url: `${SITE_URL}/geek-area/dictionnaire`,
       },
     ],
   },
@@ -95,16 +102,30 @@ const sections = [
     href: "/geek-area/livre-blanc",
     label: "Lire le résumé",
   },
+  {
+    num: "04",
+    icon: BookA,
+    title: "Dictionnaire Bitcoin Pandul",
+    description:
+      "Pandul propose le meilleur dictionnaire open source francophone dédié à Bitcoin. Tout le vocabulaire technique du protocole - UTXO, mempool, taproot, lightning… - est défini, vulgarisé et maintenu par la communauté française. Une ressource libre, citable et constamment mise à jour.",
+    highlights: [
+      "Lexique complet 100 % en français",
+      "Open source : définitions auditables et contributions ouvertes",
+      "Maintenu par la communauté Pandul",
+    ],
+    href: "/geek-area/dictionnaire",
+    label: "Découvrir le dictionnaire",
+  },
 ];
 
 const GeekArea = () => {
   return (
     <main className="min-h-screen bg-background">
       <Seo
-        title="Geek Area Bitcoin : nœud, hardware wallet DIY et livre blanc"
-        description="Trois ressources avancées pour les bitcoiners techniques : monter son nœud Bitcoin Core, construire un hardware wallet DIY SeedSigner et lire le livre blanc de Satoshi chapitre par chapitre."
+        title="Geek Area Bitcoin : nœud, hardware wallet DIY, livre blanc et dictionnaire"
+        description="Quatre ressources avancées pour les bitcoiners techniques : monter son nœud Bitcoin Core, construire un hardware wallet DIY SeedSigner, lire le livre blanc de Satoshi et explorer le dictionnaire Bitcoin Pandul."
         path="/geek-area"
-        keywords="geek area bitcoin, nœud bitcoin core, seedsigner, hardware wallet diy, livre blanc satoshi, bitcoin technique"
+        keywords="geek area bitcoin, nœud bitcoin core, seedsigner, hardware wallet diy, livre blanc satoshi, dictionnaire bitcoin, pandul, bitcoin technique"
         jsonLd={geekAreaJsonLd}
       />
       <Navbar />
@@ -120,8 +141,9 @@ const GeekArea = () => {
             </h1>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg mb-10">
               Prends le contrôle total. Lance ton propre nœud Bitcoin, construis
-              ton hardware wallet open source, et plonge dans l'œuvre originale
-              de Satoshi - étape par étape.
+              ton hardware wallet open source, plonge dans l'œuvre originale de
+              Satoshi et maîtrise tout le vocabulaire grâce au dictionnaire
+              Pandul - étape par étape.
             </p>
             {/* Ancres rapides */}
             <div className="flex flex-wrap gap-3 justify-center">

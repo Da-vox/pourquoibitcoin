@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import {
+  BookA,
   BookOpen,
   FileText,
   Hexagon,
@@ -55,6 +56,7 @@ const groups: SitemapGroup[] = [
       { to: "/geek-area/noeud-bitcoin", label: "Nœud Bitcoin", icon: Hexagon },
       { to: "/geek-area/hardware-wallet", label: "Hardware Wallet", icon: Wallet },
       { to: "/geek-area/livre-blanc", label: "Livre blanc de Satoshi", icon: FileText },
+      { to: "/geek-area/dictionnaire", label: "Dictionnaire Pandul", icon: BookA },
     ],
   },
 ];
