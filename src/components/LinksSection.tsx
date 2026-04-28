@@ -16,6 +16,18 @@ interface LinkItem {
 const LINKS: LinkItem[] = ([
 
 {
+  "id": "20",
+  "type": "article",
+  "url": "https://cryptoast.fr/nouvelle-proposition-fork-bitcoin-concurrencer-finance-tokenisee-ethereum-feu-communaute/",
+  "title": "Une nouvelle proposition de fork de Bitcoin pour concurrencer la finance tokenisée d'Ethereum met le feu à la communauté",
+  "description": "Une nouvelle proposition de fork de Bitcoin agite la communauté : permettre à Bitcoin de concurrencer Ethereum sur le terrain de la finance tokenisée. Le débat fait rage entre maximalistes attachés à la simplicité du protocole et partisans d'une évolution vers plus de programmabilité.",
+  "image": "https://cryptoast.fr/wp-content/uploads/2024/02/bitcoin-fork-proposal.jpg",
+  "date": "2026-04-28"
+},
+
+
+
+{
   "id": "19",
   "type": "tweet",
   "url": "https://x.com/Loic_Pandul/status/2044662676408733717?s=20",
