@@ -4,7 +4,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://pourquoibitcoin.fr/</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-04-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pourquoibitcoin.fr/"/>
@@ -12,70 +12,111 @@
     <image:image>
       <image:loc>https://pourquoibitcoin.fr/og-image.jpg</image:loc>
       <image:title>Pourquoi Bitcoin - comprendre Bitcoin en français</image:title>
+      <image:caption>Pourquoi Bitcoin ? Comprendre Bitcoin simplement en français.</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://pourquoibitcoin.fr/fondamentaux</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pourquoibitcoin.fr/fondamentaux"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pourquoibitcoin.fr/fondamentaux"/>
+    <image:image>
+      <image:loc>https://pourquoibitcoin.fr/og-image.jpg</image:loc>
+      <image:title>Fondamentaux de Bitcoin : FAQ, comparatif et quiz</image:title>
+      <image:caption>Apprends les fondamentaux de Bitcoin : FAQ, comparatif or vs euros vs BTC, quiz interactif.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://pourquoibitcoin.fr/arguments</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pourquoibitcoin.fr/arguments"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pourquoibitcoin.fr/arguments"/>
+    <image:image>
+      <image:loc>https://pourquoibitcoin.fr/og-image.jpg</image:loc>
+      <image:title>Arguments contre Bitcoin : les contre-arguments rationnels</image:title>
+      <image:caption>Ponzi, énergie, volatilité, criminels, or, complexité : les critiques contre Bitcoin démontées une par une.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://pourquoibitcoin.fr/securiser</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pourquoibitcoin.fr/securiser"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pourquoibitcoin.fr/securiser"/>
+    <image:image>
+      <image:loc>https://pourquoibitcoin.fr/og-image.jpg</image:loc>
+      <image:title>Sécuriser ses bitcoins : guide complet hardware wallet</image:title>
+      <image:caption>Guide pas à pas pour sécuriser ses BTC en self-custody avec un hardware wallet (Ledger).</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://pourquoibitcoin.fr/geek-area</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pourquoibitcoin.fr/geek-area"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pourquoibitcoin.fr/geek-area"/>
+    <image:image>
+      <image:loc>https://pourquoibitcoin.fr/og-image.jpg</image:loc>
+      <image:title>Geek Area Bitcoin : nœud, hardware wallet DIY, livre blanc et dictionnaire</image:title>
+      <image:caption>Quatre ressources avancées pour les bitcoiners techniques.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://pourquoibitcoin.fr/geek-area/noeud-bitcoin</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pourquoibitcoin.fr/geek-area/noeud-bitcoin"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pourquoibitcoin.fr/geek-area/noeud-bitcoin"/>
+    <image:image>
+      <image:loc>https://pourquoibitcoin.fr/og-image.jpg</image:loc>
+      <image:title>Monter son nœud Bitcoin Core : guide complet</image:title>
+      <image:caption>Installation pas à pas de Bitcoin Core, configuration matérielle et connexion via RPC.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://pourquoibitcoin.fr/geek-area/hardware-wallet</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pourquoibitcoin.fr/geek-area/hardware-wallet"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pourquoibitcoin.fr/geek-area/hardware-wallet"/>
+    <image:image>
+      <image:loc>https://pourquoibitcoin.fr/og-image.jpg</image:loc>
+      <image:title>Construire son hardware wallet DIY SeedSigner</image:title>
+      <image:caption>Hardware wallet open source à assembler : composants, flashage et signature en air-gap.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://pourquoibitcoin.fr/geek-area/livre-blanc</loc>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pourquoibitcoin.fr/geek-area/livre-blanc"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pourquoibitcoin.fr/geek-area/livre-blanc"/>
+    <image:image>
+      <image:loc>https://pourquoibitcoin.fr/og-image.jpg</image:loc>
+      <image:title>Livre blanc de Satoshi Nakamoto : résumé chapitre par chapitre</image:title>
+      <image:caption>Le document fondateur de Bitcoin (2008) expliqué simplement, chapitre par chapitre.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://pourquoibitcoin.fr/geek-area/dictionnaire</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pourquoibitcoin.fr/geek-area/dictionnaire"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://pourquoibitcoin.fr/geek-area/dictionnaire"/>
+    <image:image>
+      <image:loc>https://pourquoibitcoin.fr/og-image.jpg</image:loc>
+      <image:title>Dictionnaire Bitcoin Pandul : le meilleur lexique open source en français</image:title>
+      <image:caption>Tout le vocabulaire technique de Bitcoin expliqué en français.</image:caption>
+    </image:image>
   </url>
 </urlset>
