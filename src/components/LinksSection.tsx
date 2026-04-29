@@ -21,7 +21,7 @@ const LINKS: LinkItem[] = ([
   "url": "https://fr.beincrypto.com/samson-mow-prediction-bitcoin-omega-candle/",
   "title": "Samson Mow prédit une « omega candle » pour le Bitcoin",
   "description": "Samson Mow, figure emblématique du Bitcoin et PDG de Jan3, anticipe une « omega candle » : un mouvement haussier explosif de Bitcoin sur une seule bougie, propulsé par l'adoption institutionnelle et la rareté du BTC. Décryptage de cette thèse maximaliste et des catalyseurs qui pourraient la déclencher.",
-  "image": "https://fr.beincrypto.com/wp-content/uploads/2024/03/samson-mow-bitcoin-prediction.jpg",
+  "image": "https://fr.beincrypto.com/_mfes/post/_next/image/?url=https%3A%2F%2Fassets.beincrypto.com%2Fimg%2FE-55T_rQUC571wW88KcrIxYKFlY%3D%2Fsmart%2Ff449c59e8af94389b8d1d4a67ef7db58&w=1200&q=75",
   "date": "2026-04-29"
 },
 
