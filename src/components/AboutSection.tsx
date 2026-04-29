@@ -18,7 +18,7 @@ const AboutSection = () => {
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">
             Ce site, réalisé via les IA Claude et Lovable fait partie du mouvement <span className="text-btc-orange font-semibold">#StudyBitcoin</span> dans le monde francophone.
-            <br /><br />Notre mission : expliquer et vulgariser la technique derrière Bitcoin.
+            <br /><br />Notre mission 100% altruiste : expliquer et vulgariser la technique derrière Bitcoin.
             Pas de jargon financier, pas de promesses de gains - juste de la compréhension.
             <br /><br />Notre référent francophone : Lionel Dricot
           </p>
