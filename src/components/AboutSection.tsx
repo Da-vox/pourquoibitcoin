@@ -1,6 +1,6 @@
 import { Code, Heart, Mail, Send, ShieldCheck } from "lucide-react";
 
-const CONTACT_EMAIL = "vaga.tuktuk@gmail.com";
+const CONTACT_EMAIL = "contact@pourquoibitcoin.fr";
 
 const AboutSection = () => {
   const subject = encodeURIComponent("Contact depuis le site Bitcoin");
