@@ -48,7 +48,7 @@ const securiserJsonLd = [
       "Guide pas à pas pour sécuriser ses bitcoins en self-custody : hardware wallet, seed phrase, configuration et erreurs à éviter.",
     inLanguage: "fr-FR",
     datePublished: "2025-01-01",
-    dateModified: "2026-04-27",
+    dateModified: "2026-04-29",
     author: { "@type": "Organization", name: "Pourquoi Bitcoin", url: SITE_URL },
     publisher: {
       "@type": "Organization",
@@ -107,7 +107,7 @@ const Securiser = () => {
         type="article"
         articleSection="Sécurité"
         publishedTime="2025-01-01T00:00:00+01:00"
-        modifiedTime="2026-04-27T00:00:00+02:00"
+        modifiedTime="2026-04-29T00:00:00+02:00"
         jsonLd={securiserJsonLd}
       />
       <Navbar />

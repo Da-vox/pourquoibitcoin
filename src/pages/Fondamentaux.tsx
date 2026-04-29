@@ -47,11 +47,36 @@ const fondamentauxJsonLd = [
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "@id": `${SITE_URL}/fondamentaux#faq`,
+    inLanguage: "fr-FR",
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["[data-speakable]"],
+    },
     mainEntity: faqEntries.map((f) => ({
       "@type": "Question",
       name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
+      acceptedAnswer: { "@type": "Answer", text: f.a, inLanguage: "fr-FR" },
     })),
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "@id": `${SITE_URL}/fondamentaux#learning`,
+    name: "Fondamentaux de Bitcoin",
+    description:
+      "Cours d'introduction à Bitcoin en français : blockchain, halving, preuve de travail, FAQ et quiz interactif.",
+    inLanguage: "fr-FR",
+    learningResourceType: "Lesson",
+    educationalLevel: "Beginner",
+    teaches: [
+      "Blockchain Bitcoin",
+      "Halving Bitcoin",
+      "Preuve de travail",
+      "Différences avec l'or et les monnaies fiduciaires",
+    ],
+    audience: { "@type": "Audience", audienceType: "Grand public francophone" },
+    isAccessibleForFree: true,
+    provider: { "@type": "Organization", name: "Pourquoi Bitcoin", url: SITE_URL },
   },
   {
     "@context": "https://schema.org",
@@ -62,7 +87,7 @@ const fondamentauxJsonLd = [
       "Apprends les fondamentaux de Bitcoin : comment ça marche, pourquoi c'est rare, comparatif or vs euros vs BTC, FAQ complète et quiz interactif.",
     inLanguage: "fr-FR",
     datePublished: "2025-01-01",
-    dateModified: "2026-04-27",
+    dateModified: "2026-04-29",
     author: { "@type": "Organization", name: "Pourquoi Bitcoin", url: SITE_URL },
     publisher: {
       "@type": "Organization",
@@ -94,7 +119,7 @@ const Fondamentaux = () => {
         type="article"
         articleSection="Fondamentaux"
         publishedTime="2025-01-01T00:00:00+01:00"
-        modifiedTime="2026-04-27T00:00:00+02:00"
+        modifiedTime="2026-04-29T00:00:00+02:00"
         jsonLd={fondamentauxJsonLd}
       />
       <Navbar />

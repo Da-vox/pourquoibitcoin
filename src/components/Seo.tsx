@@ -58,6 +58,19 @@ const removeMetaByProperty = (property: string) => {
   document.head.querySelector(`meta[property="${property}"]`)?.remove();
 };
 
+const removeMetaByName = (name: string) => {
+  document.head.querySelector(`meta[name="${name}"]`)?.remove();
+};
+
+const detectImageMime = (url: string): string => {
+  const lower = url.toLowerCase();
+  if (lower.endsWith(".png")) return "image/png";
+  if (lower.endsWith(".webp")) return "image/webp";
+  if (lower.endsWith(".gif")) return "image/gif";
+  if (lower.endsWith(".svg")) return "image/svg+xml";
+  return "image/jpeg";
+};
+
 const setJsonLd = (id: string, data: JsonLd) => {
   const existing = document.getElementById(id);
   if (existing) existing.remove();
@@ -94,8 +107,15 @@ const Seo = ({
     document.title = fullTitle;
     setMetaByName("description", description);
     if (keywords) setMetaByName("keywords", keywords);
+    else removeMetaByName("keywords");
     setMetaByName(
       "robots",
+      noindex
+        ? "noindex, nofollow"
+        : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+    );
+    setMetaByName(
+      "googlebot",
       noindex
         ? "noindex, nofollow"
         : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
@@ -113,7 +133,7 @@ const Seo = ({
     setMetaByProperty("og:locale", "fr_FR");
     setMetaByProperty("og:image", image);
     setMetaByProperty("og:image:secure_url", image);
-    setMetaByProperty("og:image:type", image.endsWith(".png") ? "image/png" : "image/jpeg");
+    setMetaByProperty("og:image:type", detectImageMime(image));
     setMetaByProperty("og:image:width", String(imageWidth));
     setMetaByProperty("og:image:height", String(imageHeight));
     setMetaByProperty("og:image:alt", imageAlt);

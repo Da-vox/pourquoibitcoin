@@ -45,13 +45,16 @@ const faqs = [
 
 const FAQSection = () => {
   return (
-    <section className="py-14 md:py-24">
+    <section className="py-14 md:py-24" aria-labelledby="faq-heading">
       <div className="container mx-auto px-6">
         <div className="text-center mb-10 md:mb-16">
           <p className="font-mono text-sm tracking-[0.3em] uppercase text-btc-orange mb-4">
             Questions fréquentes
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2
+            id="faq-heading"
+            className="text-4xl md:text-5xl font-bold text-foreground mb-6"
+          >
             <span className="text-gradient-btc">FAQ</span> Bitcoin
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto text-lg">
@@ -59,7 +62,7 @@ const FAQSection = () => {
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto" data-speakable>
           <Accordion type="single" collapsible className="space-y-3">
             {faqs.map((faq, i) => (
               <AccordionItem
