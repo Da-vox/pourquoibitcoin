@@ -11,7 +11,7 @@ type RouteMeta = {
   keywords?: string;
 };
 
-const SITE_URL = "https://pourquoibitcoin.lovable.app";
+const SITE_URL = "https://pourquoibitcoin.fr";
 const OG_IMAGE = `${SITE_URL}/og-image.jpg`;
 
 const routes: RouteMeta[] = [
