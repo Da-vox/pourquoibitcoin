@@ -16,6 +16,18 @@ interface LinkItem {
 const LINKS: LinkItem[] = ([
 
 {
+  "id": "22",
+  "type": "article",
+  "url": "https://myfirstbitcoin.org/",
+  "title": "My First Bitcoin",
+  "description": "My First Bitcoin est une initiative éducative à but non lucratif qui propose des cours gratuits et open-source pour apprendre les bases de Bitcoin. Une ressource précieuse pour comprendre Bitcoin de manière indépendante et accessible à tous.",
+  "image": "https://myfirstbitcoin.org/wp-content/uploads/2026/04/aCx6WvmrFEM-HD.jpg",
+  "date": "2026-04-30"
+},
+
+
+
+{
   "id": "21",
   "type": "article",
   "url": "https://www.binance.com/fr/academy/articles/why-does-bitcoin-have-value",
