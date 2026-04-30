@@ -21,8 +21,8 @@ const LINKS: LinkItem[] = ([
   "url": "https://www.binance.com/fr/academy/articles/why-does-bitcoin-have-value",
   "title": "Pourquoi Bitcoin a-t-il de la valeur ?",
   "description": "Un article pédagogique de Binance Academy qui explique les fondements de la valeur de Bitcoin : rareté, décentralisation, sécurité du réseau, utilité comme réserve de valeur et moyen d'échange. Une lecture idéale pour comprendre ce qui donne sa valeur à Bitcoin.",
-  "image": "https://public.bnbstatic.com/image/cms/article/body/202210/d57334b8b1f130bf24c2d4be4e9bd8df.png",
-  "date": "2026-04-30"
+  "image": "https://public.bnbstatic.com/image/pgc/202305/a1d7b4c47116aeb017edc374c799f12b.jpg",
+  "date": "2023-11-16"
 },
 
 
