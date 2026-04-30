@@ -137,9 +137,9 @@ const FundamentalsSection = () => {
           <p className="font-mono text-xs tracking-[0.4em] uppercase text-btc-orange mb-4">
             Pourquoi Bitcoin ?
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-foreground mb-4">
-            Les fondamentaux
-          </h2>
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tighter text-foreground mb-4">
+            Les fondamentaux de Bitcoin
+          </h1>
           <p className="text-muted-foreground text-lg leading-relaxed max-w-[55ch]">
             Comprendre Bitcoin, c'est comprendre pourquoi il est inévitable. Mais notre mission est de vous faire comprendre avant qu'il soit trop tard face aux institutionnels !
           </p>

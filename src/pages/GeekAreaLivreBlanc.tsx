@@ -58,7 +58,7 @@ const livreBlancJsonLd = [
       inLanguage: "en",
     },
     datePublished: "2008-10-31",
-    dateModified: "2026-04-29",
+    dateModified: "2026-04-30",
     keywords: [
       "livre blanc bitcoin",
       "bitcoin whitepaper",
@@ -212,7 +212,7 @@ const GeekAreaLivreBlanc = () => {
         type="article"
         articleSection="Geek Area"
         publishedTime="2008-10-31T00:00:00Z"
-        modifiedTime="2026-04-29T00:00:00+02:00"
+        modifiedTime="2026-04-30T00:00:00+02:00"
         jsonLd={livreBlancJsonLd}
       />
       <Navbar />

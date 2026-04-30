@@ -4,7 +4,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://pourquoibitcoin.fr/</loc>
-    <lastmod>2026-04-29</lastmod>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pourquoibitcoin.fr/"/>
@@ -17,7 +17,7 @@
   </url>
   <url>
     <loc>https://pourquoibitcoin.fr/fondamentaux</loc>
-    <lastmod>2026-04-29</lastmod>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pourquoibitcoin.fr/fondamentaux"/>
@@ -30,7 +30,7 @@
   </url>
   <url>
     <loc>https://pourquoibitcoin.fr/arguments</loc>
-    <lastmod>2026-04-29</lastmod>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pourquoibitcoin.fr/arguments"/>
@@ -43,7 +43,7 @@
   </url>
   <url>
     <loc>https://pourquoibitcoin.fr/securiser</loc>
-    <lastmod>2026-04-29</lastmod>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pourquoibitcoin.fr/securiser"/>
@@ -56,7 +56,7 @@
   </url>
   <url>
     <loc>https://pourquoibitcoin.fr/geek-area</loc>
-    <lastmod>2026-04-29</lastmod>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pourquoibitcoin.fr/geek-area"/>
@@ -69,7 +69,7 @@
   </url>
   <url>
     <loc>https://pourquoibitcoin.fr/geek-area/noeud-bitcoin</loc>
-    <lastmod>2026-04-29</lastmod>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pourquoibitcoin.fr/geek-area/noeud-bitcoin"/>
@@ -82,7 +82,7 @@
   </url>
   <url>
     <loc>https://pourquoibitcoin.fr/geek-area/hardware-wallet</loc>
-    <lastmod>2026-04-29</lastmod>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pourquoibitcoin.fr/geek-area/hardware-wallet"/>
@@ -95,7 +95,7 @@
   </url>
   <url>
     <loc>https://pourquoibitcoin.fr/geek-area/livre-blanc</loc>
-    <lastmod>2026-04-29</lastmod>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pourquoibitcoin.fr/geek-area/livre-blanc"/>
@@ -108,7 +108,7 @@
   </url>
   <url>
     <loc>https://pourquoibitcoin.fr/geek-area/dictionnaire</loc>
-    <lastmod>2026-04-29</lastmod>
+    <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://pourquoibitcoin.fr/geek-area/dictionnaire"/>

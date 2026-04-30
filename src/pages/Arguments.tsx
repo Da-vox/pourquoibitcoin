@@ -19,7 +19,7 @@ const argumentsJsonLd = [
       "Ponzi, énergie, volatilité, criminels, or, complexité : les critiques récurrentes contre Bitcoin démontées une par une, avec calculateur d'investissement et citations clés.",
     inLanguage: "fr-FR",
     datePublished: "2025-01-01",
-    dateModified: "2026-04-29",
+    dateModified: "2026-04-30",
     author: { "@type": "Organization", name: "Pourquoi Bitcoin", url: SITE_URL },
     publisher: {
       "@type": "Organization",
@@ -50,7 +50,7 @@ const Arguments = () => {
         type="article"
         articleSection="Arguments"
         publishedTime="2025-01-01T00:00:00+01:00"
-        modifiedTime="2026-04-29T00:00:00+02:00"
+        modifiedTime="2026-04-30T00:00:00+02:00"
         jsonLd={argumentsJsonLd}
       />
       <Navbar />

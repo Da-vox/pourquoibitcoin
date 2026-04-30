@@ -36,7 +36,7 @@ const noeudJsonLd = [
       "Installation pas à pas de Bitcoin Core, configuration matérielle et connexion de son wallet via RPC.",
     inLanguage: "fr-FR",
     datePublished: "2025-01-01",
-    dateModified: "2026-04-29",
+    dateModified: "2026-04-30",
     author: { "@type": "Organization", name: "Pourquoi Bitcoin", url: SITE_URL },
     publisher: {
       "@type": "Organization",
@@ -191,7 +191,7 @@ const GeekAreaNoeud = () => {
         type="article"
         articleSection="Geek Area"
         publishedTime="2025-01-01T00:00:00+01:00"
-        modifiedTime="2026-04-29T00:00:00+02:00"
+        modifiedTime="2026-04-30T00:00:00+02:00"
         jsonLd={noeudJsonLd}
       />
       <Navbar />

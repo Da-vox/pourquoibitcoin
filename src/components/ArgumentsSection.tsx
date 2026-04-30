@@ -199,11 +199,11 @@ const ArgumentsSection = () => {
           <p className="font-mono text-xs tracking-[0.4em] uppercase text-btc-orange mb-4">
             Le guide anti-oncle
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-foreground mb-4">
-            10 arguments pour le
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tighter text-foreground mb-4">
+            10 arguments contre Bitcoin démontés
             <br />
-            prochain repas de famille
-          </h2>
+            <span className="text-muted-foreground">pour le prochain repas de famille</span>
+          </h1>
           <p className="text-muted-foreground text-lg leading-relaxed max-w-[55ch]">
             Clique sur chaque attaque pour découvrir la réponse qui fera taire
             ton oncle, ton banquier, et le journaliste de BFM.

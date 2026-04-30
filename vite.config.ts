@@ -72,6 +72,13 @@ const routes: RouteMeta[] = [
       "Le livre blanc Bitcoin de Satoshi Nakamoto (2008) expliqué chapitre par chapitre en français : transactions, proof of work, arbre de Merkle.",
     keywords: "livre blanc bitcoin, whitepaper bitcoin, satoshi nakamoto, proof of work, merkle tree",
   },
+  {
+    path: "/geek-area/dictionnaire",
+    title: "Dictionnaire Bitcoin Pandul : le meilleur lexique open source en français | Pourquoi Bitcoin",
+    description:
+      "Pandul propose le meilleur dictionnaire Bitcoin open source en français : tout le vocabulaire technique du protocole expliqué clairement, maintenu par la communauté.",
+    keywords: "dictionnaire bitcoin, lexique bitcoin, pandul, bitcoin français, vocabulaire bitcoin, glossaire bitcoin",
+  },
 ];
 
 const replaceOrInjectMeta = (html: string, route: RouteMeta): string => {
