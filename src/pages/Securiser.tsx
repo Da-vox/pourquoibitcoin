@@ -85,15 +85,24 @@ const steps = [
   },
 ];
 
-const setupSteps = [
-  "Commande ton Ledger uniquement sur le site officiel (jamais sur Amazon ou d'occasion).",
-  "Télécharge l'app Ledger Live sur ton ordinateur ou smartphone (toujours des liens ou des stores officiels.",
-  "Branche ton Ledger et suis les instructions d'initialisation.",
-  "NOTE ta seed phrase (24 mots) sur PAPIER. Active l'option du 25eme mot, technique (details sur internet) mais c'est la sécu idéale . Ne la photographie JAMAIS. Ne la stocke JAMAIS en numérique.",
-  "Range ta seed phrase dans un endroit sûr (coffre-fort à la banque, cela coûte que 10€ par mois, chez un notaire…). C'est ta sauvegarde ultime. Évite les petits coffres chez toi, cela ne sert à rien.",
-  "Installe l'app Bitcoin sur ton Ledger via Ledger Live.",
-  "Transfère tes BTC depuis l'exchange vers ton adresse Ledger.",
-  "Vérifie l'adresse de réception directement sur l'écran du Ledger avant de confirmer. Alerte: fais toujours un transfert test de 5 ou 6 euros avant pour garantir le flux.",
+const setupSteps: Array<{
+  text: string;
+  link?: { href: string; label: string };
+}> = [
+  { text: "Commande ton Ledger uniquement sur le site officiel (jamais sur Amazon ou d'occasion)." },
+  { text: "Télécharge l'app Ledger Live sur ton ordinateur ou smartphone (toujours des liens ou des stores officiels." },
+  { text: "Branche ton Ledger et suis les instructions d'initialisation." },
+  { text: "NOTE ta seed phrase (24 mots) sur PAPIER. Active l'option du 25eme mot, technique (details sur internet) mais c'est la sécu idéale . Ne la photographie JAMAIS. Ne la stocke JAMAIS en numérique." },
+  { text: "Range ta seed phrase dans un endroit sûr (coffre-fort à la banque, cela coûte que 10€ par mois, chez un notaire…). C'est ta sauvegarde ultime. Évite les petits coffres chez toi, cela ne sert à rien." },
+  { text: "Installe l'app Bitcoin sur ton Ledger via Ledger Live." },
+  {
+    text: "Transfère tes BTC depuis l'exchange vers ton adresse Ledger.",
+    link: {
+      href: "https://bitcoin.fr/bitcoin-scam-list/",
+      label: "liste des sites à éviter",
+    },
+  },
+  { text: "Vérifie l'adresse de réception directement sur l'écran du Ledger avant de confirmer. Alerte: fais toujours un transfert test de 5 ou 6 euros avant pour garantir le flux." },
 ];
 
 const Securiser = () => {
@@ -175,7 +184,21 @@ const Securiser = () => {
                       {i + 1}
                     </div>
                     <p className="text-secondary-foreground leading-relaxed pt-1">
-                      {step}
+                      {step.text}
+                      {step.link && (
+                        <>
+                          {" "}
+                          <a
+                            href={step.link.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 text-btc-orange hover:underline"
+                          >
+                            {step.link.label}
+                            <ExternalLink className="w-3.5 h-3.5" />
+                          </a>
+                        </>
+                      )}
                     </p>
                   </div>
                 ))}
