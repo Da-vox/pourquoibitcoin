@@ -16,6 +16,18 @@ interface LinkItem {
 const LINKS: LinkItem[] = ([
 
 {
+  "id": "21",
+  "type": "article",
+  "url": "https://www.binance.com/fr/academy/articles/why-does-bitcoin-have-value",
+  "title": "Pourquoi Bitcoin a-t-il de la valeur ?",
+  "description": "Un article pédagogique de Binance Academy qui explique les fondements de la valeur de Bitcoin : rareté, décentralisation, sécurité du réseau, utilité comme réserve de valeur et moyen d'échange. Une lecture idéale pour comprendre ce qui donne sa valeur à Bitcoin.",
+  "image": "https://public.bnbstatic.com/image/cms/article/body/202210/d57334b8b1f130bf24c2d4be4e9bd8df.png",
+  "date": "2026-04-30"
+},
+
+
+
+{
   "id": "20",
   "type": "article",
   "url": "https://cryptoast.fr/nouvelle-proposition-fork-bitcoin-concurrencer-finance-tokenisee-ethereum-feu-communaute/",
