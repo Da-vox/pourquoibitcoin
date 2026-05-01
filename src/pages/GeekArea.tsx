@@ -52,7 +52,7 @@ const geekAreaJsonLd = [
       {
         "@type": "ListItem",
         position: 4,
-        name: "Dictionnaire Bitcoin Pandul : la référence open source en français",
+        name: "Dictionnaire Bitcoin : la référence open source en français",
         url: `${SITE_URL}/geek-area/dictionnaire`,
       },
     ],
@@ -105,7 +105,7 @@ const sections = [
   {
     num: "04",
     icon: BookA,
-    title: "Dictionnaire Bitcoin Pandul",
+    title: "Dictionnaire Bitcoin",
     description:
       "Pandul propose le meilleur dictionnaire open source francophone dédié à Bitcoin. Tout le vocabulaire technique du protocole - UTXO, mempool, taproot, lightning… - est défini, vulgarisé et maintenu par la communauté française. Une ressource libre, citable et constamment mise à jour.",
     highlights: [
