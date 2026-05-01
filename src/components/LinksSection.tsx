@@ -16,6 +16,18 @@ interface LinkItem {
 const LINKS: LinkItem[] = ([
 
 {
+  "id": "23",
+  "type": "article",
+  "url": "https://fr.benzinga.com/crypto/ne-jamais-vendre-votre-bitcoin-comment-le-pdg-de-strike-jack-mallers-a-soutenu-cette-promesse/",
+  "title": "Ne jamais vendre votre Bitcoin : comment le PDG de Strike Jack Mallers a soutenu cette promesse",
+  "description": "Jack Mallers, PDG de Strike, défend la philosophie du HODL en expliquant comment il a tenu sa promesse de ne jamais vendre son Bitcoin. Un éclairage inspirant sur la conviction long terme et la vision de Bitcoin comme réserve de valeur ultime.",
+  "image": "https://cdn.benzinga.com/files/images/story/2026/05/01/Bitcoin-Btc-Virtual-Cryptocurrency-In-Fr_2.jpeg?width=2048&height=1536",
+  "date": "2026-05-01"
+},
+
+
+
+{
   "id": "22",
   "type": "article",
   "url": "https://myfirstbitcoin.org/",
