@@ -21,7 +21,7 @@ const dictionnaireJsonLd = [
   buildBreadcrumb([
     { name: "Accueil", path: "/" },
     { name: "Geek Area", path: "/geek-area" },
-    { name: "Dictionnaire Pandul", path: "/geek-area/dictionnaire" },
+    { name: "Dictionnaire Bitcoin", path: "/geek-area/dictionnaire" },
   ]),
   {
     "@context": "https://schema.org",
@@ -114,8 +114,8 @@ const GeekAreaDictionnaire = () => {
   return (
     <main className="min-h-screen bg-background">
       <Seo
-        title="Dictionnaire Bitcoin Pandul : le meilleur lexique open source en français"
-        description="Pandul propose le meilleur dictionnaire Bitcoin open source en français : tout le vocabulaire technique du protocole expliqué clairement, maintenu par la communauté francophone."
+        title="Dictionnaire Bitcoin : le meilleur lexique open source en français"
+        description="Cela propose le meilleur dictionnaire Bitcoin open source en français : tout le vocabulaire technique du protocole expliqué clairement, maintenu par la communauté francophone."
         path="/geek-area/dictionnaire"
         keywords="dictionnaire bitcoin, lexique bitcoin, pandul, bitcoin français, vocabulaire bitcoin, glossaire bitcoin"
         type="article"
@@ -150,7 +150,7 @@ const GeekAreaDictionnaire = () => {
             </p>
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
               Le{" "}
-              <span className="text-gradient-btc">dictionnaire Pandul</span>
+              <span className="text-gradient-btc">dictionnaire Bitcoin</span>
             </h1>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg mb-6">
               Le meilleur dictionnaire <strong>open source</strong> et{" "}
@@ -181,7 +181,7 @@ const GeekAreaDictionnaire = () => {
               </h2>
               <p className="text-muted-foreground text-base leading-relaxed">
                 Bitcoin a son propre vocabulaire et la majorité des ressources
-                techniques sont en anglais. Pandul comble ce vide avec un
+                techniques sont en anglais. Loïc comble ce vide avec un
                 lexique précis, libre et constamment mis à jour.
               </p>
             </div>
@@ -219,7 +219,7 @@ const GeekAreaDictionnaire = () => {
               <ul className="space-y-3">
                 {[
                   "Tu lis un article ou un thread sur Bitcoin et tu bloques sur un terme ? Cherche-le directement sur pandul.fr/dictionnaire.",
-                  "Tu prépares un exposé, un article ou un cours en français : Pandul est une source citable et libre de droits.",
+                  "Tu prépares un exposé, un article ou un cours en français : Ce dictionnaire est une source citable et libre de droits.",
                   "Tu veux contribuer ? Le dépôt est ouvert sur GitHub : tu peux corriger une faute, clarifier une définition ou en ajouter une nouvelle.",
                   "Couple-le avec le livre blanc de Satoshi : chaque concept croisé dans le whitepaper a sa fiche détaillée.",
                 ].map((item, i) => (
@@ -247,8 +247,7 @@ const GeekAreaDictionnaire = () => {
                 Plonge dans le dictionnaire
               </h3>
               <p className="text-muted-foreground text-sm mb-6">
-                Toutes les définitions sont accessibles gratuitement sur le site
-                de Pandul. Ajoute-le à tes favoris : tu y reviendras souvent.
+                Toutes les définitions sont accessibles gratuitement sur le site. Ajoute-le à tes favoris : tu y reviendras souvent.
               </p>
               <a
                 href="https://pandul.fr/dictionnaire/"
@@ -297,9 +296,9 @@ const GeekAreaDictionnaire = () => {
         <section className="py-12 border-t border-border">
           <div className="container mx-auto px-6 text-center">
             <p className="text-muted-foreground text-sm mb-4">
-              Partage le dictionnaire Pandul avec d'autres bitcoiners
+              Partage le dictionnaire Bitcoin avec d'autres bitcoiners
             </p>
-            <ShareButtons title="Le dictionnaire Bitcoin de Pandul - Geek Area" />
+            <ShareButtons title="Le dictionnaire Bitcoin de Loïc Morel- Geek Area" />
           </div>
         </section>
       </div>
