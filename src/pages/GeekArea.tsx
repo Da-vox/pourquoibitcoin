@@ -146,12 +146,12 @@ const GeekArea = () => {
               Pandul - étape par étape.
             </p>
             {/* Ancres rapides */}
-            <div className="flex flex-wrap gap-3 justify-center">
+            <div className="flex flex-col items-stretch gap-3 max-w-xl mx-auto">
               {sections.map((s) => (
                 <Link
                   key={s.num}
                   to={s.href}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-btc-orange/40 text-btc-orange text-sm font-medium transition-all hover:bg-btc-orange/10 hover:border-btc-orange"
+                  className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-btc-orange/40 text-btc-orange text-sm font-medium transition-all hover:bg-btc-orange/10 hover:border-btc-orange"
                 >
                   <s.icon className="w-3.5 h-3.5" />
                   {s.title}
