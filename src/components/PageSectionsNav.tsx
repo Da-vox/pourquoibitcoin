@@ -7,9 +7,9 @@ interface SectionLink {
 }
 
 const sections: SectionLink[] = [
-  { id: "prix",       label: "Cours" },
-  { id: "ressources", label: "Ressources" },
-  { id: "apropos",    label: "À propos & Contact" },
+  { id: "prix",       label: "BTC Cours" },
+  { id: "ressources", label: "BTC Actu" },
+  { id: "apropos",    label: "À propos / Contact" },
 ];
 
 /**
