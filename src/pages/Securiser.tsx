@@ -242,7 +242,7 @@ const Securiser = () => {
                 le plus important que tu feras pour protéger ton patrimoine.
               </p>
               <a
-                href="#"
+                href="https://shop.ledger.com/fr/pages/referral-program?referral_code=BF3ZW5PZBYWNQ"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-gradient-btc text-primary-foreground font-semibold text-lg transition-all hover:scale-105 glow-btc"
