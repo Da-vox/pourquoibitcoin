@@ -216,7 +216,8 @@ const Securiser = () => {
                   "Stocker sa seed phrase sur un téléphone ou ordinateur",
                   "Partager sa seed phrase avec qui que ce soit",
                   "Prendre une photo de sa seed phrase",
-                  "Entrer sa seed phrase sur un site web",
+                  "Entrer sa seed phrase sur un site web ou une application",
+                  "Stocker sa seed chez soi, il faut uniquement la stocker à la banque dans un coffre (10€ par mois en moyenne)",
                   "Ignorer les mises à jour de firmware",
                 ].map((err, i) => (
                   <div
