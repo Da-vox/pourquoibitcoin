@@ -28,9 +28,9 @@ const dictionnaireJsonLd = [
     "@type": "Article",
     "@id": `${SITE_URL}/geek-area/dictionnaire#article`,
     headline:
-      "Le dictionnaire Pandul : la meilleure ressource open source francophone sur Bitcoin",
+      "Le dictionnaire Bitcoin : la meilleure ressource open source francophone sur Bitcoin",
     description:
-      "Présentation du dictionnaire Bitcoin de Pandul : la référence open source en français pour comprendre tout le vocabulaire technique de Bitcoin.",
+      "Présentation du dictionnaire Bitcoin de Loïc Morel : la référence open source en français pour comprendre tout le vocabulaire technique de Bitcoin.",
     inLanguage: "fr-FR",
     publisher: {
       "@type": "Organization",
@@ -45,7 +45,7 @@ const dictionnaireJsonLd = [
     },
     about: {
       "@type": "WebSite",
-      name: "Dictionnaire Pandul",
+      name: "Dictionnaire Bitcoin",
       url: "https://pandul.fr/dictionnaire/",
       inLanguage: "fr-FR",
     },
@@ -76,7 +76,7 @@ const features = [
     icon: Users,
     title: "Maintenu par la communauté",
     description:
-      "Pandul est animé par des bitcoiners francophones passionnés leadé par Loïc Morel. Le dictionnaire évolue en continu avec le protocole et les nouveaux concepts (BIP, soft forks, etc.).",
+      "Ce dictionnaire est animé par des bitcoiners francophones passionnés leadé par Loïc Morel. Le dictionnaire évolue en continu avec le protocole et les nouveaux concepts (BIP, soft forks, etc.).",
   },
   {
     icon: Search,
