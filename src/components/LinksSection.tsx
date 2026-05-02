@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { ExternalLink, Newspaper, Youtube, Twitter } from "lucide-react";
+import { ExternalLink, Newspaper, Youtube, Twitter, Star } from "lucide-react";
 
 type LinkType = "article" | "youtube" | "tweet";
 
@@ -11,6 +11,7 @@ interface LinkItem {
   description: string;
   image: string;
   date: string;
+  featured?: boolean;
 }
 
 const LINKS: LinkItem[] = ([
