@@ -23,7 +23,8 @@ const LINKS: LinkItem[] = ([
   "title": "Ne jamais vendre votre Bitcoin : comment le PDG de Strike Jack Mallers a soutenu cette promesse",
   "description": "Jack Mallers, PDG de Strike, défend la philosophie du HODL en expliquant comment il a tenu sa promesse de ne jamais vendre son Bitcoin. Un éclairage inspirant sur la conviction long terme et la vision de Bitcoin comme réserve de valeur ultime.",
   "image": "https://cdn.benzinga.com/files/images/story/2026/05/01/Bitcoin-Btc-Virtual-Cryptocurrency-In-Fr_2.jpeg?width=2048&height=1536",
-  "date": "2026-05-01"
+  "date": "2026-05-01",
+  "featured": true
 },
 
 
@@ -299,7 +300,11 @@ const LinksSection = () => {
   const [page, setPage] = useState(1);
   const sectionRef = useRef<HTMLElement>(null);
 
-  const filteredLinks = filter === "all" ? LINKS : LINKS.filter((l) => l.type === filter);
+  const featuredLink = LINKS.find((l) => l.featured);
+  const nonFeaturedLinks = LINKS.filter((l) => !l.featured);
+
+  const filteredLinks =
+    filter === "all" ? nonFeaturedLinks : nonFeaturedLinks.filter((l) => l.type === filter);
   const totalPages = Math.max(1, Math.ceil(filteredLinks.length / PAGE_SIZE));
   const currentPage = Math.min(page, totalPages);
   const visibleLinks = filteredLinks.slice(
