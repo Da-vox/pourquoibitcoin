@@ -339,6 +339,61 @@ const LinksSection = () => {
           </p>
         </div>
 
+        {/* À la une — featured link */}
+        {featuredLink && (() => {
+          const cfg = typeLabel[featuredLink.type];
+          const Icon = cfg.icon;
+          return (
+            <a
+              href={featuredLink.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block max-w-4xl mx-auto mb-10 rounded-2xl overflow-hidden border border-btc-orange/40 bg-gradient-to-br from-btc-orange/10 via-card/70 to-card/50 hover:border-btc-orange/70 transition-all hover:shadow-[0_0_40px_-10px_hsl(var(--btc-orange)/0.4)]"
+            >
+              <div className="grid md:grid-cols-[1.1fr_1fr] gap-0">
+                <div className="relative aspect-[16/9] md:aspect-auto md:min-h-[220px] overflow-hidden bg-card">
+                  <img
+                    src={featuredLink.image}
+                    alt={featuredLink.title}
+                    loading="lazy"
+                    decoding="async"
+                    onError={(e) => {
+                      e.currentTarget.style.visibility = "hidden";
+                    }}
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
+                  />
+                  <div className="absolute top-3 left-3 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-btc-orange text-btc-dark text-[10px] font-mono uppercase tracking-wider font-bold shadow-lg">
+                    <Star className="w-3 h-3" fill="currentColor" />
+                    À la une
+                  </div>
+                </div>
+                <div className="p-5 md:p-6 flex flex-col gap-2 justify-center">
+                  <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-btc-orange">
+                    <Icon className="w-3 h-3" />
+                    <span>{cfg.label}</span>
+                    <span className="text-muted-foreground ml-auto text-[10px]">
+                      {new Date(featuredLink.date).toLocaleDateString("fr-FR", {
+                        day: "numeric",
+                        month: "short",
+                        year: "numeric",
+                      })}
+                    </span>
+                  </div>
+                  <h3 className="text-base md:text-lg font-bold text-foreground group-hover:text-btc-orange transition-colors leading-snug">
+                    {featuredLink.title}
+                  </h3>
+                  <p className="text-muted-foreground text-xs md:text-sm leading-relaxed line-clamp-3">
+                    {featuredLink.description}
+                  </p>
+                  <div className="flex items-center gap-1 text-btc-orange text-xs font-medium pt-1">
+                    {featuredLink.type === "youtube" ? "Voir la vidéo" : "Lire l'article"} <ExternalLink className="w-3 h-3" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          );
+        })()}
+
         <div
           role="tablist"
           aria-label="Filtrer par type"
