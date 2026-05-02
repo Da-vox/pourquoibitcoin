@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { ExternalLink, Newspaper, Youtube, Twitter } from "lucide-react";
+import { ExternalLink, Newspaper, Youtube, Twitter, Star } from "lucide-react";
 
 type LinkType = "article" | "youtube" | "tweet";
 
@@ -11,6 +11,7 @@ interface LinkItem {
   description: string;
   image: string;
   date: string;
+  featured?: boolean;
 }
 
 const LINKS: LinkItem[] = ([
@@ -22,7 +23,8 @@ const LINKS: LinkItem[] = ([
   "title": "Ne jamais vendre votre Bitcoin : comment le PDG de Strike Jack Mallers a soutenu cette promesse",
   "description": "Jack Mallers, PDG de Strike, défend la philosophie du HODL en expliquant comment il a tenu sa promesse de ne jamais vendre son Bitcoin. Un éclairage inspirant sur la conviction long terme et la vision de Bitcoin comme réserve de valeur ultime.",
   "image": "https://cdn.benzinga.com/files/images/story/2026/05/01/Bitcoin-Btc-Virtual-Cryptocurrency-In-Fr_2.jpeg?width=2048&height=1536",
-  "date": "2026-05-01"
+  "date": "2026-05-01",
+  "featured": true
 },
 
 
@@ -298,7 +300,11 @@ const LinksSection = () => {
   const [page, setPage] = useState(1);
   const sectionRef = useRef<HTMLElement>(null);
 
-  const filteredLinks = filter === "all" ? LINKS : LINKS.filter((l) => l.type === filter);
+  const featuredLink = LINKS.find((l) => l.featured);
+  const nonFeaturedLinks = LINKS.filter((l) => !l.featured);
+
+  const filteredLinks =
+    filter === "all" ? nonFeaturedLinks : nonFeaturedLinks.filter((l) => l.type === filter);
   const totalPages = Math.max(1, Math.ceil(filteredLinks.length / PAGE_SIZE));
   const currentPage = Math.min(page, totalPages);
   const visibleLinks = filteredLinks.slice(
@@ -332,6 +338,61 @@ const LinksSection = () => {
             Articles, vidéos et tweets sélectionnés pour approfondir tes connaissances.
           </p>
         </div>
+
+        {/* À la une — featured link */}
+        {featuredLink && (() => {
+          const cfg = typeLabel[featuredLink.type];
+          const Icon = cfg.icon;
+          return (
+            <a
+              href={featuredLink.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block max-w-4xl mx-auto mb-10 rounded-2xl overflow-hidden border border-btc-orange/40 bg-gradient-to-br from-btc-orange/10 via-card/70 to-card/50 hover:border-btc-orange/70 transition-all hover:shadow-[0_0_40px_-10px_hsl(var(--btc-orange)/0.4)]"
+            >
+              <div className="grid md:grid-cols-[1.1fr_1fr] gap-0">
+                <div className="relative aspect-[16/9] md:aspect-auto md:min-h-[220px] overflow-hidden bg-card">
+                  <img
+                    src={featuredLink.image}
+                    alt={featuredLink.title}
+                    loading="lazy"
+                    decoding="async"
+                    onError={(e) => {
+                      e.currentTarget.style.visibility = "hidden";
+                    }}
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
+                  />
+                  <div className="absolute top-3 left-3 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-btc-orange text-btc-dark text-[10px] font-mono uppercase tracking-wider font-bold shadow-lg">
+                    <Star className="w-3 h-3" fill="currentColor" />
+                    À la une
+                  </div>
+                </div>
+                <div className="p-5 md:p-6 flex flex-col gap-2 justify-center">
+                  <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-btc-orange">
+                    <Icon className="w-3 h-3" />
+                    <span>{cfg.label}</span>
+                    <span className="text-muted-foreground ml-auto text-[10px]">
+                      {new Date(featuredLink.date).toLocaleDateString("fr-FR", {
+                        day: "numeric",
+                        month: "short",
+                        year: "numeric",
+                      })}
+                    </span>
+                  </div>
+                  <h3 className="text-base md:text-lg font-bold text-foreground group-hover:text-btc-orange transition-colors leading-snug">
+                    {featuredLink.title}
+                  </h3>
+                  <p className="text-muted-foreground text-xs md:text-sm leading-relaxed line-clamp-3">
+                    {featuredLink.description}
+                  </p>
+                  <div className="flex items-center gap-1 text-btc-orange text-xs font-medium pt-1">
+                    {featuredLink.type === "youtube" ? "Voir la vidéo" : "Lire l'article"} <ExternalLink className="w-3 h-3" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          );
+        })()}
 
         <div
           role="tablist"

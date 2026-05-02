@@ -13,7 +13,7 @@ import {
   HandCoins,
   FileText,
 } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import BitcoinSupplySchedule from "@/components/illustrations/BitcoinSupplySchedule";
 import LightningLayersDiagram from "@/components/illustrations/LightningLayersDiagram";
 
@@ -111,19 +111,19 @@ const fundamentals = [
   },
 ];
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: {},
   visible: {
     transition: { staggerChildren: 0.08 },
   },
 };
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 24 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { type: "spring", stiffness: 100, damping: 22 },
+    transition: { type: "spring" as const, stiffness: 100, damping: 22 },
   },
 };
 
