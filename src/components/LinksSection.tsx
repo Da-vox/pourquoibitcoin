@@ -17,6 +17,18 @@ interface LinkItem {
 const LINKS: LinkItem[] = ([
 
 {
+  "id": "25",
+  "type": "tweet",
+  "url": "https://x.com/SimplyBitcoin/status/2051030174158713010?s=20",
+  "title": "Tweet de Simply Bitcoin",
+  "description": "Un tweet à découvrir sur Bitcoin par Simply Bitcoin.",
+  "image": "https://pbs.twimg.com/profile_images/1396929547347546113/Y4HGbg-9_400x400.jpg",
+  "date": "2026-05-03"
+},
+
+
+
+{
   "id": "24",
   "type": "youtube",
   "url": "https://youtu.be/Zl5JB9q7LUw",
