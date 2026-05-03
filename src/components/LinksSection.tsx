@@ -20,8 +20,8 @@ const LINKS: LinkItem[] = ([
   "id": "24",
   "type": "youtube",
   "url": "https://youtu.be/Zl5JB9q7LUw",
-  "title": "Vidéo Bitcoin à découvrir",
-  "description": "Une vidéo à découvrir sur Bitcoin.",
+  "title": "Le quantique ne tuera pas Bitcoin, les bitcoiners oui.",
+  "description": "Project Eleven casse une clé elliptique de 15 bits sur un ordinateur quantique : les médias s'emballent, les 6,9 millions de bitcoins « à risque » reviennent dans toutes les conversations. Mais pendant ce coup de communication, un papier de Google Quantum AI relance une proposition radicale : geler certains coins vulnérables avant qu'un acteur quantique puisse les saisir. Un débat qui dépasse la technique et touche à la philosophie monétaire de Bitcoin : propriété, immuabilité, et ce que l'on est prêt à sacrifier au nom d'un bien supérieur.",
   "image": "https://i.ytimg.com/vi/Zl5JB9q7LUw/maxresdefault.jpg",
   "date": "2026-05-03"
 },
