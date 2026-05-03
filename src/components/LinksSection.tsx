@@ -17,6 +17,18 @@ interface LinkItem {
 const LINKS: LinkItem[] = ([
 
 {
+  "id": "24",
+  "type": "youtube",
+  "url": "https://youtu.be/Zl5JB9q7LUw",
+  "title": "Vidéo Bitcoin à découvrir",
+  "description": "Une vidéo à découvrir sur Bitcoin.",
+  "image": "https://i.ytimg.com/vi/Zl5JB9q7LUw/maxresdefault.jpg",
+  "date": "2026-05-03"
+},
+
+
+
+{
   "id": "23",
   "type": "article",
   "url": "https://fr.benzinga.com/crypto/ne-jamais-vendre-votre-bitcoin-comment-le-pdg-de-strike-jack-mallers-a-soutenu-cette-promesse/",
