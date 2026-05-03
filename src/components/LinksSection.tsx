@@ -22,7 +22,7 @@ const LINKS: LinkItem[] = ([
   "url": "https://x.com/SimplyBitcoin/status/2051030174158713010?s=20",
   "title": "Tweet de Simply Bitcoin",
   "description": "Un tweet à découvrir sur Bitcoin par Simply Bitcoin.",
-  "image": "https://pbs.twimg.com/profile_images/1396929547347546113/Y4HGbg-9_400x400.jpg",
+  "image": "https://x.com/SimplyBitcoin/status/2051030174158713010/photo/1",
   "date": "2026-05-03"
 },
 
