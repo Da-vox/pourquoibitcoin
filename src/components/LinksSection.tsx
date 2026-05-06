@@ -17,6 +17,17 @@ interface LinkItem {
 const LINKS: LinkItem[] = ([
 
 {
+  "id": "26",
+  "type": "article",
+  "url": "https://cryptoast.fr/particulier-mine-seul-bloc-bitcoin-empoche-recompense-240000-dollars-maison/",
+  "title": "Un particulier mine seul un bloc Bitcoin et empoche 240 000 dollars depuis chez lui",
+  "description": "Un mineur solo a réussi l'exploit de valider un bloc Bitcoin depuis chez lui et d'empocher la récompense de bloc d'environ 240 000 dollars. Une démonstration éclatante que le minage individuel reste possible et que Bitcoin demeure ouvert à tous, malgré la domination des grandes fermes industrielles.",
+  "image": "https://cryptoast.fr/wp-content/uploads/2026/05/minage-bitcoin-maison-recompense-240000-dollars.webp",
+  "date": "2026-05-06",
+  "featured": true
+},
+
+{
   "id": "25",
   "type": "tweet",
   "url": "https://x.com/SimplyBitcoin/status/2051030174158713010?s=20",
@@ -47,8 +58,7 @@ const LINKS: LinkItem[] = ([
   "title": "Ne jamais vendre votre Bitcoin : comment le PDG de Strike Jack Mallers a soutenu cette promesse",
   "description": "Jack Mallers, PDG de Strike, défend la philosophie du HODL en expliquant comment il a tenu sa promesse de ne jamais vendre son Bitcoin. Un éclairage inspirant sur la conviction long terme et la vision de Bitcoin comme réserve de valeur ultime.",
   "image": "https://cdn.benzinga.com/files/images/story/2026/05/01/Bitcoin-Btc-Virtual-Cryptocurrency-In-Fr_2.jpeg?width=2048&height=1536",
-  "date": "2026-05-01",
-  "featured": true
+  "date": "2026-05-01"
 },
 
 
